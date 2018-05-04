@@ -1,0 +1,6 @@
+<tr>
+	<td class="file_name" width="30%"><input type="text" class="wpfepp-<?php echo $field_key; ?>-name-field wpfepp-form-field" name="<?php echo $field_key; ?>_file_names[]" value="<?php echo esc_attr( $file_value['name'] ); ?>" placeholder="<?php esc_attr_e( 'File Name', 'wpfepp-plugin' ); ?>" <?php echo $print_restrictions; ?> /></td>
+	<td class="file_url"><input type="text" class="wpfepp-<?php echo $field_key; ?>-url-field wpfepp-form-field" name="<?php echo $field_key; ?>_file_urls[]" value="<?php echo esc_attr( $file_value['file'] ); ?>" placeholder="<?php esc_attr_e( "http://", 'wpfepp-plugin' ); ?>" <?php echo $print_restrictions; ?> /></td>
+	<td class="file_url_choose" width="17%"><button type="button" class="wpfepp-button wpfepp-file-url-button" data-choose="<?php esc_attr_e( 'Choose file', 'wpfepp-plugin' ); ?>" data-update="<?php esc_attr_e( 'Insert file URL', 'wpfepp-plugin' ); ?>"><?php echo str_replace( ' ', '&nbsp;', __( 'Choose file', 'wpfepp-plugin' ) ); ?></button></td>
+	<td width="1%"><a href="#" class="delete"><?php _e('Delete', 'wpfepp-plugin') ?></a></td>
+</tr>

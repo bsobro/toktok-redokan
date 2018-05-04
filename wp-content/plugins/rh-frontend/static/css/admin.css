@@ -1,0 +1,45 @@
+.wpfepp-op{width: 100%;margin-top: 30px;display: table}
+.wpfepp-op h2{padding: 5px;background: #e5e5e5}
+.wpfepp-op .wpfepp-op-sidebar, .wpfepp-op .wpfepp-op-content{vertical-align: top;display: table-cell}
+.wpfepp-op.errors-tab input[type="text"]{width: 50%}
+.wpfepp-op.emails-tab textarea, .wpfepp-op.extended-tab textarea{width: 50%;height: 200px}
+.wpfepp-op .wpfepp-op-sidebar{width: 250px}
+.wpfepp-op-content .ui-sortable{margin: 0}
+.wpfepp-op-sidebar .side-block{background: #fff;border: 1px solid #e7e7e7;margin-left: 20px;margin-bottom: 20px;padding: 20px}
+.wpfepp-op-sidebar .side-block h3{margin-top: 0;margin-bottom: 20px}
+.wpfepp-op-sidebar .side-block .wpfepp-rehub-fields{overflow-y: scroll;height: 280px}
+.wpfepp-op-sidebar .side-block .wpfepp-rehub-fields li{cursor: pointer}
+.wpfepp-op-sidebar .custom-field-builder label{clear: both;display: block;margin: 10px 0;width: 100%;font-weight: bold}
+.wpfepp-op-sidebar .custom-field-builder input[type="text"] {padding: 10px}
+.wpfepp-op-sidebar .custom-field-builder p.submit{margin: 15px 0 0 0;padding: 0}
+.wpfepp-form-ul label{display: block;float: left;width: 30%}
+.wpfepp-form-ul > li{border-bottom: 1px dashed #eeeeee;margin-bottom: 10px;padding-bottom: 10px}
+.wpfepp-widget-container{background: none repeat scroll 0 0 #fff;display: block;margin-bottom: 20px;box-shadow: 0 2px 2px #ebebeb}
+.wpfepp-widget-container.hidden{display: none}
+.wpfepp-widget-head, .wpfepp-widget-body{padding: 15px 20px}
+.wpfepp-widget-head{border: 1px solid #e7e7e7;cursor: -moz-grab;cursor: -webkit-grab;cursor: move}
+.wpfepp-widget-body{border-style: solid;border-color: #e7e7e7;border-width: 0 1px 1px 1px;display: none}
+.wpfepp-widget-body textarea{width: 50%;height: 60px}
+.wpfepp-field{display: table;float: left;width: 70%}
+.wpfepp-description{color: #a7a7a7;margin: 10px 0 0 0}
+.clear{clear: both}
+.wpfepp-ajax-form .error{background: none repeat scroll 0 0 #fff8ef;border: 1px solid #ffbdb4}
+.manage-column.column-id{width: 50px}
+.manage-column.column-name, .manage-column.column-post_type{width: 150px}
+#wpfepp-loading{display: none}
+#wpfepp-form-creator{margin-bottom: 50px}
+.wpfepp-expand {float: right}
+.wpfepp-expand span{color: #9d9d9d;cursor: pointer;vertical-align: middle}
+.wpfepp-custom-field-delete{float: right;margin: 0 20px}
+@media only screen and (min-width:600px){#wpfepp-form-creator{float: left;width: 33%}#wpfepp-form-list-table-container{float: right;width: 65%}}
+/* Icons */
+.dashicons-trash{color: #949494;vertical-align: middle}
+.dashicons-trash:hover{color: #7f7f7f;cursor: pointer}
+.dashicons-update{-webkit-animation: 2s linear 0s normal none infinite spin;-moz-animation: 2s linear 0s normal none infinite spin;animation: 2s linear 0s normal none infinite spin;display: inline-block}
+@-webkit-keyframes spin{0% {-webkit-transform: rotate(0deg);}100% {-webkit-transform: rotate(359deg);}}
+@-moz-keyframes spin{0% {-moz-transform: rotate(0deg);}100% {-moz-transform: rotate(359deg);}}
+@keyframes spin {0% {transform: rotate(0deg);}100% {transform: rotate(359deg);}}
+/* Extended tab */
+.wpfepp-op.extended-tab #map-canvas{ margin:10px 0;clear: both;width: 80% !important}
+.wpfepp-op.extended-tab #map-canvas-options .map-action-lock{display: block;background: url( '../img/unlocked.svg' ) no-repeat 0 0;background-size: contain;cursor: pointer;padding: 0 0 0 32px;user-select: none}
+.wpfepp-op.extended-tab #map-canvas-options .map-action-lock.locked{background: url( '../img/locked.svg' ) no-repeat 0 0;background-size: contain}

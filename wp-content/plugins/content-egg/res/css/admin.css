@@ -1,0 +1,201 @@
+.tab-content {
+ display:inline !important;
+}
+
+.egg-container .deckgrid[deckgrid]::before {
+    content: '4 .col-md-3';
+    font-size: 0;
+    visibility: hidden;
+}
+
+.egg-container .animation-fade {
+    opacity:0;
+}
+
+.egg-container .animation-faded {
+    opacity:1;
+}
+
+.egg-container .animation-faded {
+    -webkit-transition: opacity 1s linear .2s;
+    -moz-transition: opacity 1s linear .2s;
+    -o-transition: opacity 1s linear .2s;
+    transition: opacity 1s linear .2s;
+}
+
+.egg-container .thumbnail-meta {
+    min-height:100px;
+}
+
+.egg-container .thumbnail:hover {
+    background: #f5f5f5 !important;
+    opacity: 1 !important;;
+}
+
+.egg-container .result_added{
+    opacity: 0.15 !important;
+    cursor: default !important;
+}
+
+.egg-container .search_panel, .egg-container .data_panel{
+    padding-top: 15px;
+    padding-bottom: 50px;
+}
+
+.egg-container .search_results, .egg-container .data_results{
+    max-height: 600px;
+    overflow-y:scroll;
+    padding-right: 20px;
+    cursor: pointer;    
+}
+
+.egg-container .search_results a {
+    cursor: pointer;
+}
+
+.egg-container a {
+    cursor: pointer;
+}
+
+.egg-container .added_data:hover{
+    background-color: #f5f5f5;
+}
+
+.egg-container .search_results_row{
+    cursor: pointer !important;
+    padding-bottom: 1px;
+}
+
+.egg-container .search_results_row:hover {
+    background: #f5f5f5;
+}
+
+.cegg-wrap {
+    position:relative;
+}
+
+.cegg-maincol {
+    margin-right: 260px;
+}
+.cegg-rightcol {
+    position: absolute;
+    width: 250px;
+    right: 0;
+    top: 0px;
+    z-index: 99999;
+}
+
+@media (max-width:600px) {
+    .cegg-leftcol {margin: 0 0 20px 0}
+    .cegg-maincol {width: 100%; position:static}
+}
+
+.cegg-box {
+    border:1px solid #30BFAB;
+    background-color:#fff;
+    padding:10px;
+    max-width:200px;
+    text-align: center;
+}
+.cegg-box h2{ text-align: center; color: #30BFAB !important; margin-top: 10px}
+.cegg-box ul li {
+    /*padding-left: 15px;*/
+}
+
+.cegg_required{
+    color: #e32;
+}
+
+.cegg-pro-label
+{
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 45%;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+    background-color: #337ab7;
+    position: relative;
+    top: -15px;    
+}
+
+@media (max-width: 768px) {
+    .cegg-maincol{ margin: 0}
+    .cegg-rightcol{ position: static;    width: auto;}
+    .cegg-box{ max-width: 1000px}
+}
+.cegg-imgcenter{ display: block; margin: 0 auto; max-width: 100%}
+.button-cegg-banner{
+    background: #f18400;
+    background: -moz-linear-gradient(top,  #f18400 0%, #e66600 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f18400), color-stop(100%,#e66600));
+    background: -webkit-linear-gradient(top,  #f18400 0%,#e66600 100%);
+    background: -o-linear-gradient(top,  #f18400 0%,#e66600 100%);
+    background: -ms-linear-gradient(top,  #f18400 0%,#e66600 100%);
+    background: linear-gradient(to bottom,  #f18400 0%,#e66600 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f18400', endColorstr='#e66600',GradientType=0 );
+    color: #fff !important; text-shadow: 0 0 2px #e66600; display: inline-block;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 0;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+.button-cegg-banner:hover{ color: #fff !important; opacity: 0.9}
+
+.cegg-checkboxgroup{
+    width: 100%;
+    overflow:auto;
+    padding: 10px 0 0 0;
+    margin: 0px;
+}
+.cegg-checkboxgroup .cegg-checkbox{
+    width:170px;
+    float:left;
+    padding: 3px;
+    margin: 0px;
+}  
+
+.egg-container .ui-sortable-helper {
+    cursor: move;
+}
+
+.egg-prefill-log{
+    overflow: auto;
+    padding: 10px 0px;
+}
+
+.egg-container .features_wrap{
+    padding: 27px 0px;
+    border: 1px solid #e3e3e3;
+    margin: 20px 0px;
+    background: #f6f6f6;
+
+}
+
+.egg-container .features_wrap .col-md-12{
+    margin-bottom:8px
+}
+.egg-container .added_data:hover .features_wrap{
+    background-color:#fff
+}
+
+.egg-container .shortcode-input{
+    cursor:  pointer;
+}
+
+.cegg-warning {
+    display: inline-block;
+    line-height: 19px;
+    padding: 11px 15px;
+    font-size: 14px;
+    text-align: left;
+    margin: 25px 20px 0 2px;
+    background-color: #fff;
+    border-left: 4px solid red;
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+}

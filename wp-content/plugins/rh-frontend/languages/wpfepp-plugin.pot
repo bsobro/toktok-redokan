@@ -1,0 +1,1886 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: RH Frontend\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-18 19:50+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Sizam themes <sizamtheme@gmail.com>\n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"X-Generator: Loco - https://localise.biz/\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n_noop:1,2;_x\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .."
+
+#: admin/class-wpfepp-admin-messages.php:54
+msgid ""
+"Thank you for installing the latest version of Frontend Publishing Pro "
+"(Rehub addition)."
+msgstr ""
+
+#: admin/class-wpfepp-admin-messages.php:55
+#: admin/class-wpfepp-form-manager.php:126
+msgid "Forms"
+msgstr ""
+
+#: admin/class-wpfepp-admin-messages.php:56
+#: admin/class-wpfepp-form-manager.php:53
+#: admin/class-wpfepp-plugin-settings.php:99 admin/partials/settings.php:9
+msgid "Settings"
+msgstr ""
+
+#: admin/class-wpfepp-admin-messages.php:57
+msgid "List of important theme meta fields"
+msgstr ""
+
+#: admin/class-wpfepp-admin-messages.php:58
+msgid "Dismiss This Message"
+msgstr ""
+
+#: admin/class-wpfepp-form-manager.php:52
+msgid "Fields"
+msgstr ""
+
+#: admin/class-wpfepp-form-manager.php:54
+msgid "Emails"
+msgstr ""
+
+#: admin/class-wpfepp-form-manager.php:55
+msgid "Extended"
+msgstr ""
+
+#: admin/class-wpfepp-form-manager.php:87
+msgid "Thank you for your contribution"
+msgstr ""
+
+#: admin/class-wpfepp-form-manager.php:88
+#, php-format
+msgid ""
+"Hi %s,\n"
+"\n"
+"Thank you for submitting the article '%s' at our website %s. It has been "
+"added to the queue and will be published shortly.\n"
+"\n"
+"Regards,\n"
+"%s\n"
+"%s"
+msgstr ""
+
+#: admin/class-wpfepp-form-manager.php:89
+#, php-format
+msgid "A new article has been submitted on your website %s"
+msgstr ""
+
+#: admin/class-wpfepp-form-manager.php:90
+#, php-format
+msgid "An article has been updated on your website %s"
+msgstr ""
+
+#: admin/class-wpfepp-form-manager.php:91
+#, php-format
+msgid ""
+"Hi %s,\n"
+"\n"
+"A new article has been added to your website. You can view and edit all your "
+"articles here:\n"
+"\n"
+"%s\n"
+"\n"
+"Regards,\n"
+"Your web server"
+msgstr ""
+
+#: admin/class-wpfepp-form-manager.php:92
+#, php-format
+msgid ""
+"Hi %s,\n"
+"\n"
+"An article has been edited and is awaiting moderation on your website. You "
+"can view and edit all your articles here:\n"
+"\n"
+"%s\n"
+"\n"
+"Regards,\n"
+"Your web server"
+msgstr ""
+
+#: admin/class-wpfepp-form-manager.php:119
+msgid "RH Frontend Publishing Pro"
+msgstr ""
+
+#: admin/class-wpfepp-form-manager.php:120
+msgid "RH Frontend"
+msgstr ""
+
+#: admin/class-wpfepp-form-manager.php:126 admin/partials/forms.php:2
+msgid "Frontend Publishing Forms"
+msgstr ""
+
+#: admin/class-wpfepp-form-manager.php:139
+msgid "Are you sure?"
+msgstr ""
+
+#: admin/class-wpfepp-form-manager.php:164
+#: admin/class-wpfepp-form-manager.php:164
+msgid "Title"
+msgstr ""
+
+#: admin/class-wpfepp-form-manager.php:165
+#: admin/class-wpfepp-form-manager.php:165
+msgid "Content"
+msgstr ""
+
+#: admin/class-wpfepp-form-manager.php:166
+#: admin/class-wpfepp-form-manager.php:166
+msgid "Excerpt"
+msgstr ""
+
+#: admin/class-wpfepp-form-manager.php:167
+#: admin/class-wpfepp-form-manager.php:167
+msgid "Thumbnail"
+msgstr ""
+
+#: admin/class-wpfepp-form-manager.php:168
+#: admin/class-wpfepp-form-manager.php:168
+msgid "Formats"
+msgstr ""
+
+#: admin/class-wpfepp-form-manager.php:171
+#: admin/class-wpfepp-form-manager.php:171
+msgid "SKU"
+msgstr ""
+
+#: admin/class-wpfepp-form-manager.php:172
+#: admin/class-wpfepp-form-manager.php:172
+msgid "Regular Price"
+msgstr ""
+
+#: admin/class-wpfepp-form-manager.php:173
+#: admin/class-wpfepp-form-manager.php:173
+msgid "Sale Price"
+msgstr ""
+
+#: admin/class-wpfepp-form-manager.php:174
+msgid "Product Options"
+msgstr ""
+
+#: admin/class-wpfepp-form-manager.php:225
+#: admin/class-wpfepp-tab-form-fields.php:52
+msgid "You missed a required item."
+msgstr ""
+
+#: admin/class-wpfepp-form-manager.php:230
+msgid "Security check failed!"
+msgstr ""
+
+#: admin/class-wpfepp-form-manager.php:237
+msgid ""
+"You can only import items from a form which has the same post type as the "
+"one selected for this form."
+msgstr ""
+
+#: admin/class-wpfepp-form-manager.php:284
+msgid "Form(s) deleted successfully!"
+msgstr ""
+
+#: admin/class-wpfepp-form-manager.php:292
+msgid "The form has been updated successfully!"
+msgstr ""
+
+#: admin/class-wpfepp-form-manager.php:342
+#: admin/class-wpfepp-tab-form-fields.php:236
+#: admin/class-wpfepp-tab-form-fields.php:428
+msgid "None"
+msgstr ""
+
+#: admin/class-wpfepp-list-table.php:73
+#: admin/class-wpfepp-tab-settings-list.php:77
+msgid "Edit"
+msgstr ""
+
+#: admin/class-wpfepp-list-table.php:74 admin/class-wpfepp-list-table.php:118
+#: admin/class-wpfepp-tab-settings-list.php:77 includes/partials/form.php:103
+#: includes/partials/html-product-download.php:5
+msgid "Delete"
+msgstr ""
+
+#: admin/class-wpfepp-list-table.php:103
+msgid "ID"
+msgstr ""
+
+#: admin/class-wpfepp-list-table.php:104
+msgid "Name"
+msgstr ""
+
+#: admin/class-wpfepp-list-table.php:105 admin/partials/forms.php:22
+msgid "Post Type"
+msgstr ""
+
+#: admin/class-wpfepp-list-table.php:106 admin/partials/forms.php:17
+msgid "Description"
+msgstr ""
+
+#: admin/class-wpfepp-plugin-settings.php:55
+msgid "Media"
+msgstr ""
+
+#: admin/class-wpfepp-plugin-settings.php:56
+msgid "Post List"
+msgstr ""
+
+#: admin/class-wpfepp-plugin-settings.php:57
+msgid "Data"
+msgstr ""
+
+#: admin/class-wpfepp-plugin-settings.php:58
+msgid "Errors"
+msgstr ""
+
+#: admin/class-wpfepp-plugin-settings.php:59
+#: admin/class-wpfepp-tab-form-fields.php:135
+msgid "Email"
+msgstr ""
+
+#: admin/class-wpfepp-plugin-settings.php:60
+msgid "CopyScape"
+msgstr ""
+
+#: admin/class-wpfepp-plugin-settings.php:61
+msgid "ReCaptcha"
+msgstr ""
+
+#: admin/class-wpfepp-plugin-settings.php:62
+msgid "Payment"
+msgstr ""
+
+#: admin/class-wpfepp-plugin-settings.php:99
+#: admin/class-wpfepp-plugin-settings.php:108
+msgid "Frontend Publishing Settings"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-emails.php:74
+msgid "User Email Subject"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-emails.php:84
+msgid "User Email Content"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-emails.php:94
+msgid "Admin Email Subject (created)"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-emails.php:104
+msgid "Admin Email Content (created)"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-emails.php:114
+msgid "Admin Email Subject (updated)"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-emails.php:124
+msgid "Admin Email Content (updated)"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-emails.php:138
+msgid "Save Changes"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-emails.php:145
+msgid ""
+"You can enable or disable the notification emails in the settings tab of "
+"this form. The sender name, sender address and email format can be modified"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-emails.php:145
+#: admin/class-wpfepp-tab-settings-copyscape.php:62
+#: admin/class-wpfepp-tab-settings-recaptcha.php:51
+#: admin/class-wpfepp-tab-settings-recaptcha.php:62
+msgid "here"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-extended.php:93
+msgid "Limit post submit for form"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-extended.php:96
+msgid "Limit number"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-extended.php:99
+msgid ""
+"If you set this field, user will have ability to post only this number of "
+"posts from this form. 0 is unlimited"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-extended.php:106
+msgid "Add message which user will see after reach the limits"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-extended.php:109
+msgid "Shortcodes are also allowed"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-extended.php:116
+msgid "Redirect after reach limit"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-extended.php:119
+msgid ""
+"Use this field to add link where you want to redirect user who reached limit."
+" Previous field will not work if you set redirect link"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-extended.php:127
+msgid "Add message which user will see before reach the limit"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-extended.php:130
+#, php-format
+msgid ""
+"%%count%% will be replaced by number of available limit. Example: You have "
+"%%count%% available submissions"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-extended.php:136
+msgid "Google Map settings"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-extended.php:139
+msgid "Location Icon finder"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-extended.php:142
+msgid ""
+"When checked the user will be able to detect its location automatically. "
+"Function works only with HTTPS."
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-extended.php:148
+msgid "Display Map"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-extended.php:151
+msgid ""
+"When checked there will be a small Google Map positioned beneath the "
+"location field."
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-extended.php:157
+msgid "Placeholder Address"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-extended.php:160
+msgid "Set a placeholder to the address field."
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-extended.php:167
+msgid "Default Location"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-extended.php:170
+msgid "The start location if the map is enabled"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-extended.php:177
+msgid "Google Map API key"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-extended.php:180
+msgid ""
+"To show a map in the form you need to obtain your Goole API key. <a "
+"href=\"//docs.gravitygeolocation.com/article/101-create-google-map-api-key\" "
+"target=\"_blank\">Learn how.</a>."
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-extended.php:187
+msgid "Country Code"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-extended.php:190
+msgid ""
+"Enter the default country code. <a href=\"https://wikipedia."
+"org/wiki/ISO_3166-1\" target=\"blank\">List of country codes</a>."
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-extended.php:197
+msgid "Language Code"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-extended.php:200
+msgid ""
+"Set the language to be used with Google Places address auto-complete. <a "
+"href=\"https://wikipedia.org/wiki/List_of_ISO_639-1_codes\" target=\"blank\">"
+"List of language codes</a>."
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-extended.php:207
+msgid "Payment Settings"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-extended.php:215
+#: admin/class-wpfepp-tab-form-settings.php:200
+#: admin/class-wpfepp-tab-settings-copyscape.php:105
+#: admin/class-wpfepp-tab-settings-data.php:68
+#: admin/class-wpfepp-tab-settings-email.php:93
+#: admin/class-wpfepp-tab-settings-errors.php:190
+#: admin/class-wpfepp-tab-settings-list.php:93
+#: admin/class-wpfepp-tab-settings-media.php:118
+#: admin/class-wpfepp-tab-settings-payment.php:68
+#: admin/class-wpfepp-tab-settings-recaptcha.php:93
+msgid "Save Settings"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-extended.php:241
+#: includes/class-wpfepp-form.php:1040
+msgid "Lock Pin Location"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-extended.php:242
+#: includes/class-wpfepp-form.php:1041
+msgid "Unlock Pin Location"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-extended.php:250
+#, php-format
+msgid ""
+"To use paid sumbission for posting, you must have installed plugin "
+"WooCommerce. You must enable payment option in RH Frontend PRO - Settings - "
+"Payment. <br />After setup payment packages, use shortode<br /><br /><code>"
+"[wpfepp_submission_form form=\"%s\" paid=\"1\"]</code><br /><br />to add "
+"payment option to form."
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:57
+msgid "The meta key is invalid."
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:112
+#: admin/class-wpfepp-tab-form-fields.php:462
+msgid "Enabled"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:115
+#: admin/class-wpfepp-tab-form-fields.php:463
+msgid "Required"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:119
+#: admin/class-wpfepp-tab-form-fields.php:514
+msgid "Label"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:124
+#: admin/class-wpfepp-tab-form-fields.php:352
+msgid "Form Element"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:130
+msgid "Text field"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:131
+#: admin/class-wpfepp-tab-form-fields.php:357
+msgid "Textarea"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:132
+msgid "Checkbox"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:133 includes/partials/form.php:174
+#: includes/partials/form.php:219 includes/partials/form.php:236
+#: includes/partials/form.php:245
+msgid "Select"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:134
+msgid "Radio buttons"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:136
+msgid "URL field"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:137
+msgid "File upload"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:138
+msgid "Date field"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:139
+msgid "Time field"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:140
+msgid "Numeric field"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:141
+msgid "Address input"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:142
+msgid "Image galery"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:146
+msgid "Step Count"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:151
+msgid ""
+"The step attribute specifies the legal number interval that you want the "
+"user to enter."
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:155
+msgid "Min value"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:160
+msgid "Minimum number that you want the user to enter."
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:164
+msgid "Max value"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:169
+msgid "Maximum number that you want the user to enter."
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:173
+msgid "Choices"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:178
+msgid ""
+"The choices for select and radio elements. One per line. Key value pairs can "
+"be added like this: key|Value"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:184
+msgid "Field Width"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:189
+msgid "Width in pixels or percentage. (e.g. 300px)"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:194
+msgid "Parser Image"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:199
+msgid ""
+"You can enable auto parsing image from external URL in this checkbox. You "
+"must have a custom field with key \"rehub_offer_product_url\" in the form "
+"which will be used for external URL."
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:203
+msgid "Min. Width"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:208
+msgid "Minimal size (width / height) of images for parsing. Default value: 500"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:213
+msgid "Min Words"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:216
+msgid "Max Words"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:221
+msgid "Min Symbols"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:224
+msgid "Max Symbols"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:230
+#: admin/class-wpfepp-tab-form-fields.php:422
+msgid "Strip Tags"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:235
+#: admin/class-wpfepp-tab-form-fields.php:427
+msgid ""
+"These HTML tags will be removed before the post is inserted into the "
+"database."
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:236
+#: admin/class-wpfepp-tab-form-fields.php:428
+msgid "Unsafe"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:236
+#: admin/class-wpfepp-tab-form-fields.php:428
+msgid "All"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:243 includes/partials/form.php:94
+msgid "Product Gallery"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:248
+msgid "Check this to allow Product Gallery in products."
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:252
+msgid "Virtual Product"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:257
+msgid "Check this to set up Product type as Virtual."
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:261
+msgid "External Product"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:266
+msgid "Check this to set up Product type as External."
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:270
+msgid "Downloadable Product"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:275
+msgid "Check this to set up Product type as Downloadable."
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:279 includes/partials/form.php:153
+msgid "Download Type"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:284
+msgid "Check this to display Download Type option for the schema."
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:291
+msgid "Multiple"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:296
+msgid "Enable it if you need the Select field with multiple choices."
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:300
+msgid "Prefix"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:305
+msgid ""
+"Some text or symbol which will be added at the start of the Meta value. To "
+"set break space use <code>&amp;nbsp;</code>"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:309
+msgid "Postfix"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:314
+msgid ""
+"Some text or symbol which will be added at the end of the Meta value. To set "
+"break space use <code>&amp;nbsp;</code>"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:318
+msgid "Data type"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:323
+msgid "Attachment URL"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:323
+msgid "Attachment ID"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:324
+msgid "Select how to save data from this field."
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:328
+msgid "Unix timestamp"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:333
+msgid ""
+"Some meta fields need it. E.g. \"_sale_price_dates_from\" and "
+"\"_sale_price_dates_to\""
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:340
+msgid "Display Media Button"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:345
+msgid ""
+"The media button will show up only if the user has permission to upload "
+"media."
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:349
+msgid "Max Links"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:357
+msgid "Rich Text Editor"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:365
+msgid "Nofollow All Links"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:371
+msgid "Allow Multiple Selections"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:374
+msgid "Hide Empty"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:377
+msgid "Exclude"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:382
+msgid "A comma-seperated list of term IDs that you want to exclude."
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:387
+msgid "Include"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:392
+msgid "A comma-seperated list of term IDs that you want to include."
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:400
+msgid "Min Count"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:405
+msgid "Minimum number of terms that you want the user to enter."
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:410
+msgid "Max Count"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:415
+msgid "Maximum number of terms that you want the user to enter."
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:434
+msgid "Instructions"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:445
+msgid "Fallback Value"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:464
+msgid "Hidden"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:467
+msgid "Meta Field:"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:470
+msgid "Default value:"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:506
+msgid "Update Form"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:512
+msgid "Custom Fields"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:516
+msgid "Meta Key"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:519
+msgid "Add field"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:524
+msgid "REhub Theme Fields"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:526
+msgid "Editor choice (val: 0-3)"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:527
+msgid "Image gallery"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:528
+msgid "Map meta field"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:529
+msgid "Mask coupon code (val: 0-1)"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:530
+msgid "Offer product Coupon code"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:531
+msgid "Offer product Coupon date"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:532
+msgid "Offer product Description"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:533
+msgid "Offer product Image URL"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:534
+msgid "Offer product Logo URL"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:535
+msgid "Offer product Name"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:536
+msgid "Offer product Old price"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:537
+msgid "Offer product Price"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:538
+msgid "Offer product URL"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:539
+msgid "Post video"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:541
+msgid "MDFT filter category"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:544
+msgid "WC product Coupon code"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:545
+msgid "WC product Coupon date"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:546
+msgid "WC product Coupon URL"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-fields.php:547
+msgid "WC Coupon Image URL"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-settings.php:73
+msgid "Disable restrictions for"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-settings.php:76
+msgid "These roles will have unrestricted access to the form."
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-settings.php:85
+msgid "Instantly publish posts by"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-settings.php:88
+msgid "The post submitted by these roles will be published instantly."
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-settings.php:96
+msgid "Width"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-settings.php:99
+msgid "Maximum form width."
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-settings.php:107
+msgid "Redirect URL"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-settings.php:110
+msgid ""
+"The user will be redirected to this URL after successful submission. Leave "
+"this empty to disable redirection."
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-settings.php:118
+msgid "Button Color"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-settings.php:121
+msgid "Color of the submission button."
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-settings.php:124
+msgid "Blue"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-settings.php:124
+msgid "Green"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-settings.php:124
+msgid "Red"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-settings.php:124
+msgid "Brown"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-settings.php:130
+msgid "Allow users to save drafts"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-settings.php:141
+msgid "User Emails"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-settings.php:144
+msgid "Send thank you email to user on post submission?"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-settings.php:152
+msgid "Admin Email New"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-settings.php:155
+msgid "Send email to admin on post submission?"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-settings.php:163
+msgid "Admin Email Edit"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-settings.php:166
+msgid "Send email to admin on post updating?"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-settings.php:174
+msgid "Enable CopyScape"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-settings.php:177
+msgid ""
+"Enable CopyScape for this form. In order to use this feature you need to add "
+"your CopyScape keys in the plugin settings."
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-settings.php:185
+msgid "Enable Captcha"
+msgstr ""
+
+#: admin/class-wpfepp-tab-form-settings.php:188
+msgid ""
+"Enable captcha for this form. In order to use this feature you need to add "
+"your ReCaptcha keys in the plugin settings."
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-copyscape.php:47
+msgid "Username"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-copyscape.php:51
+msgid "Your copyscape username."
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-copyscape.php:59
+msgid "API Key"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-copyscape.php:62
+#, php-format
+msgid "Your copyscape API key. You can get this key %s."
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-copyscape.php:71
+msgid "Do not accept unoriginal submissions"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-copyscape.php:75
+msgid ""
+"If you set this option to true, a user will not be able to submit unoriginal "
+"content. A new CopyScape query will be done on each try. If you set this to "
+"false, the submission will be added to the pending queue and the copyscape "
+"status will be displayed in a new column (see next option)."
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-copyscape.php:83
+msgid "Add a CopyScape column for these post types"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-copyscape.php:87
+msgid "The new columns will appear in the admin area."
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-copyscape.php:113
+msgid "In this section you can manage your CopyScape API keys and settings."
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-data.php:47
+msgid "Delete All Data on Uninstallation"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-data.php:50
+msgid ""
+"If you want to permanently remove this plugin then you might want to set "
+"this to true."
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-email.php:47
+msgid "Sender Name"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-email.php:50
+msgid "This name will be used as the sender name in notification emails."
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-email.php:59
+msgid "Sender Address"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-email.php:62
+msgid "Emails will be sent from this address."
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-email.php:71
+msgid "Email Format"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-email.php:74
+msgid "In which format would you like to send the emails."
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-email.php:77
+msgid "Plain Text"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-email.php:77
+msgid "HTML"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-email.php:101
+msgid ""
+"These are the general email settings of the plugin. You can modify the "
+"actual content of the emails by editing your form."
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-errors.php:48
+msgid "Form Error"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-errors.php:51
+msgid "The main error shown when the user hits the submission button."
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-errors.php:59
+msgid "Required Field"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-errors.php:62
+msgid "The error shown when the user misses a required field."
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-errors.php:70
+msgid "Minimum Words"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-errors.php:73
+msgid ""
+"The error shown when the submission does not meet the minimum words "
+"requirement."
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-errors.php:81
+msgid "Maximum Words"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-errors.php:84
+msgid ""
+"The error shown when the submission does not meet the maximum words "
+"requirement."
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-errors.php:92
+msgid "Minimum Symbols"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-errors.php:95
+msgid ""
+"The error shown when the submission does not meet the minimum symbols "
+"requirement."
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-errors.php:103
+msgid "Maximum Symbols"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-errors.php:106
+msgid ""
+"The error shown when the submission does not meet the maximum symbols "
+"requirement."
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-errors.php:114
+msgid "Maximum Links"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-errors.php:117
+msgid ""
+"The error shown when the submission does not meet the maximum links "
+"requirement (used for non-hierarichal taxonomies like tags)."
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-errors.php:125
+msgid "Minimum Segments"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-errors.php:128
+msgid ""
+"The error shown when the submission does not meet the minimum segments "
+"requirement (used for non-hierarichal taxonomies like tags)."
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-errors.php:136
+msgid "Maximum Segments"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-errors.php:139
+msgid ""
+"The error shown when the submission does not meet the maximum segments "
+"requirement (used for non-hierarichal taxonomies like tags)."
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-errors.php:147
+msgid "Invalid Email"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-errors.php:150
+msgid "The error shown when the user enters an invalid email."
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-errors.php:158
+msgid "Invalid URL"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-errors.php:161
+msgid "The error shown when the user enters an invalid URL."
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-errors.php:169
+msgid "CopyScape Error"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-errors.php:172
+msgid ""
+"The error shown when the content does not pass CopyScape (if you choose not "
+"to accept unoriginal submissions in the CopyScape tab)."
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-errors.php:198
+msgid "Here you can customize the errors displayed by the plugin."
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-list.php:48
+msgid "Post List Page Length"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-list.php:51
+msgid "Number of items to display on a single page of the post list table."
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-list.php:59
+msgid "Post List Tabs"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-list.php:62
+msgid "Which tabs would you like to display in the post list table"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-list.php:65
+#: includes/partials/post-list.php:30
+msgid "Live"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-list.php:65
+#: includes/partials/post-list.php:31
+msgid "Pending"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-list.php:65
+#: includes/partials/post-list.php:32
+msgid "Draft"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-list.php:71
+msgid "Post List Columns"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-list.php:74
+msgid "Which columns would you like to display in the post list table"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-list.php:77
+msgid "Permalink"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-list.php:101
+#, php-format
+msgid "These settings are for the list tables generated by %s shortcode."
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-media.php:47
+msgid "Max Upload Size"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-media.php:50
+msgid "Maximum upload size in kilobytes."
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-media.php:59
+msgid "Show users only their media items"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-media.php:62
+msgid "All the other media items will be hidden."
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-media.php:71
+msgid "Allowed Media Types"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-media.php:74
+msgid ""
+"By default WordPress supports a wide range of media formats. You can see the "
+"full list <a target=\"_blank\" href=\"http://codex.wordpress."
+"org/Function_Reference/get_allowed_mime_types#Default_allowed_mime_types\">"
+"here</a>."
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-media.php:77
+msgid "Image"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-media.php:77
+msgid "Video"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-media.php:77
+msgid "Text"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-media.php:77
+msgid "Audio"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-media.php:77
+msgid "MS Office"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-media.php:77
+msgid "OpenOffice"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-media.php:77
+msgid "WordPerfect"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-media.php:77
+msgid "Misc"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-media.php:84
+msgid "Exempt Roles"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-media.php:87
+msgid "These roles will not be affected by these upload restrictions."
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-media.php:97
+msgid "Give upload capability to Subscribers & Contributors"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-media.php:100
+msgid ""
+"By default WordPress does not allow contributors and subscribers to upload "
+"media items."
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-media.php:126
+msgid ""
+"Please note that these media settings are global. In other words they will "
+"affect your WordPress back-end as well."
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-payment.php:47
+msgid "Support Payment Submit in Woocommerce"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-payment.php:50
+msgid "When checked you can add to WooCommerce a paid posting package."
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-payment.php:76
+msgid ""
+"To use paid sumbission for posting, you must have installed plugin "
+"WooCommerce. <br>Then enable function below. You will get new product post "
+"type inside Woocommerce - <em>Paid submit package</em>.<br>Create product "
+"with this product type and configure package details in <em>Package "
+"Option<em>.<br>Also, I recommend to disable Catalog visibility of this "
+"product in Publish section and make date of publishing in past. <br>Don't "
+"forget to add a correct Form ID where you want to have paid submission. <br>"
+"Then, you can use shortcode <code>[wpfepp_submission_form form=\"1\" "
+"paid=\"1\"]</code> to add payment option to form."
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-recaptcha.php:47
+msgid "Site Key"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-recaptcha.php:51
+#, php-format
+msgid "Your ReCaptcha site key. You can get this key %s."
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-recaptcha.php:59
+msgid "Secret"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-recaptcha.php:62
+#, php-format
+msgid "Your ReCaptcha secret. You can get it %s."
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-recaptcha.php:71
+msgid "Theme"
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-recaptcha.php:75
+msgid "Color scheme of the ReCaptcha widget."
+msgstr ""
+
+#: admin/class-wpfepp-tab-settings-recaptcha.php:101
+msgid "In this section you can manage your ReCaptcha API keys and settings."
+msgstr ""
+
+#: includes/class-frontend-publishing-pro.php:222
+msgid "Choose Image"
+msgstr ""
+
+#: includes/class-frontend-publishing-pro.php:223
+msgid "Choose File"
+msgstr ""
+
+#: includes/class-frontend-publishing-pro.php:224
+msgid "Choose an image to make it as the Post Thumbnail."
+msgstr ""
+
+#: includes/class-frontend-publishing-pro.php:225
+msgid "Or upload your own one in the Thumbnail section."
+msgstr ""
+
+#: includes/class-frontend-publishing-pro.php:226
+msgid "There are no suitable images to retrieve."
+msgstr ""
+
+#: includes/class-frontend-publishing-pro.php:227
+msgid "... parsing images ..."
+msgstr ""
+
+#: includes/class-frontend-publishing-pro.php:376
+#, php-format
+msgid "Files larger than %s kilobytes are not allowed."
+msgstr ""
+
+#: includes/class-update-checker.php:754
+msgid "Check for updates"
+msgstr ""
+
+#: includes/class-update-checker.php:798
+msgid "This plugin is up to date."
+msgstr ""
+
+#: includes/class-update-checker.php:800
+msgid "A new version of this plugin is available."
+msgstr ""
+
+#: includes/class-update-checker.php:802
+#, php-format
+msgid "Unknown update checker status \"%s\""
+msgstr ""
+
+#: includes/class-wpfepp-captcha.php:23
+msgid ""
+"You need to specify your ReCaptcha keys in the plugin settings for this "
+"captcha to work!"
+msgstr ""
+
+#: includes/class-wpfepp-copyscape.php:48
+msgid "You need to specify your CopyScape API keys in the plugin settings"
+msgstr ""
+
+#: includes/class-wpfepp-email-manager.php:110
+msgid "Admin"
+msgstr ""
+
+#: includes/class-wpfepp-form.php:149 includes/class-wpfepp-post-list.php:91
+msgid "No form with the specified ID was found"
+msgstr ""
+
+#: includes/class-wpfepp-form.php:154 includes/class-wpfepp-post-list.php:96
+#, php-format
+msgid "You need to %s first."
+msgstr ""
+
+#: includes/class-wpfepp-form.php:154 includes/class-wpfepp-post-list.php:96
+msgid "login"
+msgstr ""
+
+#: includes/class-wpfepp-form.php:158 includes/class-wpfepp-post-list.php:100
+msgid "Woocommerce plugin is deactivated or not installed."
+msgstr ""
+
+#: includes/class-wpfepp-form.php:191
+msgid "You reached the limit for submit to this form"
+msgstr ""
+
+#: includes/class-wpfepp-form.php:201
+msgid "You will be redirected now..."
+msgstr ""
+
+#: includes/class-wpfepp-form.php:206 includes/class-wpfepp-form.php:213
+#, php-format
+msgid "You have %%count%% available submissions"
+msgstr ""
+
+#: includes/class-wpfepp-form.php:260
+msgid "Drafts are not allowed!"
+msgstr ""
+
+#: includes/class-wpfepp-form.php:269 includes/class-wpfepp-form.php:343
+msgid "Captcha response incorrect"
+msgstr ""
+
+#: includes/class-wpfepp-form.php:283 includes/class-wpfepp-form.php:392
+msgid "Preview"
+msgstr ""
+
+#: includes/class-wpfepp-form.php:285
+#, php-format
+msgid "The post has been saved successfully! %s"
+msgstr ""
+
+#: includes/class-wpfepp-form.php:320
+msgid "This form no longer exists."
+msgstr ""
+
+#: includes/class-wpfepp-form.php:325
+msgid "You failed the security check."
+msgstr ""
+
+#: includes/class-wpfepp-form.php:329
+msgid "You do not have permission to modify this post."
+msgstr ""
+
+#: includes/class-wpfepp-form.php:357
+msgid "ERROR: "
+msgstr ""
+
+#: includes/class-wpfepp-form.php:361
+msgid "passed"
+msgstr ""
+
+#: includes/class-wpfepp-form.php:361
+msgid "failed"
+msgstr ""
+
+#: includes/class-wpfepp-form.php:393
+msgid "View"
+msgstr ""
+
+#: includes/class-wpfepp-form.php:412
+#, php-format
+msgid "The post has been created successfully. %s %s %s"
+msgstr ""
+
+#: includes/class-wpfepp-form.php:415
+#, php-format
+msgid "The post has been updated successfully. %s %s %s"
+msgstr ""
+
+#: includes/class-wpfepp-form.php:420
+msgid "Continue Editing"
+msgstr ""
+
+#: includes/class-wpfepp-form.php:422
+msgid "Add new"
+msgstr ""
+
+#: includes/class-wpfepp-form.php:1142
+#, php-format
+msgid ""
+"The downloadable file %s cannot be used as it does not have an allowed file "
+"type. Allowed types include: %s"
+msgstr ""
+
+#: includes/class-wpfepp-form.php:1155
+#, php-format
+msgid ""
+"The downloadable file %s cannot be used as it does not exist on the server."
+msgstr ""
+
+#: includes/class-wpfepp-post-list.php:134
+msgid "Sorry! You failed the security check"
+msgstr ""
+
+#: includes/class-wpfepp-post-list.php:138
+msgid "You don't have permission to delete this post"
+msgstr ""
+
+#: includes/class-wpfepp-post-list.php:158
+msgid "The article could not be deleted"
+msgstr ""
+
+#: includes/class-wpfepp-post-list.php:163
+msgid "The article has been deleted successfully!"
+msgstr ""
+
+#: includes/class-wpfepp-shortcode-manager.php:67
+msgid ""
+"<p>You must have one of post submit package before submission. After "
+"purchase, please, login to get access to form. You can buy package below:<p>"
+msgstr ""
+
+#: includes/class-wpfepp-shortcode-manager.php:142
+msgid "Get package"
+msgstr ""
+
+#: includes/class-wpfepp-shortcode-manager.php:154
+msgid ""
+"<p>Currently, there is no packages, if you are admin, please, add payment "
+"packages. Check instructions in Settings - Payment.<p>"
+msgstr ""
+
+#: includes/class-wpfepp-shortcode-manager.php:159
+msgid "No limit"
+msgstr ""
+
+#: includes/class-wpfepp-shortcode-manager.php:160
+#, php-format
+msgid "<p>You have %d posts left. Your package expires: %s.</p>"
+msgstr ""
+
+#: includes/class-wpfepp-shortcode-manager.php:167
+msgid ""
+"Please check Payment Settings of the plugin to enable paid submit function."
+msgstr ""
+
+#: includes/paid-functions.php:17
+msgid "Paid Submit Package"
+msgstr ""
+
+#: includes/paid-functions.php:62
+msgid "Package Options"
+msgstr ""
+
+#: includes/paid-functions.php:82 includes/paid-functions.php:291
+msgid "Number of posts"
+msgstr ""
+
+#: includes/paid-functions.php:84
+msgid "Enter the number of posts that owns the package."
+msgstr ""
+
+#: includes/paid-functions.php:94 includes/paid-functions.php:295
+msgid "Period of days"
+msgstr ""
+
+#: includes/paid-functions.php:96
+msgid "E.g. 30, 45..."
+msgstr ""
+
+#: includes/paid-functions.php:106
+msgid "Paid Form ID"
+msgstr ""
+
+#: includes/paid-functions.php:108
+msgid "Enter the form ID that owns the package."
+msgstr ""
+
+#: includes/paid-functions.php:118 includes/paid-functions.php:299
+msgid "Posting Page URL"
+msgstr ""
+
+#: includes/paid-functions.php:121
+msgid ""
+"Enter the page URL where user can post articles / products after purchase."
+msgstr ""
+
+#: includes/paid-functions.php:287
+msgid "Purchased post package"
+msgstr ""
+
+#: admin/partials/forms.php:9
+msgid "Create a New Form"
+msgstr ""
+
+#: admin/partials/forms.php:12
+msgid "Form Name"
+msgstr ""
+
+#: admin/partials/forms.php:14
+msgid "The name of this form"
+msgstr ""
+
+#: admin/partials/forms.php:19
+msgid "A tiny description explaining what this form does"
+msgstr ""
+
+#: admin/partials/forms.php:34
+msgid "The post type of this form"
+msgstr ""
+
+#: admin/partials/forms.php:37
+msgid "Import elements from"
+msgstr ""
+
+#: admin/partials/forms.php:40
+msgid ""
+"If you want to duplicate the fields, settings and emails of an existing form,"
+" specify it here. Otherwise defaults values will be used for everything."
+msgstr ""
+
+#: admin/partials/forms.php:47
+msgid "Create Form"
+msgstr ""
+
+#: admin/partials/settings.php:10
+msgid "Use this shortcode to include submit form on page"
+msgstr ""
+
+#: admin/partials/settings.php:12
+msgid ""
+"Use this shortcode to include full post list for author with edit, delete "
+"links. Delete 'show_all=0' if you want to show all posts of user (including "
+"posts submitted with another forms)"
+msgstr ""
+
+#: includes/partials/form.php:69
+msgid "Select Featured Image"
+msgstr ""
+
+#: includes/partials/form.php:74 includes/partials/form.php:106
+#: includes/partials/form.php:255
+msgid "Unfortunately, you do not have enough rights to upload images."
+msgstr ""
+
+#: includes/partials/form.php:103
+msgid "Add images to Product gallery"
+msgstr ""
+
+#: includes/partials/form.php:103
+msgid "Add to gallery"
+msgstr ""
+
+#: includes/partials/form.php:103
+msgid "Delete image"
+msgstr ""
+
+#: includes/partials/form.php:103
+msgid "Add images"
+msgstr ""
+
+#: includes/partials/form.php:115
+msgid "Product URL"
+msgstr ""
+
+#: includes/partials/form.php:117
+msgid "Enter the external URL to the product."
+msgstr ""
+
+#: includes/partials/form.php:119 includes/partials/html-product-download.php:3
+msgid "http://"
+msgstr ""
+
+#: includes/partials/form.php:124
+msgid "Downloadable Files"
+msgstr ""
+
+#: includes/partials/form.php:140
+msgid "Add File"
+msgstr ""
+
+#: includes/partials/form.php:144
+msgid "Download Limit"
+msgstr ""
+
+#: includes/partials/form.php:145
+msgid "Leave blank for unlimited re-downloads."
+msgstr ""
+
+#: includes/partials/form.php:147
+msgid "Unlimited"
+msgstr ""
+
+#: includes/partials/form.php:148
+msgid "Download Expiry"
+msgstr ""
+
+#: includes/partials/form.php:149
+msgid ""
+"Enter the number of days before a download link expires, or leave blank."
+msgstr ""
+
+#: includes/partials/form.php:151
+msgid "Never"
+msgstr ""
+
+#: includes/partials/form.php:154
+msgid ""
+"Choose a download type - this controls the <a href=\"http://schema.org/\">"
+"schema</a>."
+msgstr ""
+
+#: includes/partials/form.php:157
+msgid "Standard Product"
+msgstr ""
+
+#: includes/partials/form.php:158
+msgid "Application/Software"
+msgstr ""
+
+#: includes/partials/form.php:159
+msgid "Music"
+msgstr ""
+
+#: includes/partials/form.php:184
+msgid "Standard"
+msgstr ""
+
+#: includes/partials/form.php:236
+msgid "Select Item"
+msgstr ""
+
+#: includes/partials/form.php:240
+msgid "Select / Upload File"
+msgstr ""
+
+#: includes/partials/form.php:245
+msgid "Select Items"
+msgstr ""
+
+#: includes/partials/form.php:249
+msgid "Select Gallery Images"
+msgstr ""
+
+#: includes/partials/form.php:286
+msgid "Submit"
+msgstr ""
+
+#: includes/partials/form.php:288
+msgid "Save Draft"
+msgstr ""
+
+#: includes/partials/html-product-download.php:2
+msgid "File Name"
+msgstr ""
+
+#: includes/partials/html-product-download.php:4
+#: includes/partials/html-product-download.php:4
+msgid "Choose file"
+msgstr ""
+
+#: includes/partials/html-product-download.php:4
+msgid "Insert file URL"
+msgstr ""
+
+#: includes/partials/post-list.php:41
+msgid "live"
+msgstr ""
+
+#: includes/partials/post-list.php:44
+msgid "pending"
+msgstr ""
+
+#: includes/partials/post-list.php:47
+msgid "draft"
+msgstr ""
+
+#: includes/partials/post-list.php:53
+#, php-format
+msgid "You don't have any %s articles."
+msgstr ""
+
+#: includes/partials/post-list.php:66
+msgid "View Post"
+msgstr ""
+
+#: includes/partials/post-list.php:71
+msgid "Edit Post"
+msgstr ""
+
+#: includes/partials/post-list.php:77
+msgid "Delete Post"
+msgstr ""
+
+#: includes/partials/post-list.php:87
+msgid "Newer Posts"
+msgstr ""
+
+#: includes/partials/post-list.php:90
+msgid "Older Posts"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"Allow your users to create, edit and delete posts directly from the "
+"WordPress frontend area."
+msgstr ""
+
+#. URI of the plugin
+msgid "https://bitbucket.org/bizdirect/rehub-frontend-pro"
+msgstr ""
+
+#. Author of the plugin
+msgid "Wpsoul.com"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://wpsoul.com"
+msgstr ""
