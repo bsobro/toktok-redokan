@@ -23,13 +23,17 @@ class Dokan_Pro_Admin_Settings {
         add_action( 'dokan_admin_menu', array( $this, 'load_admin_settings' ), 10, 2 );
         add_action( 'dokan_admin_menu', array( $this, 'tools_modules_menu' ), 99 );
 
+        add_action( 'dokan-admin-routes', array( $this, 'vue_admin_routes' ) );
+
         add_action( 'admin_init', array( $this, 'tools_page_handler' ) );
         add_filter( 'dokan_settings_fields', array( $this, 'load_settings_sections_fields' ), 10 );
         add_action( 'dokan_render_admin_toolbar', array( $this, 'render_pro_admin_toolbar' ) );
-        add_action( 'init', array( $this, 'dokan_export_all_logs' ) );
+        add_action( 'init', array( $this, 'dokan_export_all_logs' ), 99 );
         add_action( 'admin_menu', array( $this, 'remove_add_on_menu' ), 80 );
         add_action( 'admin_notices', array( $this, 'show_whats_new_notice' ), 10 );
         add_action( 'wp_ajax_dokan-whats-new-notice', array( $this, 'dismiss_new_notice' ) );
+
+        add_action( 'admin_init', array( $this, 'handle_seller_bulk_action' ), 10 );
     }
 
     /**
@@ -43,8 +47,11 @@ class Dokan_Pro_Admin_Settings {
      * @return void
      */
     public function load_admin_settings( $capability, $menu_position ) {
+        global $submenu;
+
         $refund      = dokan_get_refund_count();
         $refund_text = __( 'Refunds', 'dokan' );
+        $slug        = 'dokan';
 
         remove_submenu_page( 'dokan', 'dokan-pro-features' );
 
@@ -54,14 +61,18 @@ class Dokan_Pro_Admin_Settings {
 
         add_submenu_page( 'dokan', __( 'Refund Requests', 'dokan' ), $refund_text, $capability, 'dokan-refund', array( $this, 'refund_request' ) );
 
-        $vendor_lisitng = add_submenu_page( 'dokan', __( 'Vendors Listing', 'dokan' ), __( 'Vendors', 'dokan' ), $capability, 'dokan-sellers', array( $this, 'seller_listing' ) );
+        if ( current_user_can( $capability ) ) {
+            $submenu[ $slug ][] = array( __( 'Vendors', 'dokan' ), $capability, 'admin.php?page=' . $slug . '#/vendors' );
+        }
+
+        // $vendor_lisitng = add_submenu_page( 'dokan', __( 'Vendors Listing', 'dokan' ), __( 'Vendors', 'dokan' ), $capability, 'dokan-sellers', array( $this, 'seller_listing' ) );
         $report         = add_submenu_page( 'dokan', __( 'Earning Reports', 'dokan' ), __( 'Reports', 'dokan' ), $capability, 'dokan-reports', array( $this, 'report_page' ) );
         $announcement   = add_submenu_page( 'dokan', __( 'Vendor Announcements', 'dokan' ), __( 'Announcements', 'dokan' ), $capability, 'edit.php?post_type=dokan_announcement' );
 
         add_submenu_page( null, __( 'Whats New', 'dokan' ), __( 'Whats New', 'dokan' ), $capability, 'whats-new-dokan', array( $this, 'whats_new_page' ) );
 
         add_action( $report, array( $this, 'common_scripts' ) );
-        add_action( $vendor_lisitng, array( $this, 'common_scripts' ) );
+        // add_action( $vendor_lisitng, array( $this, 'common_scripts' ) );
 
         add_action( 'admin_print_scripts-post-new.php', array( $this, 'announcement_scripts' ), 11 );
         add_action( 'admin_print_scripts-post.php', array( $this, 'announcement_scripts' ), 11 );
@@ -245,6 +256,30 @@ class Dokan_Pro_Admin_Settings {
     }
 
     /**
+     * Add vue routes for admin pages
+     *
+     * @param  array $routes
+     *
+     * @return array
+     */
+    public function vue_admin_routes( $routes ) {
+
+        $routes[] = array(
+            'path'      => '/vendors',
+            'name'      => 'Vendors',
+            'component' => 'Vendors'
+        );
+
+        $routes[] = array(
+            'path'      => '/vendors/:id',
+            'name'      => 'VendorSingle',
+            'component' => 'VendorSingle'
+        );
+
+        return $routes;
+    }
+
+    /**
     * Modules Scripts
     *
     * @since 1.0.0
@@ -290,6 +325,7 @@ class Dokan_Pro_Admin_Settings {
      * @return void
      */
     function seller_listing() {
+        // echo '<div class="wrap"><div id="vue-admin-app"></div></div>';
         include dirname( __FILE__ ) . '/sellers.php';
     }
 
@@ -557,6 +593,34 @@ class Dokan_Pro_Admin_Settings {
 
             update_option( 'dokan_whats_new_versions', $versions );
         }
+    }
+
+    /**
+     * Handle seller bulk action
+     *
+     * @since 2.8.0
+     *
+     * @return void
+     */
+    public function handle_seller_bulk_action() {
+        if ( ! isset( $_REQUEST['dokan-seller-bulk-action'] ) ) {
+            return;
+        }
+
+        if ( isset( $_REQUEST['action2'] ) && $_REQUEST['action2'] == 'delete' ) {
+
+            $users = $_REQUEST['users'];
+
+            if ( $users ) {
+                foreach ( $users as $key => $user ) {
+                    dokan()->vendor->get( intval( $user ) )->delete();
+                }
+            }
+        }
+
+        $redirect_url = add_query_arg( array( 'page' => 'dokan-sellers'), admin_url( 'admin.php' ) );
+        wp_redirect( $redirect_url );
+        exit();
     }
 }
 

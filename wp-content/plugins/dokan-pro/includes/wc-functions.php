@@ -971,7 +971,7 @@ function dokan_add_category_commission_field() {
     </div>
     <div class="form-field term-display-type-wrap">
         <label for="per_category_admin_commission"><?php _e( 'Admin Commission from this category', 'dokan' ); ?></label>
-        <input type="number" min="0" max="100" name="per_category_admin_commission">
+        <input type="number" min="0" name="per_category_admin_commission" step="any">
         <p class="description"><?php _e( 'If set, it will override global admin commission rate for this category', 'dokan' ); ?></p>
     </div>
     <?php
@@ -1003,7 +1003,7 @@ function dokan_edit_category_commission_field( $term ){
     <tr class="form-field">
         <th scope="row" valign="top"><label><?php _e( 'Admin commission', 'dokan' ); ?></label></th>
         <td>
-            <input type="number" min="0" max="100" name="per_category_admin_commission" value="<?php echo $commission ?>">
+            <input type="number" min="0" name="per_category_admin_commission" value="<?php echo $commission ?>" step="any">
             <p class="description"><?php _e( 'If set, it will override global admin commission rate for this category', 'dokan' ); ?></p>
         </td>
     </tr>
@@ -1060,14 +1060,6 @@ function dokan_custom_split_shipping_packages( $packages ) {
     }
 
     foreach ( $seller_pack as $seller_id => $pack ) {
-
-        $dokan_shipping = new Dokan_WC_Shipping();
-
-        // If seller store shipping is disabled then bell out from here
-        if ( $dokan_shipping->is_method_enabled() && ! Dokan_WC_Shipping::is_shipping_enabled_for_seller( $seller_id ) ) {
-            continue;
-        }
-
         $packages[] = array(
             'contents'        => $pack,
             'contents_cost'   => array_sum( wp_list_pluck( $pack, 'line_total' ) ),

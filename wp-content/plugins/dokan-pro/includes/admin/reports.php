@@ -200,14 +200,14 @@
         );
         $headers = apply_filters( 'dokan_earning_report_header', $headers );
         $statuses = wc_get_order_statuses();
-        
+
         $args = $_GET;
         $args['action'] = 'dokan-export';
         $export_url = add_query_arg( $args , admin_url( 'admin.php' ) );
         ?>
-    
+
         <?php do_action( 'dokan_prev_report_form', $_GET ); ?>
-    
+
         <a href="<?php echo $export_url ?>">
             <button class="button button-primary" style="float:right; margin: 10px;"><?php _e( ' Export CSV', 'dokan' ); ?></button>
         </a>
@@ -263,7 +263,7 @@
 
                     $result = array(
                         'order_id'     => '<a href="' . admin_url( 'post.php?action=edit&amp;post=' . $log->order_id ) . '">#' . $log->order_id . '</a>',
-                        'seller_id'    => '<a href="' . add_query_arg( array( 'seller_id' => $log->seller_id ) ) . '">' . $seller->display_name . '</a> (<a href="' . admin_url( 'user-edit.php?user_id=' . $log->seller_id ) . '">' . __( 'edit', 'dokan' ) . '</a>)',
+                        'seller_id'    => $seller ? '<a href="' . add_query_arg( array( 'seller_id' => $log->seller_id ) ) . '">' . $seller->display_name . '</a> (<a href="' . admin_url( 'user-edit.php?user_id=' . $log->seller_id ) . '">' . __( 'edit', 'dokan' ) . '</a>)' : __( 'Vendor not exist', 'dokan' ),
                         'order_total'  => $log->order_total,
                         'net_amount'   => $log->net_amount,
                         'commision'    => $log->order_total - $log->net_amount,

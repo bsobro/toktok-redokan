@@ -30,7 +30,7 @@ class Dokan_Stripe_Connect_Saved_Cards {
         $cards = get_user_meta( get_current_user_id(), '_stripe_customer_id', false );
 
         if ( $cards ) {
-            wc_get_template( 'saved-cards.php', array( 'cards' => $cards ), 'woocommerce-gateway-stripe/', WC_STRIPE_TEMPLATE_PATH );
+            wc_get_template( 'saved-cards.php', array( 'cards' => $cards ), 'woocommerce-gateway-stripe/', DOKAN_STRIPE_TEMPLATE_PATH );
         }
     }
 

@@ -153,6 +153,81 @@ jQuery( function( $ ) {
 
             $('.tips').tooltip();
 
+            // disable saving button for variable product
+            function dokan_disable_variable_saving_button( $element ) {
+                if ( Number( $element.closest('.variable_pricing').find('span.vendor-price').text() ) < 0 ) {
+                    $element.closest( '.variable_pricing' ).find( '.save-variation-changes' ).attr( 'disabled', 'disabled' );
+                    $element.closest( '.variable_pricing' ).find( '.dokan-product-less-price-alert' ).removeClass( 'dokan-hide' );
+                    $( 'input[type=submit]' ).attr( 'disabled', 'disabled' );
+                } else {
+                    $element.closest( '.variable_pricing' ).find( '.dokan-product-less-price-alert' ).addClass( 'dokan-hide' );
+                    $element.closest( '.variable_pricing' ).find( '.save-variation-changes' ).removeAttr( 'disabled' );
+                    $( 'input[type=submit]' ).removeAttr( 'disabled' );
+                }
+            }
+
+            // variable product price error checking
+            function dokan_show_variable_product_earning_suggestion() {
+                if ( dokan.commission_type == 'percentage' ) {
+                    if ( $('input.dokan-product-sales-price-variable' ).val() == '' ) {
+                        $( 'input.dokan-product-regular-price-variable').each( function( i, elm ) {
+                            var $element = $(elm);
+
+                            $element.closest('.content-half-part').find('span.vendor-price').html(
+                                parseFloat( accounting.formatNumber( ( ( $(this).closest( elm ).val() * dokan.vendor_percentage ) / 100 ), dokan.rounding_precision, '' ) )
+                                .toString()
+                                .replace( '.', dokan.mon_decimal_point )
+                            )
+
+                            dokan_disable_variable_saving_button( $element );
+                        } );
+                    } else {
+                        $( 'input.dokan-product-sales-price-variable').each( function( i, elm ) {
+                            var $element = $( elm );
+
+                            $element.closest('.variable_pricing').find('span.vendor-price').html(
+                                parseFloat( accounting.formatNumber( ( ( $(this).closest( elm ).val() * dokan.vendor_percentage ) / 100 ), dokan.rounding_precision, '' ) )
+                                .toString()
+                                .replace( '.', dokan.mon_decimal_point )
+                            )
+
+                            dokan_disable_variable_saving_button( $element );
+                        } );
+                    }
+                } else {
+                    if ( $('input.dokan-product-sales-price-variable' ).val() == '' ) {
+                        $( 'input.dokan-product-regular-price-variable').each( function( i, elm ) {
+                            var $element = $(elm);
+
+                            $element.closest('.variable_pricing').find('span.vendor-price').html(
+                                parseFloat( accounting.formatNumber( (  $(this).closest( elm ).val() - ( 100 - dokan.vendor_percentage ) ), dokan.rounding_precision, '' ) )
+                                .toString()
+                                .replace( '.', dokan.mon_decimal_point )
+                            );
+
+                            dokan_disable_variable_saving_button( $element );
+
+                        } );
+                    } else {
+                        $( 'input.dokan-product-sales-price-variable' ).each( function( i, elm ) {
+                            var $element = $( elm );
+
+                            $element.closest('.variable_pricing').find('span.vendor-price').html(
+                                parseFloat( accounting.formatNumber( (  $(this).closest( elm ).val() - ( 100 - dokan.vendor_percentage ) ), dokan.rounding_precision, '' ) )
+                                .toString()
+                                .replace( '.', dokan.mon_decimal_point )
+                            );
+
+                            dokan_disable_variable_saving_button( $element );
+                        } );
+                    }
+                }
+            }
+
+            $( "input.dokan-product-regular-price-variable, input.dokan-product-sales-price-variable" ).on( 'keyup', function () {
+                dokan_show_variable_product_earning_suggestion()
+            } );
+
             // Datepicker fields
             $( '.sale_price_dates_fields', wrapper ).each( function() {
                 var dates = $( this ).find( 'input' ).datepicker({

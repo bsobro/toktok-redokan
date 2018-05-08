@@ -21,6 +21,9 @@ $dps_state_rates         = get_user_meta( $user_id, '_dps_state_rates', true );
 $dps_pt                  = get_user_meta( $user_id, '_dps_pt', true );
 $dps_shipping_policy     = get_user_meta( $user_id, '_dps_ship_policy', true );
 $dps_refund_policy       = get_user_meta( $user_id, '_dps_refund_policy', true );
+$flat_rate       = get_user_meta( $user_id, '_dokan_flat_rate', true );
+
+// Testing Extra code for shipping
 ?>
 
 <form method="post" id="shipping-form"  action="" class="dokan-form-horizontal">
@@ -150,6 +153,20 @@ $dps_refund_policy       = get_user_meta( $user_id, '_dps_refund_policy', true )
                 </select>
             </div>
         </div>
+
+        <div class="dokan-form-group">
+            <label class="dokan-w4 dokan-control-label" for="_dps_ship_policy">
+                <?php _e( 'Flat Rate', 'dokan' ); ?>
+                <span class="dokan-tooltips-help tips" title="<?php _e( 'Write your terms, conditions and instructions about shipping', 'dokan' ); ?>">
+                    <i class="fa fa-question-circle"></i>
+                </span>
+            </label>
+
+            <div class="dokan-w6 dokan-text-left">
+                <input type="number" class="dokan-form-control" name="_dokan_flat_rate" value="<?php echo $flat_rate; ?>">
+            </div>
+        </div>
+
 
         <div class="dokan-form-group">
 

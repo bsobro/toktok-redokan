@@ -93,5 +93,3 @@ class Dokan_Feature_Seller_Widget extends WP_Widget {
         <?php
     }
 }
-
-add_action( 'widgets_init', create_function( '', "register_widget( 'Dokan_Feature_Seller_Widget' );" ) );

@@ -111,15 +111,20 @@ extract( $variation_data );
             </div>
 
             <div class="dokan-clearfix"></div>
-
             <div class="variable_pricing">
                 <div class="content-half-part">
                     <label><?php echo __( 'Regular price', 'dokan' ) . ' (' . get_woocommerce_currency_symbol() . ')'; ?></label>
-                    <input type="text" size="5" name="variable_regular_price[<?php echo $loop; ?>]" value="<?php if ( isset( $_regular_price ) ) echo esc_attr( $_regular_price ); ?>" class="dokan-form-control" placeholder="<?php esc_attr_e( 'Variation price (required)', 'dokan' ); ?>" />
+                    <span class="vendor-earning">( <?php _e( ' You Earn : ', 'dokan' ) ?><?php echo get_woocommerce_currency_symbol() ?><span class="vendor-price">0.00</span> )</span>
+                    <input type="text" size="5" name="variable_regular_price[<?php echo $loop; ?>]" value="<?php if ( isset( $_regular_price ) ) echo esc_attr( $_regular_price ); ?>" class="dokan-form-control dokan-product-regular-price-variable" placeholder="<?php esc_attr_e( 'Variation price (required)', 'dokan' ); ?>" />
                 </div>
                 <div class="content-half-part">
                     <label><?php echo __( 'Sale price', 'dokan' ) . ' (' . get_woocommerce_currency_symbol() . ')'; ?> <a href="#" class="sale_schedule"><?php _e( 'Schedule', 'dokan' ); ?></a><a href="#" class="cancel_sale_schedule" style="display:none"><?php _e( 'Cancel schedule', 'dokan' ); ?></a></label>
-                    <input type="text" size="5" name="variable_sale_price[<?php echo $loop; ?>]" value="<?php if ( isset( $_sale_price ) ) echo esc_attr( $_sale_price ); ?>" class="dokan-form-control" />
+                    <input type="text" size="5" name="variable_sale_price[<?php echo $loop; ?>]" value="<?php if ( isset( $_sale_price ) ) echo esc_attr( $_sale_price ); ?>" class="dokan-form-control dokan-product-sales-price-variable" />
+                </div>
+                <div class="dokan-form-group dokan-clearfix product-edit-container">
+                    <div class="dokan-product-less-price-alert">
+                        <?php _e('Product price can\'t be less than the vendor fee!', 'dokan' ); ?>
+                    </div>
                 </div>
                 <div class="dokan-clearfix"></div>
                 <div class="sale_price_dates_fields dokan-form-group" style="display: none">

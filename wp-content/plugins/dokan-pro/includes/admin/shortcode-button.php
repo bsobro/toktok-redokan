@@ -25,38 +25,45 @@ class Dokan_shortcodes_button {
      *
      */
     function localize_shortcodes() {
+        $screen = get_current_screen();
 
         $shortcodes = array(
             'dokan-dashboard'            => array(
-                'title'   => 'Dokan Dasboard',
+                'title'   => __( 'Vendor Dasboard', 'dokan' ),
                 'content' => '[dokan-dashboard]'
             ),
+            'vendor-registration' => array(
+                'title'   => __( 'Vendor Registration Form', 'dokan' ),
+                'content' => '[dokan-vendor-registration]'
+            ),
             'dokan-stores'               => array(
-                'title'   => 'Stores List',
+                'title'   => __( 'Stores List', 'dokan' ),
                 'content' => '[dokan-stores]'
             ),
             'dokan-best-selling-product' => array(
-                'title'   => 'Best Selling Product',
+                'title'   => __( 'Best Selling Product', 'dokan' ),
                 'content' => '[dokan-best-selling-product no_of_product="5" seller_id="" ]'
             ),
             'dokan-top-rated-product'    => array(
-                'title'   => 'Top Rated Product',
+                'title'   => __( 'Top Rated Products', 'dokan' ),
                 'content' => '[dokan-top-rated-product]'
             ),
-            'dokan-my-orders'            => array(
-                'title'   => 'Dokan My Orders',
+            'dokan-my-orders' => array(
+                'title'   => __( 'Dokan My Orders', 'dokan' ),
                 'content' => '[dokan-my-orders]'
             ),
-            'dokan-customer-migration'   => array(
-                'title'   => 'Dokan Customer Migration',
+            'dokan-customer-migration' => array(
+                'title'   => __( 'Customer Migration Form', 'dokan' ),
                 'content' => '[dokan-customer-migration]'
-            )
+            ),
         );
 
         $assets_url = DOKAN_PRO_PLUGIN_ASSEST;
 
-        wp_localize_script( 'dokan_slider_admin', 'dokan_shortcodes', apply_filters( 'dokan_button_shortcodes', $shortcodes ) );
-        wp_localize_script( 'dokan_slider_admin', 'dokan_assets_url', $assets_url );
+        if ( 'post' == $screen->base ) {
+            wp_localize_script( 'jquery', 'dokan_shortcodes', apply_filters( 'dokan_button_shortcodes', $shortcodes ) );
+            wp_localize_script( 'jquery', 'dokan_assets_url', $assets_url );
+        }
     }
 
     /**

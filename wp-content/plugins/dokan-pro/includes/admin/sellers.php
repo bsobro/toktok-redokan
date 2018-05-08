@@ -52,7 +52,6 @@
             <input type="search" id="search-input" name="s" value="">
             <input type="submit" id="search-submit" class="button" value="<?php _e( 'Search Vendors', 'dokan' ); ?>">
         </p>
-        <?php //wp_nonce_field( 'bulk-users' ); ?>
 
         <table class="widefat withdraw-table">
             <thead>
@@ -82,7 +81,6 @@
                 $limit       = 20;
                 $count       = 0;
                 $offset      = ( $paged - 1 ) * $limit;
-
                 $args        = array( 'role' => 'seller', 'number' => $limit, 'offset' => $offset );
 
                 if ( $status != 'all' ) {
@@ -208,7 +206,7 @@
                     <option value="delete"><?php _e( 'Delete', 'dokan' ); ?></option>
                 </select>
 
-                <input type="submit" name="" id="doaction2" class="button button-primary" value="<?php esc_attr_e( 'Apply', 'dokan' ); ?>">
+                <input type="submit" name="dokan-seller-bulk-action" id="doaction2" class="button button-primary" value="<?php esc_attr_e( 'Apply', 'dokan' ); ?>">
             </div>
 
             <?php

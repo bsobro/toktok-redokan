@@ -520,7 +520,7 @@ class Dokan_Pro_Reviews {
      * @return void
      */
     public function render_row( $comment, $post_type ) {
-        $comment_date       = get_comment_date( 'Y/m/d \a\t g:i a', $comment->comment_ID );
+        $comment_date       = get_comment_date( '', $comment->comment_ID );
         $comment_author_img = get_avatar( $comment->comment_author_email, 32 );
         $eidt_post_url      = get_edit_post_link( $comment->comment_post_ID );
         $permalink          = get_comment_link( $comment );
@@ -674,7 +674,7 @@ class Dokan_Pro_Reviews {
             foreach ( $comments as $single_comment ) {
                 if ( $single_comment->comment_approved ) {
                     $GLOBALS['comment'] = $single_comment;
-                    $comment_date       = get_comment_date( 'l, F jS, Y \a\t g:i a', $single_comment->comment_ID );
+                    $comment_date       = get_comment_date( '', $single_comment->comment_ID );
                     $comment_author_img = get_avatar( $single_comment->comment_author_email, 180 );
                     $permalink          = get_comment_link( $single_comment );
                     ?>

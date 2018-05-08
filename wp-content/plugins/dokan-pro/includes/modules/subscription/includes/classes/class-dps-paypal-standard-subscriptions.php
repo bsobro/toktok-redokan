@@ -294,12 +294,15 @@ class DPS_PayPal_Standard_Subscriptions {
                 update_user_meta( $customer_id, 'product_pack_enddate', date( 'Y-m-d H:i:s', strtotime( "+" . $subs_interval . " " . $subs_period . "" . $add_s ) ) );
                 update_user_meta( $customer_id, 'can_post_product', '1' );
                 update_user_meta( $customer_id, '_customer_recurring_subscription', 'active' );
-                $vendor_commission = get_post_meta( $product['product_id'], '_vendor_commission', true );
+                
+                $admin_commission      = get_post_meta( $product['product_id'], '_subscription_product_admin_commission', true );
+                $admin_commission_type = get_post_meta( $product['product_id'], '_subscription_product_admin_commission_type', true );
 
-                if ( !empty( $vendor_commission ) ) {
-                    update_user_meta( $customer_id, 'dokan_seller_percentage', $vendor_commission );
+                if ( ! empty( $admin_commission ) && ! empty( $admin_commission_type ) ) {
+                    update_user_meta( $customer_id, 'dokan_admin_percentage', $admin_commission );
+                    update_user_meta( $customer_id, 'dokan_admin_percentage_type', $admin_commission_type );
                 } else {
-                    update_user_meta( $customer_id, 'dokan_seller_percentage', '' );
+                    update_user_meta( $customer_id, 'dokan_admin_percentage', '' );
                 }
 
                 $order->add_order_note( __( 'IPN subscription sign up completed.', 'dokan' ) );
@@ -324,12 +327,15 @@ class DPS_PayPal_Standard_Subscriptions {
                     update_user_meta( $customer_id, 'product_pack_enddate', date( 'Y-m-d H:i:s', strtotime( "+" . $subs_interval . " " . $subs_period . "" . $add_s ) ) );
                     update_user_meta( $customer_id, 'can_post_product', '1' );
                     update_user_meta( $customer_id, '_customer_recurring_subscription', 'active' );
-                    $vendor_commission = get_post_meta( $product['product_id'], '_vendor_commission', true );
 
-                    if ( !empty( $vendor_commission ) ) {
-                        update_user_meta( $customer_id, 'dokan_seller_percentage', $vendor_commission );
+                    $admin_commission      = get_post_meta( $product['product_id'], '_subscription_product_admin_commission', true );
+                    $admin_commission_type = get_post_meta( $product['product_id'], '_subscription_product_admin_commission_type', true );
+
+                    if ( ! empty( $admin_commission ) && ! empty( $admin_commission_type ) ) {
+                        update_user_meta( $customer_id, 'dokan_admin_percentage', $admin_commission );
+                        update_user_meta( $customer_id, 'dokan_admin_percentage_type', $admin_commission_type );
                     } else {
-                        update_user_meta( $customer_id, 'dokan_seller_percentage', '' );
+                        update_user_meta( $customer_id, 'dokan_admin_percentage', '' );
                     }
 
                     if ( dokan_get_prop( $order, 'status' ) != 'completed' ) {
@@ -519,4 +525,3 @@ class DPS_PayPal_Standard_Subscriptions {
 }
 
 DPS_PayPal_Standard_Subscriptions::init();
-

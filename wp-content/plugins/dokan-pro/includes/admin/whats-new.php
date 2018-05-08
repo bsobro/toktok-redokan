@@ -1,6 +1,82 @@
 <?php
 $changelog = array(
     array(
+        'version'  => 'Version 2.8.0',
+        'released' => '2018-05-01',
+        'changes'  => array(
+            array(
+                'title'         => 'Introduction of REST APIs',
+                'type'          => 'New',
+                'description'   => 'We have introduced REST APIs in dokan'
+            ),
+            array(
+                'title'         => 'Zone wize shipping',
+                'type'          => 'New',
+                'description'   => 'We have introduced zone wize shipping functionality similar to WooCommerce in dokan. <img src="https://wedevs-com-wedevs.netdna-ssl.com/wp-content/uploads/2018/04/dokan-vendor-dashboard-settings-shipping-method-settings.gif">'
+            ),
+            array(
+                'title'         => 'Earning suggestion for variable product',
+                'type'          => 'New',
+                'description'   => 'As like simple product, vendor will get to see the earning suggestion for variable product as well'
+            ),
+            array(
+                'title'         => 'Confirmation on subscription cancellation',
+                'type'          => 'New',
+                'description'   => 'Cancellation of a subscription pack will ask for confirmation'
+            ),
+            array(
+                'title'         => 'Unable to login with social media',
+                'type'          => 'Fix',
+                'description'   => 'Customer, Seller was unable to login with social media'
+            ),
+            array(
+                'title'         => 'CSV earning report exporting',
+                'type'          => 'Fix',
+                'description'   => 'There were an issue with CSV report exporting from back end'
+            ),
+            array(
+                'title'         => 'Unable to delete vendor form admin panel',
+                'type'          => 'Fix',
+                'description'   => 'Admin was unable to delete a vendor from admin panel'
+            ),
+            array(
+                'title'         => 'Seller setup wizard is missing during email verification',
+                'type'          => 'Fix',
+                'description'   => 'Seller setup wizard after a seller is verified by email was missing'
+            ),
+            array(
+                'title'         => 'Subscription Free pack visibility',
+                'type'          => 'Fix',
+                'description'   => 'Hide subscription product type from back end when a seller can access the back end'
+            ),
+            array(
+                'title'         => 'Disable back end access for vendor staff',
+                'type'          => 'Improvement',
+                'description'   => 'Disable back end access for vendor staff for security perpose'
+            ),
+            array(
+                'title'         => 'Updated deprecated functions',
+                'type'          => 'Improvement',
+                'description'   => 'Updated some deprecated functions'
+            ),
+            array(
+                'title'         => 'Statement calculation',
+                'type'          => 'Improvement',
+                'description'   => 'Statement calculation'
+            ),
+            array(
+                'title'         => 'Reduction of \'dokan\' text from staff permission',
+                'type'          => 'Improvement',
+                'description'   => 'Reduction of \'dokan\' text from staff permission',
+            ),
+            array(
+                'title'         => 'Various UI, UX improvement',
+                'type'          => 'Improvement',
+                'description'   => 'Various UI, UX improvement',
+            ),
+        )
+    ),
+    array(
         'version'  => 'Version 2.7.5',
         'released' => '2018-03-06',
         'changes'  => array(

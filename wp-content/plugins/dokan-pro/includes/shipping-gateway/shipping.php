@@ -103,6 +103,14 @@ class Dokan_WC_Shipping extends WC_Shipping_Method {
 
         $amount = 0.0;
 
+        if ( ! $this->is_method_enabled() ) {
+            return;
+        }
+
+        if ( !self::is_shipping_enabled_for_seller( $package['seller_id'] ) ) {
+            return;
+        }
+
         if ( $products ) {
             $amount = $this->calculate_per_seller( $products, $destination_country, $destination_state );
         }
@@ -252,10 +260,10 @@ class Dokan_WC_Shipping extends WC_Shipping_Method {
                         $price[ $seller_id ]['addition_price'][] = 0;
                     }
 
-                    $price[ $seller_id ]['default'] = $default_shipping_price;
+                    $price[ $seller_id ]['default'] = floatval( $default_shipping_price );
 
                     if ( $product['quantity'] > 1 ) {
-                        $price[ $seller_id ]['qty'][] = ( ( $product['quantity'] - 1 ) * $default_shipping_qty_price );
+                        $price[ $seller_id ]['qty'][] = ( ( $product['quantity'] - 1 ) * floatval( $default_shipping_qty_price ) );
                     } else {
                         $price[ $seller_id ]['qty'][] = 0;
                     }
@@ -263,7 +271,7 @@ class Dokan_WC_Shipping extends WC_Shipping_Method {
                 }
 
                 if ( count( $products ) > 1 ) {
-                    $price[ $seller_id ]['add_product'] =  (int) $default_shipping_add_price * ( count( $products) - ( 1 + $downloadable_count ) );
+                    $price[ $seller_id ]['add_product'] =  floatval( $default_shipping_add_price ) * ( count( $products) - ( 1 + $downloadable_count ) );
                 } else {
                     $price[ $seller_id ]['add_product'] = 0;
                 }
@@ -275,13 +283,13 @@ class Dokan_WC_Shipping extends WC_Shipping_Method {
 
                     if ( array_key_exists( $destination_state, $dps_state_rates[$destination_country] ) ) {
                         if ( isset( $dps_state_rates[$destination_country][$destination_state] ) ) {
-                            $price[$seller_id]['state_rates'] = $dps_state_rates[$destination_country][$destination_state];
+                            $price[$seller_id]['state_rates'] = floatval( $dps_state_rates[$destination_country][$destination_state] );
                         } else {
-                            $price[$seller_id]['state_rates'] = ( isset( $dps_country_rates[$destination_country] ) ) ? $dps_country_rates[$destination_country] : 0;
+                            $price[$seller_id]['state_rates'] = ( isset( $dps_country_rates[$destination_country] ) ) ? floatval( $dps_country_rates[$destination_country] ) : 0;
                         }
 
                     } elseif ( array_key_exists( 'everywhere', $dps_state_rates[$destination_country] ) ) {
-                        $price[$seller_id]['state_rates'] = ( isset( $dps_state_rates[$destination_country]['everywhere'] ) ) ? $dps_state_rates[$destination_country]['everywhere'] : 0;
+                        $price[$seller_id]['state_rates'] = ( isset( $dps_state_rates[$destination_country]['everywhere'] ) ) ? floatval( $dps_state_rates[$destination_country]['everywhere'] ) : 0;
                     } else {
                         $price[$seller_id]['state_rates'] = 0;
                     }
@@ -289,9 +297,9 @@ class Dokan_WC_Shipping extends WC_Shipping_Method {
                 } else {
 
                     if ( !array_key_exists( $destination_country, $dps_country_rates ) ) {
-                        $price[$seller_id]['state_rates'] = isset( $dps_country_rates['everywhere'] ) ? $dps_country_rates['everywhere'] : 0;
+                        $price[$seller_id]['state_rates'] = isset( $dps_country_rates['everywhere'] ) ? floatval( $dps_country_rates['everywhere'] ) : 0;
                     } else {
-                        $price[$seller_id]['state_rates'] = ( isset( $dps_country_rates[$destination_country] ) ) ? $dps_country_rates[$destination_country] : 0;
+                        $price[$seller_id]['state_rates'] = ( isset( $dps_country_rates[$destination_country] ) ) ? floatval( $dps_country_rates[$destination_country] ) : 0;
                     }
                 }
             }
@@ -299,7 +307,7 @@ class Dokan_WC_Shipping extends WC_Shipping_Method {
 
         if ( !empty( $price ) ) {
             foreach ( $price as $s_id => $value ) {
-                $amount = $amount + ( ( isset( $value['addition_price'] ) ? array_sum( $value['addition_price'] ) : 0 ) +  ( isset($value['default']) ? $value['default'] : 0 ) + ( isset( $value['qty'] ) ? array_sum( $value['qty'] ) : 0 ) +$value['add_product'] + ( isset($value['state_rates']) ? $value['state_rates'] : 0 ) );
+                $amount = $amount + ( ( isset( $value['addition_price'] ) ? array_sum( $value['addition_price'] ) : 0 ) +  ( isset($value['default'] ) ? $value['default'] : 0 ) + ( isset( $value['qty'] ) ? array_sum( $value['qty'] ) : 0 ) + $value['add_product'] + ( isset( $value['state_rates'] ) ? $value['state_rates'] : 0 ) );
             }
         }
 

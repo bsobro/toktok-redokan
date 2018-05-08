@@ -443,7 +443,7 @@ class Dokan_Announcement {
             home_url(),
         );
         $body = str_replace( $find, $replace, $body);
-        $subject = sprintf( __( 'New Announcement from [%s] ', 'dokan-lite' ), $email->get_from_name() );
+        $subject = sprintf( __( 'New Announcement from [%s] ', 'dokan' ), $email->get_from_name() );
         $email->send( $seller_emails, $subject, $body );
     }
 }

@@ -145,5 +145,3 @@ class Dokan_Store_Support_Widget extends WP_Widget {
         <?php
     }
 }
-
-add_action( 'widgets_init', create_function( '', "register_widget( 'Dokan_Store_Support_Widget' );" ) );

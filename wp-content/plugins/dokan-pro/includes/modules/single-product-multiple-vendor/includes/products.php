@@ -463,14 +463,14 @@ class Dokan_SPMV_Products {
                             <a href="<?php echo dokan_get_store_url( $post_author_id ); ?>"><?php echo $seller_info['store_name'] ?></a>
                         </div>
                         <div class="table-cell price">
-                            <span class="cell-title">Price</span>
+                            <span class="cell-title"><?php _e( 'Price', 'dokan' ); ?></span>
                             <?php echo $product_obj->get_price_html(); ?>
                         </div>
                         <div class="table-cell rating">
-                            <span class="cell-title">Rating</span>
+                            <span class="cell-title"><?php _e( 'Rating', 'dokan' ); ?></span>
                             <div class="woocommerce-product-rating">
                                 <?php echo wc_get_rating_html( $average, $rating_count ); ?>
-                                <?php if ( comments_open() ) : ?><a href="#reviews" class="woocommerce-review-link" rel="nofollow">(<?php printf( _n( '%s customer review', '%s customer reviews', $review_count, 'woocommerce' ), '<span class="count">' . esc_html( $review_count ) . '</span>' ); ?>)</a><?php endif ?>
+                                <?php if ( comments_open() ) : ?><a href="#reviews" class="woocommerce-review-link" rel="nofollow">(<?php printf( _n( '%s customer review', '%s customer reviews', $review_count, 'dokan' ), '<span class="count">' . esc_html( $review_count ) . '</span>' ); ?>)</a><?php endif ?>
                             </div>
                         </div>
                         <div class="table-cell action-area">

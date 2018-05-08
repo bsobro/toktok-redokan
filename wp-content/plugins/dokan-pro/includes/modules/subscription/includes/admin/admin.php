@@ -37,7 +37,7 @@ class DPS_Admin {
         wp_enqueue_style( 'dps-custom-style', DPS_URL . '/assets/css/style.css', false, date( 'Ymd' ) );
         wp_enqueue_script( 'dps-custom-admin-js', DPS_URL . '/assets/js/admin-script.js', array('jquery'), false, true );
 
-        wp_localize_script( 'dps-custom-admin-js', 'dokan', array(
+        wp_localize_script( 'dps-custom-admin-js', 'dokanSubscription', array(
             'ajaxurl'             => admin_url( 'admin-ajax.php' ),
             'subscriptionLengths' => DPS_Manager::get_subscription_ranges()
         ) );
@@ -69,6 +69,9 @@ class DPS_Admin {
      * @param array   $product_type
      */
     function add_product_type( $types ) {
+        if ( ! current_user_can( 'manage_woocommerce' ) ) {
+            return $types;
+        }
 
         $types['product_pack'] = __( 'Dokan Subscription', 'dokan' );
 
@@ -79,6 +82,10 @@ class DPS_Admin {
      * Add extra custom field in woocommerce product type
      */
     function general_fields() {
+        if ( ! current_user_can( 'manage_woocommerce' ) ) {
+            return;
+        }
+
         global $woocommerce, $post;
 
         echo '<div class="options_group show_if_product_pack">';
@@ -562,7 +569,13 @@ class DPS_Admin {
             </tr>
             <tr>
                 <td><?php _e( 'End Date :' ) ;?></td>
-                <td><?php echo date( get_option( 'date_format' ), strtotime( get_user_meta( $user->ID, 'product_pack_enddate', true ) ) ); ?></td>
+                <td>
+                    <?php if ( get_user_meta( $user->ID, 'product_pack_enddate', true ) > '4000-10-10' ) {
+                        printf( __( 'Lifetime package.', 'dokan' ) );
+                    } else {
+                        echo date( get_option( 'date_format' ), strtotime( get_user_meta( $user->ID, 'product_pack_enddate', true ) ) );
+                    } ?>
+                </td>
             </tr>
         <?php endif; ?>
 
@@ -636,6 +649,10 @@ class DPS_Admin {
             return;
         }
 
+        if ( get_user_meta( $user_id, 'product_package_id', true ) == $pack_id ) {
+            return;
+        }
+
         //cancel paypal if current pack is recurring
         if( get_user_meta( $user_id, '_customer_recurring_subscription', true ) == 'active' ) {
             $order_id = get_user_meta( $user_id, 'product_order_id', true );
@@ -646,13 +663,21 @@ class DPS_Admin {
             }
         }
 
-        $pack_validity = get_post_meta( $pack_id, '_pack_validity', true );
-        $admin_commission = get_post_meta( $pack_id, '_per_product_admin_commission', true );
+        $pack_validity           = get_post_meta( $pack_id, '_pack_validity', true );
+        $admin_commission        = get_post_meta( $pack_id, '_subscription_product_admin_commission', true );
+        $admin_commission_type   = get_post_meta( $pack_id, '_subscription_product_admin_commission_type', true );
+
         update_user_meta( $user_id, 'product_package_id', $pack_id );
         update_user_meta( $user_id, 'product_order_id', '' );
         update_user_meta( $user_id, 'product_no_with_pack' , get_post_meta( $pack_id, '_no_of_product', true ) ); //number of products
         update_user_meta( $user_id, 'product_pack_startdate', date( 'Y-m-d H:i:s' ) );
-        update_user_meta( $user_id, 'product_pack_enddate', date( 'Y-m-d H:i:s', strtotime( "+$pack_validity days" ) ) );
+
+        if ( $pack_validity == 0 ) {
+            update_user_meta( $user_id, 'product_pack_enddate', date( 'Y-m-d H:i:s', strtotime( "+999999 days" ) ) );
+        } else {
+            update_user_meta( $user_id, 'product_pack_enddate', date( 'Y-m-d H:i:s', strtotime( "+$pack_validity days" ) ) );
+        }
+
         update_user_meta( $user_id, 'can_post_product' , 1 );
         update_user_meta( $user_id, '_customer_recurring_subscription', '' );
 
@@ -663,10 +688,11 @@ class DPS_Admin {
             delete_user_meta( $user_id, 'vendor_allowed_categories' );
         }
 
-        if ( ! empty( $admin_commission ) ) {
-            update_user_meta( $user_id, 'dokan_seller_percentage', $admin_commission );
+        if ( ! empty( $admin_commission ) && ! empty( $admin_commission_type ) ) {
+            update_user_meta( $user_id, 'dokan_admin_percentage', $admin_commission );
+            update_user_meta( $user_id, 'dokan_admin_percentage_type', $admin_commission_type );
         } else {
-            update_user_meta( $user_id, 'dokan_seller_percentage', '' );
+            update_user_meta( $user_id, 'dokan_admin_percentage', '' );
         }
     }
 }

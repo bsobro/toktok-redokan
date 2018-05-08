@@ -3,9 +3,9 @@ Contributors: tareq1988, wedevs
 Donate Link: http://tareq.co/donate/
 Tags: woocommerce, multivendor, multi-vendor, paypal, shop, vendor, seller, store, sell, online, amazon, dokan, ebay, Etsy, multi seller, multi store, multi vendor, multi vendors, multistore, multivendor, product vendor, product vendors, vendor, vendor system, vendors, wc market place, wc marketplace, wc vendors, woo vendors, woocommerce market place, woocommerce marketplace, woocommerce multi vendor,  commission rate, e-commerce, ebay, ecommerce, yith, yithemes
 Requires at least: 4.4
-Tested up to: 4.9.4
-WC requires at least: 2.6
-WC tested up to: 3.3.1
+Tested up to: 4.9.5
+WC requires at least: 3.0
+WC tested up to: 3.3.5
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -171,6 +171,42 @@ A. You just delete the free version and install and activate the pro version. No
 15. Frontend &rarr; Individual Seller Store
 
 == Changelog ==
+
+v2.8.1 -> May 3, 2018
+--------------------------
+- [fix]  Added some missing transation in single product multivendor modules
+- [fix]  Tinymce dokan button not working in all post types
+
+v2.8.0 -> May 2, 2018
+--------------------------
+- [new]   Introduction of REST APIs
+- [new]   Introduction of zone wise shipping
+- [new]   Price suggestion for variable product
+- [new]   Cancellation of a subscription pack will ask for confirmation
+- [fix]   Social login issue
+- [fix]   CSV earning report exporting issue
+- [fix]   Unable to delete vendor form admin panel issue
+- [fix]   Paypal adaptive checkout issue
+- [fix]   Fatal error while importing product via CSV issue
+- [fix]   Subscription based admin commission issue
+- [fix]   Seller permission issue
+- [fix]   Subscription is being updated with the update of a user in back end issue
+- [fix]   Stripe card saving option issue
+- [fix]   Duplicated product shows existing product's view count
+- [fix]   Booking cancellation email sending issue
+- [fix]   Seller setup wizard after a seller is verified by email issue
+- [fix]   Seller verification widget issue
+- [fix]   Shipping notice issue
+- [fix]   Seller could update admin commission from backend issue
+- [fix]   Subscription pack date issue
+- [fix]   Hide subscription product type from back end when a seller can access the back end
+- [fix]   Progress bar value not increase by adding stripe payment method issue
+- [tweak] Disable back end access for vendor staff
+- [tweak] Vendor review date format
+- [tweak] Updated deprecated functions
+- [tweak] Statement calculation
+- [tweak] Reduction of 'dokan' text from staff permission
+- [tweak] Various UI, UX improvement
 
 v2.7.5 -> March 06, 2018
 ---------------------

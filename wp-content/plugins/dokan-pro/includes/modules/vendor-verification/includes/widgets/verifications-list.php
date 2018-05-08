@@ -193,11 +193,15 @@ class Dokan_Verification_list extends WP_Widget {
 
 }
 
-add_action( 'widgets_init', create_function( '', "register_widget( 'Dokan_Verification_list' );" ) );
+add_action( 'widgets_init', 'dokan_register_verification_widget' );
 
-add_action( 'dokan_sidebar_store_after', 'show_verification_widget');
+function dokan_register_verification_widget() {
+    register_widget( 'Dokan_Verification_list' );
+}
 
-function show_verification_widget() {
+add_action( 'dokan_sidebar_store_after', 'dokan_show_verification_widget');
+
+function dokan_show_verification_widget() {
     if ( !is_active_sidebar( 'sidebar-store' ) ) {
         $args = array(
             'before_widget' => '<aside class="widget">',

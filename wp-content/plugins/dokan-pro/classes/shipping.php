@@ -18,7 +18,7 @@ class Dokan_Pro_Shipping {
             require_once DOKAN_PRO_INC . '/shipping-gateway/shipping.php';
         }
 
-        add_action( 'woocommerce_shipping_init', array( $this, 'include_shipping' ) );
+        add_action( 'init', array( $this, 'include_shipping' ), 5 );
         add_action( 'woocommerce_shipping_methods', array( $this, 'register_shipping' ) );
         add_action( 'woocommerce_product_tabs', array( $this, 'register_product_tab' ) );
         add_action( 'woocommerce_after_checkout_validation', array( $this, 'validate_country' ) );
@@ -65,7 +65,8 @@ class Dokan_Pro_Shipping {
      * @return array
      */
     function register_shipping( $methods ) {
-        $methods[] = 'Dokan_WC_Shipping';
+        $methods['dokan_product_shipping'] = 'Dokan_WC_Shipping';
+        $methods['dokan_vendor_shipping'] = 'Dokan_Vendor_Shipping';
 
         return $methods;
     }
@@ -95,55 +96,71 @@ class Dokan_Pro_Shipping {
 
         // echo $shipping_country;
         $packages = WC()->shipping->get_packages();
-        $packages = reset( $packages );
 
-        if ( !isset( $packages['contents'] ) ) {
+        reset( $packages );
+
+        if ( !isset( $packages[0]['contents'] ) ) {
             return;
         }
 
-        $products = $packages['contents'];
-        $destination_country = isset( $packages['destination']['country'] ) ? $packages['destination']['country'] : '';
-        $destination_state = isset( $packages['destination']['state'] ) ? $packages['destination']['state'] : '';
+        $products = array();
 
+        foreach ( $packages as $package ) {
+            array_push( $products, $package['contents'] );
+        }
+
+        $destination_country = isset( $packages[0]['destination']['country'] ) ? $packages[0]['destination']['country'] : '';
+        $destination_state   = isset( $packages[0]['destination']['state'] ) ? $packages[0]['destination']['state'] : '';
+
+        // hold all the errors
         $errors = array();
-        foreach ( $products as $key => $product) {
 
-            $seller_id = get_post_field( 'post_author', $product['product_id'] );
+        foreach ( $products as $key => $product ) {
+            $dokan_regular_shipping = new Dokan_WC_Shipping();
 
-            if ( ! Dokan_WC_Shipping::is_shipping_enabled_for_seller( $seller_id ) ) {
-                continue;
-            }
+            foreach ( $product as $product_obj ) {
+                $seller_id = get_post_field( 'post_author', $product_obj['product_id'] );
 
-            if ( Dokan_WC_Shipping::is_product_disable_shipping( $product['product_id'] ) ) {
-                continue;
-            }
+                if ( ! $dokan_regular_shipping->is_method_enabled() ) {
+                    continue;
+                }
 
-            $dps_country_rates = get_user_meta( $seller_id, '_dps_country_rates', true );
-            $dps_state_rates   = get_user_meta( $seller_id, '_dps_state_rates', true );
+                if ( ! Dokan_WC_Shipping::is_shipping_enabled_for_seller( $seller_id ) ) {
+                    continue;
+                }
 
-            $has_found = false;
-            $dps_country = ( isset( $dps_country_rates ) ) ? $dps_country_rates : array();
-            $dps_state = ( isset( $dps_state_rates[$destination_country] ) ) ? $dps_state_rates[$destination_country] : array();
+                if ( Dokan_WC_Shipping::is_product_disable_shipping( $product_obj['product_id'] ) ) {
+                    continue;
+                }
 
-            if ( array_key_exists( $destination_country, $dps_country ) ) {
+                $dps_country_rates = get_user_meta( $seller_id, '_dps_country_rates', true );
+                $dps_state_rates   = get_user_meta( $seller_id, '_dps_state_rates', true );
 
-                if ( $dps_state ) {
-                    if ( array_key_exists( $destination_state, $dps_state ) ) {
-                        $has_found = true;
-                    } elseif ( array_key_exists( 'everywhere', $dps_state ) ) {
+                $has_found   = false;
+                $dps_country = ( isset( $dps_country_rates ) ) ? $dps_country_rates : array();
+                $dps_state   = ( isset( $dps_state_rates[$destination_country] ) ) ? $dps_state_rates[$destination_country] : array();
+
+                if ( array_key_exists( $destination_country, $dps_country ) ) {
+
+                    if ( $dps_state ) {
+                        if ( array_key_exists( $destination_state, $dps_state ) ) {
+                            $has_found = true;
+                        } elseif ( array_key_exists( 'everywhere', $dps_state ) ) {
+                            $has_found = true;
+                        }
+                    } else {
                         $has_found = true;
                     }
                 } else {
-                    $has_found = true;
+                    if ( array_key_exists( 'everywhere', $dps_country ) ) {
+                        $has_found = true;
+                    }
                 }
-            } else {
-                if ( array_key_exists( 'everywhere', $dps_country ) ) {
-                    $has_found = true;
-                }
-            }
 
-            if ( ! $has_found ) {
-                $errors[] = sprintf( '<a href="%s">%s</a>', get_permalink( $product['product_id'] ), get_the_title( $product['product_id'] ) );
+                if ( ! $has_found ) {
+                    $errors[] = sprintf( '<a href="%s">%s</a>', get_permalink( $product_obj['product_id'] ), get_the_title( $product_obj['product_id'] ) );
+                }
+
             }
         }
 
@@ -184,6 +201,12 @@ class Dokan_Pro_Shipping {
             $user_id = dokan_get_current_user_id();
             $s_rates = array();
             $rates   = array();
+
+            // Additional extra code
+
+            if ( isset( $_POST['_dokan_flat_rate'] ) ) {
+                update_user_meta( $user_id, '_dokan_flat_rate', $_POST['_dokan_flat_rate'] );
+            }
 
             if ( isset( $_POST['dps_enable_shipping'] ) ) {
                 update_user_meta( $user_id, '_dps_shipping_enable', $_POST['dps_enable_shipping'] );
@@ -262,7 +285,7 @@ class Dokan_Pro_Shipping {
 
             do_action( 'dokan_after_shipping_options_updated' ,$rates, $s_rates );
 
-            $shipping_url = dokan_get_navigation_url( 'settings/shipping' );
+            $shipping_url = dokan_get_navigation_url( 'settings/regular-shipping' );
             wp_redirect( add_query_arg( array( 'message' => 'shipping_saved' ), $shipping_url ) );
             exit();
         }

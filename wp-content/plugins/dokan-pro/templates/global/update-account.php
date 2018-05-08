@@ -26,7 +26,7 @@ $cu_slug = get_user_meta( $user_id, 'nickname', true );
 
 
 <h2><?php _e( 'Update account to Vendor', 'dokan' ); ?></h2>
-<form method="post" action="">
+<form method="post" action="" class="register">
 
     <div class="dokan-become-seller">
 

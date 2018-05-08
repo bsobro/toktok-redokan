@@ -100,6 +100,7 @@ class Dokan_Product_Subscription {
         // add_action( 'valid-paypal-standard-ipn-request', array( $this, 'process_paypal_ipn_request' ), 9 );
 
         add_filter( 'dokan_get_dashboard_nav', array( $this, 'add_new_page' ), 11, 1 );
+        add_filter( 'dokan_set_template_path', array( $this, 'load_subscription_templates' ), 11, 3 );
         add_action( 'dokan_load_custom_template', array( $this, 'load_template_from_plugin') );
         add_action( 'dokan_rewrite_rules_loaded', array( $this, 'add_rewrite_rules' ) );
 
@@ -220,7 +221,8 @@ class Dokan_Product_Subscription {
      */
     public function enqueue_scripts() {
         wp_enqueue_style( 'dps-custom-style', DPS_URL . '/assets/css/style.css', false, date( 'Ymd' ) );
-        wp_enqueue_script( 'dps-custom-js', DPS_URL . '/assets/js/script.js', array( 'jquery' ), false, true );
+        wp_enqueue_script( 'dps-custom-js', DPS_URL . '/assets/js/script.js', array( 'jquery' ), time(), true );
+        wp_localize_script( 'dps-custom-js', 'dokanSubscription', array( 'cancel_string' => __( 'Do you really want to cancel the subscription?', 'dokan' ) ) );
     }
 
     /**
@@ -275,6 +277,32 @@ class Dokan_Product_Subscription {
     }
 
     /**
+    * Get plugin path
+    *
+    * @since 2.8
+    *
+    * @return void
+    **/
+    public function plugin_path() {
+        return untrailingslashit( plugin_dir_path( __FILE__ ) );
+    }
+
+    /**
+    * Load Dokan subscription templates
+    *
+    * @since 2.8
+    *
+    * @return void
+    **/
+    public function load_subscription_templates( $template_path, $template, $args ) {
+        if ( isset( $args['is_subscription'] ) && $args['is_subscription'] ) {
+            return $this->plugin_path() . '/templates';
+        }
+
+        return $template_path;
+    }
+
+    /**
      * Load template for the dashboard
      *
      * @param  array $query_vars
@@ -286,12 +314,10 @@ class Dokan_Product_Subscription {
             $installed_version = get_option( 'dokan_theme_version' );
 
             if ( $installed_version > '2.3' ) {
-                $template = dirname( __FILE__ ) . '/templates/product_subscription_plugin_new.php';
+                dokan_get_template_part( 'subscription/product_subscription_plugin_new', '', array( 'is_subscription' => true ) );
             } else {
-                $template = dirname( __FILE__ ) . '/templates/product_subscription_plugin.php';
+                dokan_get_template_part( 'subscription/product_subscription_plugin', '', array( 'is_subscription' => true ) );
             }
-
-            include $template;
         }
     }
 
@@ -495,6 +521,11 @@ class Dokan_Product_Subscription {
                     $recurring_interval = (int) get_post_meta( $post->ID, '_subscription_period_interval', true );
                     $recurring_period   = get_post_meta( $post->ID, '_subscription_period', true );
                     $product = wc_get_product( get_the_ID() );
+
+                    if ( ( get_post_meta( get_the_ID(), '_regular_price', true ) == '0' ) && $this->has_used_free_pack( get_current_user_id(), get_the_id() ) ) {
+                        continue;
+                    }
+
                     ?>
 
                         <div class="product_pack_item <?php echo ( $this->has_pack_validity_seller( get_the_ID() ) || $this->pack_renew_seller( get_the_ID() ) ) ? 'current_pack ' : ''; ?><?php echo ( ( get_post_meta( get_the_ID(), '_regular_price', true ) == '0' ) && $this->has_used_free_pack( get_current_user_id(), get_the_id() ) ) ? 'fp_already_taken' : ''; ?>">
@@ -766,7 +797,7 @@ class Dokan_Product_Subscription {
                 update_user_meta( $customer_id, 'product_order_id', $order_id );
                 update_user_meta( $customer_id, 'product_no_with_pack', get_post_meta( $product['product_id'], '_no_of_product', true ) );
                 update_user_meta( $customer_id, 'product_pack_startdate', date( 'Y-m-d H:i:s' ) );
-                
+
                 if ( $pack_validity == 0 ) {
                     update_user_meta( $customer_id, 'product_pack_enddate', date( 'Y-m-d H:i:s', strtotime( "+999999 days" ) ) );
                 } else {
@@ -775,10 +806,13 @@ class Dokan_Product_Subscription {
 
                 update_user_meta( $customer_id, 'can_post_product', '1' );
                 update_user_meta( $customer_id, '_customer_recurring_subscription', '' );
-                $admin_commission = get_post_meta( $product['product_id'], '_subscription_product_admin_commission', true );
 
-                if ( ! empty( $admin_commission ) ) {
+                $admin_commission        = get_post_meta( $product['product_id'], '_subscription_product_admin_commission', true );
+                $admin_commission_type   = get_post_meta( $product['product_id'], '_subscription_product_admin_commission_type', true );
+
+                if ( ! empty( $admin_commission ) && ! empty( $admin_commission_type ) ) {
                     update_user_meta( $customer_id, 'dokan_admin_percentage', $admin_commission );
+                    update_user_meta( $customer_id, 'dokan_admin_percentage_type', $admin_commission_type );
                 } else {
                     update_user_meta( $customer_id, 'dokan_admin_percentage', '' );
                 }
@@ -1049,7 +1083,7 @@ class Dokan_Product_Subscription {
         delete_user_meta( $customer_id, 'product_pack_enddate' );
         delete_user_meta( $customer_id, 'can_post_product' );
         delete_user_meta( $customer_id, '_customer_recurring_subscription' );
-        delete_user_meta( $customer_id, 'dokan_seller_percentage' );
+        delete_user_meta( $customer_id, 'dokan_admin_percentage' );
     }
 
     /**

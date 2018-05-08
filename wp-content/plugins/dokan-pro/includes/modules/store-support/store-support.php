@@ -68,6 +68,7 @@ class Dokan_Store_Support {
         add_filter( 'dokan_get_all_cap', array( $this, 'add_capabilities' ), 10 );
         add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
         add_action( 'init', array( $this, 'init_hooks' ) );
+
         require_once DOKAN_STORE_SUPPORT_DIR . '/support-widget.php';
     }
 
@@ -109,6 +110,7 @@ class Dokan_Store_Support {
 
         add_filter( 'dokan_query_var_filter', array( $this, 'register_support_queryvar' ), 20 );
         add_filter( 'dokan_get_dashboard_nav', array( $this, 'add_store_support_page' ), 20, 1 );
+        add_filter( 'dokan_set_template_path', array( $this, 'load_store_support_templates' ), 11, 3 );
         add_action( 'dokan_load_custom_template', array( $this, 'load_template_from_plugin' ), 20 );
         add_action( 'dokan_rewrite_rules_loaded', array( $this, 'add_rewrite_rules' ) );
 
@@ -123,6 +125,7 @@ class Dokan_Store_Support {
 
         add_filter( 'woocommerce_locate_template', array( $this, 'customer_topic_list' ),15 );
 
+        add_action( 'widgets_init', array( $this, 'register_widgets' ) );
     }
 
     /**
@@ -550,6 +553,32 @@ class Dokan_Store_Support {
     }
 
     /**
+    * Get plugin path
+    *
+    * @since 2.8
+    *
+    * @return void
+    **/
+    public function plugin_path() {
+        return untrailingslashit( plugin_dir_path( __FILE__ ) );
+    }
+
+    /**
+    * Load Dokan Store support templates
+    *
+    * @since 2.8
+    *
+    * @return void
+    **/
+    public function load_store_support_templates( $template_path, $template, $args ) {
+        if ( isset( $args['is_store_support'] ) && $args['is_store_support'] ) {
+            return $this->plugin_path() . '/templates';
+        }
+
+        return $template_path;
+    }
+
+    /**
      * Register page templates
      *
      * @since 1.0
@@ -562,15 +591,13 @@ class Dokan_Store_Support {
         if ( isset( $query_vars['support'] ) ) {
             if ( !current_user_can( 'dokan_manage_support_tickets' ) ) {
                 dokan_get_template_part( 'global/dokan-error', '', array( 'deleted' => false, 'message' => __( 'You have no permission to view this page', 'dokan' ) ) );
-                return;
+            } else {
+                dokan_get_template_part( 'store-support/support', '', array( 'is_store_support' => true ) );
             }
-            $template = DOKAN_STORE_SUPPORT_DIR . '/templates/support.php';
-            include $template;
         }
 
         if ( isset( $query_vars['support-tickets'] ) ) {
-            $template = DOKAN_STORE_SUPPORT_DIR . '/templates/support-tickets.php';
-            include $template;
+            dokan_get_template_part( 'store-support/support-tickets', '', array( 'is_store_support' => true ) );
         }
     }
 
@@ -1504,10 +1531,21 @@ class Dokan_Store_Support {
      */
     public function add_capabilities( $capabilities ) {
         $capabilities['store_support'] = array(
-            'dokan_manage_support_tickets',
+            'dokan_manage_support_tickets' => __( 'Manage support ticket', 'dokan' ),
         );
 
         return $capabilities;
+    }
+
+    /**
+     * Register widgets
+     *
+     * @since 2.8
+     *
+     * @return void
+     */
+    public function register_widgets() {
+        register_widget( 'Dokan_Store_Support_Widget' );
     }
 
 }

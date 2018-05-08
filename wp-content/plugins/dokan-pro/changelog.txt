@@ -1,3 +1,39 @@
+v2.8.1 -> May 3, 2018
+--------------------------
+- [fix]  Added some missing transation in single product multivendor modules
+- [fix]  Tinymce dokan button not working in all post types
+
+v2.8.0 -> May 2, 2018
+--------------------------
+- [new]   Introduction of REST APIs
+- [new]   Introduction of zone wise shipping
+- [new]   Price suggestion for variable product
+- [new]   Cancellation of a subscription pack will ask for confirmation
+- [fix]   Social login issue
+- [fix]   CSV earning report exporting issue
+- [fix]   Unable to delete vendor form admin panel issue
+- [fix]   Paypal adaptive checkout issue
+- [fix]   Fatal error while importing product via CSV issue
+- [fix]   Subscription based admin commission issue
+- [fix]   Seller permission issue
+- [fix]   Subscription is being updated with the update of a user in back end issue
+- [fix]   Stripe card saving option issue
+- [fix]   Duplicated product shows existing product's view count
+- [fix]   Booking cancellation email sending issue
+- [fix]   Seller setup wizard after a seller is verified by email issue
+- [fix]   Seller verification widget issue
+- [fix]   Shipping notice issue
+- [fix]   Seller could update admin commission from backend issue
+- [fix]   Subscription pack date issue
+- [fix]   Hide subscription product type from back end when a seller can access the back end
+- [fix]   Progress bar value not increase by adding stripe payment method issue
+- [tweak] Disable back end access for vendor staff
+- [tweak] Vendor review date format
+- [tweak] Updated deprecated functions
+- [tweak] Statement calculation
+- [tweak] Reduction of 'dokan' text from staff permission
+- [tweak] Various UI, UX improvement
+
 v2.7.5 -> March 06, 2018
 ---------------------
 - [fix]   If a user is logged in using social media then he is unable to upload product image

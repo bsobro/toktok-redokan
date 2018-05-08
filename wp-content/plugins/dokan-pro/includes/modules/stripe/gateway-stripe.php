@@ -41,6 +41,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 define( 'DOKAN_STRIPE_FILE', __FILE__ );
 define( 'DOKAN_STRIPE_PATH', dirname( __FILE__ ) );
+define( 'DOKAN_STRIPE_TEMPLATE_PATH', dirname( __FILE__ ) . '/templates/' );
 
 /**
  * Dokan Stripe Main class
@@ -56,7 +57,7 @@ class Dokan_Stripe {
 
         /** All actions */
         add_action( 'init', array( $this, 'init' ) );
-        add_action( 'template_redirect', array( $this, 'stripe_check_connect' ) );
+        add_action( 'template_redirect', array( $this, 'stripe_check_connect' ), 20 );
 
         add_filter( 'woocommerce_payment_gateways', array( $this, 'register_gateway' ) );
 
@@ -75,7 +76,10 @@ class Dokan_Stripe {
         add_action( 'template_redirect', array( $this, 'delete_stripe_account') , 50 );
         add_action( 'init', array( $this, 'handle_stripe_webhook') , 10 );
 
-        add_filter( 'dokan_profile_completion_progress_value', array( $this, 'profile_progress_override') , 88 );
+        add_action( 'dokan_store_profile_saved', array( $this, 'save_stripe_progress' ), 8, 2 );
+        // add_filter( 'woocommerce_add_to_cart_validation', array( $this, 'add_to_cart_validation' ), 15, 3 );
+
+        add_action( 'woocommerce_after_checkout_validation', array( $this, 'check_vendor_configure_stripe' ), 15, 2 );
     }
 
     function filter_gateways(  $gateways ){
@@ -91,6 +95,51 @@ class Dokan_Stripe {
             }
         }
         return $gateways;
+    }
+
+    /**
+     * Validate checkout if vendor has configured stripe account
+     *
+     * @since 2.8.0
+     *
+     * @return void
+     */
+    public function check_vendor_configure_stripe( $data, $errors ) {
+        $settings = get_option('woocommerce_dokan-stripe-connect_settings');
+
+        // bailout if the gateway is not enabled
+        if ( isset( $settings['enabled'] ) && $settings['enabled'] == 'yes' ) {
+            if ( 'dokan-stripe-connect' == $data['payment_method'] ) {
+                foreach ( WC()->cart->get_cart() as $item ) {
+                    $product_id = $item['data']->get_id();
+                    $available_vendors[get_post_field( 'post_author', $product_id )][] = $item['data'];
+                }
+
+                $vendor_names = array();
+
+                foreach ( array_keys( $available_vendors ) as $vendor_id ) {
+                    $vendor = dokan()->vendor->get( $vendor_id );
+                    $access_token = get_user_meta( $vendor_id, '_stripe_connect_access_key', true );
+
+                    if ( empty( $access_token ) ) {
+                        $vendor_products = array();
+
+                        foreach ( $available_vendors[$vendor_id] as $product ) {
+                            $vendor_products[] = sprintf( '<a href="%s">%s</a>', $product->get_permalink(), $product->get_name() );
+                        }
+                        $vendor_names[$vendor_id] = array(
+                            'name' => sprintf( '<a href="%s">%s</a>', esc_url( $vendor->get_shop_url() ), $vendor->get_shop_name() ),
+                            'products' => implode( ', ', $vendor_products )
+                        );
+                    }
+                }
+
+                foreach ( $vendor_names as $vendor_id => $data ) {
+                    $errors->add( 'stipe-not-configured', sprintf( '<strong>Error!</strong> The <strong>%s</strong> does not allowes the Stipe gateway. You can not purchase this products %s using Stripe Gateway', $data['name'], $data['products'] ) );
+                }
+            }
+        }
+
     }
 
     /**
@@ -157,7 +206,7 @@ class Dokan_Stripe {
      *
      * @return bool
      */
-    public function add_to_cart_validation( $validation, $product_id ) {
+    function add_to_cart_validation( $validation, $product_id, $qty ) {
         $settings = get_option('woocommerce_dokan-stripe-connect_settings');
 
         // bailout if the gateway is not enabled
@@ -251,6 +300,7 @@ class Dokan_Stripe {
         </style>
 
         <div class="dokan-stripe-connect-container">
+            <input type="hidden" name="settings[stripe]" value="<?php echo empty( $key ) ? 0 : 1; ?>">
             <?php
                 if ( empty( $key ) ) {
 
@@ -570,20 +620,23 @@ class Dokan_Stripe {
         endif;
     }
 
-    function profile_progress_override( $track_val ) {
-
-        if ( !is_user_logged_in() ) {
-            return $track_val;
+    /**
+    * Save stripe progress settings data
+    *
+    * @since 2.8
+    *
+    * @return void
+    **/
+    public function save_stripe_progress( $store_id, $dokan_settings ) {
+        if ( ! $store_id ) {
+            return;
         }
 
-        $connected = get_user_meta( get_current_user_id(), '_stripe_connect_access_key', true );
-
-        if ( $connected ) {
-            $track_val['progress'] = $track_val['progress'] +  $track_val['progress_vals']['payment_method_val'];
-            $track_val['stripe']   = $track_val['progress_vals']['payment_method_val'];
+        if ( isset( $_POST['settings']['stripe'] ) ) {
+            $dokan_settings['payment']['stripe'] = $_POST['settings']['stripe'];
         }
 
-        return $track_val;
+        update_user_meta( $store_id, 'dokan_profile_settings', $dokan_settings );
     }
 
 }

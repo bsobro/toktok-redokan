@@ -4,8 +4,6 @@ if ( !defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 /**
  * Provides a PayPal Adaptive Payment Gateway.
  *
- * Provides a PayPal Adaptive Payment Gateway.
- *
  * @author weDevs
  */
 class WC_Dokan_Paypal_Ap_Gateway extends WC_Payment_Gateway {
@@ -345,7 +343,7 @@ class WC_Dokan_Paypal_Ap_Gateway extends WC_Payment_Gateway {
                 }
 
                 $receiver[$key] = new \PayPal\Types\AP\Receiver();
-                $receiver[$key]->amount = $seller_balance;
+                $receiver[$key]->amount = round( $seller_balance, wc_get_price_decimals() );
                 $receiver[$key]->email  = $seller_pay_email;
 
                 $sum += (float) $seller_balance;
@@ -356,9 +354,9 @@ class WC_Dokan_Paypal_Ap_Gateway extends WC_Payment_Gateway {
                 if ( $this->single_mode == 'yes' ) {
                     throw new Exception( sprintf( __( 'You have products from multiple-vendor please choose products from Single vendor only', 'dokan' ) ) );
                 }
-                $admin_amount = (string) $order->get_total();
+                $admin_amount = (string) round( $order->get_total(), wc_get_price_decimals() );
             } else {
-                $admin_amount = (string) ( (float) $order->get_total() - $sum );
+                $admin_amount = (string) ( round( (float) $order->get_total() - $sum, wc_get_price_decimals() ) );
             }
         } else {
 
@@ -371,20 +369,20 @@ class WC_Dokan_Paypal_Ap_Gateway extends WC_Payment_Gateway {
             }
 
             $receiver[0]         = new PayPal\Types\AP\Receiver();
-            $receiver[0]->amount = $seller_balance;
+            $receiver[0]->amount = round( $seller_balance, wc_get_price_decimals() );
             $receiver[0]->email  = $seller_pay_email;
 
             if ( $this->payment_process == 'chained' ) {
 
                 if ( $this->single_mode == 'yes' ) {
-                    $admin_amount        = (string) ( (float) $order->get_total() - (float) $seller_balance );
+                    $admin_amount        = (string) ( round( (float) $order->get_total() - (float) $seller_balance, wc_get_price_decimals() ) );
                     $receiver[0]->amount = (string) $order->get_total();
                 } else {
-                    $admin_amount = (string) $order->get_total();
+                    $admin_amount = (string) round( $order->get_total(), wc_get_price_decimals() );
                 }
 
             } else {
-                $admin_amount = (string) ( (float) $order->get_total() - (float) $seller_balance );
+                $admin_amount = (string) ( round( (float) $order->get_total() - (float) $seller_balance, wc_get_price_decimals() ) );
             }
         }
 

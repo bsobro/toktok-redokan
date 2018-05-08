@@ -96,7 +96,10 @@ class Dokan_Seller_Verification {
         $installed_version = get_option( 'dokan_theme_version' );
 
         add_action( 'init', array( $this, 'init_session' ) );
-        add_action( 'template_redirect', array( $this, 'monitor_autheticate_requests' ) );
+        add_action( 'template_redirect', array( $this, 'monitor_autheticate_requests' ), 99 );
+
+        // widget
+        add_action( 'widgets_init', array( $this, 'register_widgets' ) );
 
         // Loads frontend scripts and styles
         add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
@@ -218,6 +221,17 @@ class Dokan_Seller_Verification {
                 require_once $lib_dir . '/Hybrid/Auth.php';
             }
         }
+    }
+
+    /**
+     * Register widgets
+     *
+     * @since 2.8
+     *
+     * @return void
+     */
+    public function register_widgets() {
+        register_widget( 'Dokan_Verification_list' );
     }
 
     public function init_session() {
@@ -381,7 +395,7 @@ class Dokan_Seller_Verification {
      * @return void
      */
     public function add_capabilities( $capabilities ) {
-        $capabilities['menu'][] = 'dokan_view_store_verification_menu';
+        $capabilities['menu']['dokan_view_store_verification_menu'] = __( 'View verification settings menu', 'dokan' );
 
         return $capabilities;
     }

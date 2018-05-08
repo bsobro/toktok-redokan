@@ -38,6 +38,7 @@ class Dokan_Pro_Products {
         add_filter( 'dokan_product_types', array( $this, 'set_default_product_types' ), 10 );
 
         add_action( 'dokan_after_linked_product_fields', array( $this, 'group_product_content' ), 10, 2 );
+        add_filter( 'woocommerce_duplicate_product_exclude_meta', array( $this, 'remove_unwanted_meta' ) );
     }
 
     /**
@@ -233,6 +234,9 @@ class Dokan_Pro_Products {
      */
     function add_per_product_commission_options() {
 
+        if ( !current_user_can( 'manage_woocommerce' ) ) {
+            return;
+        }
         woocommerce_wp_select( array(
             'id'            => '_per_product_admin_commission_type',
             'label'         => __( 'Admin Commission type', 'dokan' ),
@@ -265,6 +269,10 @@ class Dokan_Pro_Products {
      * @return void
      */
     function save_per_product_commission_options( $post_id ) {
+
+        if ( !current_user_can( 'manage_woocommerce' ) ) {
+            return;
+        }
         if ( isset( $_POST['_per_product_admin_commission_type'] ) ) {
             $value = empty( $_POST['_per_product_admin_commission_type'] ) ? 'percentage' : $_POST['_per_product_admin_commission_type'];
             update_post_meta( $post_id, '_per_product_admin_commission_type', $value );
@@ -574,6 +582,21 @@ class Dokan_Pro_Products {
             'post_id'        => $post_id,
             'product'        => wc_get_product( $post_id )
         ) );
+    }
+
+    /**
+     * Remove unwanted meta_keys while duplicating product
+     *
+     * @param  array $meta_keys
+     *
+     * @since 2.7.6
+     *
+     * @return array $meta_keys
+     */
+    public function remove_unwanted_meta( $meta_keys ) {
+        $meta_keys[] = 'pageview';
+
+        return $meta_keys;
     }
 
 }

@@ -67,6 +67,14 @@ class Dokan_Pro_Ajax {
         add_action( 'wp_ajax_nopriv_dokan_refund_request', array( $this, 'dokan_refund_request') );
 
         add_action( 'wp_ajax_dokan_toggle_seller', array( $this, 'toggle_seller_status' ) );
+
+        // Shipping Zone
+        add_action( 'wp_ajax_dokan-get-shipping-zone', array( $this, 'get_shipping_zone' ) );
+        add_action( 'wp_ajax_dokan-update-shipping-method-settings', array( $this, 'update_shipping_methods_settings' ) );
+        add_action( 'wp_ajax_dokan-toggle-shipping-method-enabled', array( $this, 'toggle_shipping_method' ) );
+        add_action( 'wp_ajax_dokan-save-zone-settings', array( $this, 'save_zone_settings' ) );
+        add_action( 'wp_ajax_dokan-add-shipping-method', array( $this, 'add_shipping_method' ) );
+        add_action( 'wp_ajax_dokan-delete-shipping-method', array( $this, 'delete_shipping_method' ) );
     }
 
     /**
@@ -87,6 +95,266 @@ class Dokan_Pro_Ajax {
         return $instance;
     }
 
+    /**
+     * Get shipping zone
+     *
+     * @since 2.8.0
+     *
+     * @return void
+     */
+    public function get_shipping_zone() {
+        if ( ! wp_verify_nonce( $_POST['nonce'], 'dokan_reviews' ) ) {
+            wp_send_json_error( __( 'Invalid nonce', 'dokan' ) );
+        }
+
+        if ( isset( $_POST['zoneID'] ) ) {
+            $zones = Dokan_Shipping_Zone::get_zone( $_POST['zoneID'] );
+        } else {
+            $zones = Dokan_Shipping_Zone::get_zones();
+        }
+
+        wp_send_json_success( $zones );
+    }
+
+    /**
+     * Get shipping methods
+     *
+     * @since 2.8.0
+     *
+     * @return void
+     */
+    public function get_shipping_methods() {
+        if ( ! wp_verify_nonce( $_POST['nonce'], 'dokan_reviews' ) ) {
+            wp_send_json_error( __( 'Invalid nonce', 'dokan' ) );
+        }
+
+        if ( !isset( $_POST['zoneID'] ) ) {
+            wp_send_json_error( __( 'Zone not found', 'dokan' ) );
+        }
+
+        $methods = Dokan_Shipping_Zone::get_shipping_methods( $_POST['zoneID'] );
+
+        wp_send_json_success( $methods );
+    }
+
+    /**
+     * Update shipping methods settings
+     *
+     * @since 2.8.0
+     *
+     * @return void
+     */
+    public function update_shipping_methods_settings() {
+        if ( ! wp_verify_nonce( $_POST['nonce'], 'dokan_reviews' ) ) {
+            wp_send_json_error( __( 'Invalid nonce', 'dokan' ) );
+        }
+
+        $zone_id = isset( $_POST['zoneID'] ) ? $_POST['zoneID'] : '';
+
+        if ( $zone_id == '' ) {
+            wp_send_json_error( __( 'Shipping zone not found', 'dokan' ) );
+        }
+
+        $defaults = array(
+            'instance_id' => '',
+            'method_id'   => '',
+            'zone_id'     => $zone_id,
+            'settings'    => array()
+        );
+
+        $args = dokan_parse_args( $_POST['data'], $defaults );
+
+        if ( empty( $args['settings']['title'] ) ) {
+            wp_send_json_error( __( 'Shipping title must be required', 'dokan' ) );
+        }
+
+        $result = Dokan_Shipping_Zone::update_shipping_method( $args );
+
+        wp_send_json_success( $args );
+    }
+
+    /**
+     * Toggle shipping method
+     *
+     * @since 2.8.0
+     *
+     * @return void
+     */
+    public function toggle_shipping_method() {
+        if ( ! wp_verify_nonce( $_POST['nonce'], 'dokan_reviews' ) ) {
+            wp_send_json_error( __( 'Invalid nonce', 'dokan' ) );
+        }
+
+        $zone_id = isset( $_POST['zoneID'] ) ? $_POST['zoneID'] : '';
+
+        if ( $zone_id == '' ) {
+            wp_send_json_error( __( 'Shipping zone not found', 'dokan' ) );
+        }
+
+        $instance_id = ! empty( $_POST['instance_id'] ) ? $_POST['instance_id'] : 0;
+
+        if ( ! $instance_id ) {
+            wp_send_json_error( __( 'Shipping method not found', 'dokan' ) );
+        }
+
+        $data = array(
+            'instance_id' => $instance_id,
+            'zone_id'     => $zone_id,
+            'checked'     => ( $_POST['checked'] == 'true' ) ? 1 : 0
+        );
+
+        $result = Dokan_Shipping_Zone::toggle_shipping_method( $data );
+
+        if ( is_wp_error( $result ) ) {
+            wp_send_json_error( $result->get_error_message() );
+        }
+
+        $message = $data['checked'] ? __( 'Shipping method enabled successfully', 'dokan' ) : __( 'Shipping method disabled successfully', 'dokan' );
+        wp_send_json_success( $message );
+    }
+
+    /**
+     * Add new shipping method for a zone
+     *
+     * @since 2.8.0
+     *
+     * @return void
+     */
+    public function add_shipping_method() {
+        if ( ! wp_verify_nonce( $_POST['nonce'], 'dokan_reviews' ) ) {
+            wp_send_json_error( __( 'Invalid nonce', 'dokan' ) );
+        }
+
+        $zone_id = isset( $_POST['zoneID'] ) ? $_POST['zoneID'] : '';
+
+        if ( $zone_id == '' ) {
+            wp_send_json_error( __( 'Shipping zone not found', 'dokan' ) );
+        }
+
+        if ( empty( $_POST['method'] ) ) {
+            wp_send_json_error( __( 'Please select a shipping method', 'dokan' ) );
+        }
+
+        $data = array(
+            'zone_id'   => $zone_id,
+            'method_id' => $_POST['method']
+        );
+
+        $result = Dokan_Shipping_Zone::add_shipping_methods( $data );
+
+        if ( is_wp_error( $result ) ) {
+            wp_send_json_error( $result->get_error_message() , 'dokan' );
+        }
+
+        wp_send_json_success( __( 'Shipping method added successfully', 'dokan' ) );
+    }
+
+    /**
+     * Delete shipping method
+     *
+     * @since 2.8.0
+     *
+     * @return void
+     */
+    public function delete_shipping_method() {
+        if ( ! wp_verify_nonce( $_POST['nonce'], 'dokan_reviews' ) ) {
+            wp_send_json_error( __( 'Invalid nonce', 'dokan' ) );
+        }
+
+        $zone_id = isset( $_POST['zoneID'] ) ? $_POST['zoneID'] : '';
+
+        if ( $zone_id == '' ) {
+            wp_send_json_error( __( 'Shipping zone not found', 'dokan' ) );
+        }
+
+        if ( empty( $_POST['instance_id'] ) ) {
+            wp_send_json_error( __( 'Shipping method not found', 'dokan' ) );
+        }
+
+        $data = array(
+            'zone_id'     => $zone_id,
+            'instance_id' => $_POST['instance_id']
+        );
+
+        $result = Dokan_Shipping_Zone::delete_shipping_methods( $data );
+
+        if ( is_wp_error( $result ) ) {
+            wp_send_json_error( $result->get_error_message() , 'dokan' );
+        }
+
+        wp_send_json_success( __( 'Shipping method deleted', 'dokan' ) );
+    }
+
+    /**
+     * Save zone settings
+     *
+     * @since 2.8.0
+     *
+     * @return void
+     */
+    public function save_zone_settings() {
+        if ( ! wp_verify_nonce( $_POST['nonce'], 'dokan_reviews' ) ) {
+            wp_send_json_error( __( 'Invalid nonce', 'dokan' ) );
+        }
+
+        $zone_id = isset( $_POST['zoneID'] ) ? $_POST['zoneID'] : '';
+
+        if ( $zone_id == '' ) {
+            wp_send_json_error( __( 'Shipping zone not found', 'dokan' ) );
+        }
+
+        $location = array();
+
+        if ( ! empty( $_POST['country'] ) && is_array( $_POST['country'] ) ) {
+            $country_array = array();
+
+            foreach ( $_POST['country'] as $country ) {
+                $country_array[] = array(
+                    'code' => $country['code'],
+                    'type'  => 'country'
+                );
+            }
+
+            $location = array_merge( $location, $country_array );
+        }
+
+        if ( ! empty( $_POST['state'] ) && is_array( $_POST['state'] ) ) {
+            $state_array = array();
+
+            foreach ( $_POST['state'] as $state ) {
+                $state_array[] = array(
+                    'code' => $state['code'],
+                    'type'  => 'state'
+                );
+            }
+
+            $location = array_merge( $location, $state_array );
+        }
+
+        if ( ! empty( $_POST['postcode'] ) ) {
+            $postcodes = explode( ',', $_POST['postcode'] );
+            $postcode_array = array();
+
+            foreach ( $postcodes as $postcode ) {
+                $postcode_array[] = array(
+                    'code' => $postcode,
+                    'type' => 'postcode'
+                );
+            }
+
+            $location = array_merge( $location, $postcode_array );
+        }
+
+        $result = Dokan_Shipping_Zone::save_location( $location, $zone_id );
+
+        wp_send_json_success( __( 'Zone settings save successfully', 'dokan' ) );
+    }
+
+    /**
+     * Load variations
+     *
+     * @return void
+     */
     public function load_variations() {
         ob_start();
 
@@ -802,51 +1070,17 @@ class Dokan_Pro_Ajax {
         $user_id = isset( $_POST['user_id'] ) ? intval( $_POST['user_id'] ) : 0;
         $status = sanitize_text_field( $_POST['type'] );
 
-        if ( $user_id && in_array( $status, array( 'yes', 'no' ) ) ) {
-            update_user_meta( $user_id, 'dokan_enable_selling', $status );
-
-            $product_status = ( $status == 'no' ) ? 'pending' : 'publish';
-            $this->change_product_status( $user_id, $product_status );
-        }
-
-        wp_send_json_success();
-        exit;
-    }
-
-    /**
-     * Chnage product status when toggling seller active status
-     *
-     * @since 2.6.9
-     *
-     * @param int $seller_id
-     * @param string $status
-     *
-     * @return void
-     */
-    function change_product_status( $seller_id, $status ) {
-        $args = array(
-            'post_type'      => 'product',
-            'post_status'    => ( $status == 'pending' ) ? 'publish' : 'pending',
-            'posts_per_page' => -1,
-            'author'         => $seller_id,
-            'orderby'        => 'post_date',
-            'order'          => 'DESC'
-        );
-
-        $product_query = new WP_Query( $args );
-        $products = $product_query->get_posts();
-
-        if ( $products ) {
-            foreach ( $products as $pro ) {
-                if ( 'publish' != $status ) {
-                    update_post_meta( $pro->ID, 'inactive_product_flag', 'yes' );
-                }
-
-                wp_update_post( array( 'ID' => $pro->ID, 'post_status' => $status ) );
+        if ( in_array( $status, array( 'yes', 'no' ) ) ) {
+            if ( 'yes' == $status ) {
+                $user = dokan()->vendor->get( $user_id )->make_active();
+            } else {
+                $user = dokan()->vendor->get( $user_id )->make_inactive();
             }
         }
-    }
 
+        wp_send_json_success($user);
+        exit;
+    }
 
     /**
      * Load State via ajax for refund

@@ -210,13 +210,13 @@ $is_enable_op_discount  = dokan_get_option( 'discount_edit', 'dokan_selling', ''
                             ?>
                             <li class="image" data-attachment_id="<?php echo $image_id; ?>">
                                 <img src="<?php echo $attachment_image[0]; ?>" alt="">
-                                <a href="#" class="action-delete" title="<?php esc_attr_e( 'Delete image', 'dokan-lite' ); ?>">&times;</a>
+                                <a href="#" class="action-delete" title="<?php esc_attr_e( 'Delete image', 'dokan' ); ?>">&times;</a>
                             </li>
                             <?php
                         }
                     }
                     ?>
-                    <li class="add-image add-product-images tips" data-title="<?php _e( 'Add gallery image', 'dokan-lite' ); ?>">
+                    <li class="add-image add-product-images tips" data-title="<?php _e( 'Add gallery image', 'dokan' ); ?>">
                         <a href="#" class="add-product-images"><i class="fa fa-plus" aria-hidden="true"></i></a>
                     </li>
                 </ul>

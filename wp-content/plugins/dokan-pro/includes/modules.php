@@ -154,10 +154,11 @@ function dokan_pro_is_module_inactive( $module ) {
  *
  * @param  string $module basename of the module file
  *
- * @return WP_Error|null WP_Error on invalid file or null on success.
+ * @return WP_Error|boolean WP_Error on invalid file or boolean.
  */
 function dokan_pro_activate_module( $module ) {
-    $current = dokan_pro_get_active_modules();
+    $current   = dokan_pro_get_active_modules();
+    $activated = false;
 
     $module_root = dirname( __FILE__) . '/modules';
     $module_data = dokan_pro_get_module_data( "$module_root/$module" );
@@ -175,7 +176,7 @@ function dokan_pro_activate_module( $module ) {
         $module_class = dokan_module_class_map( $module );
 
         if ( $module_class && class_exists( $module_class ) ) {
-            $reflector = new ReflectionClass( $module_class );
+            $reflector  = new ReflectionClass( $module_class );
             $addon_path = plugin_basename( $reflector->getFileName() );
 
             deactivate_plugins( $addon_path );
@@ -190,10 +191,12 @@ function dokan_pro_activate_module( $module ) {
             do_action( "dokan_activate_{$file_path}", $module );
         }
 
+        $activated = true;
+
         update_option( dokan_pro_active_module_key(), $current );
     }
 
-    return null;
+    return $activated;
 }
 
 /**

@@ -296,8 +296,6 @@ class Dokan_Pro_Reports {
     public function render_review_content() {
         global $woocommerce;
 
-        require_once DOKAN_PRO_INC . '/reports.php';
-
         $charts  = dokan_get_reports_charts();
         $link    = dokan_get_navigation_url( 'reports' );
         $current = isset( $_GET['chart'] ) ? $_GET['chart'] : 'overview';
