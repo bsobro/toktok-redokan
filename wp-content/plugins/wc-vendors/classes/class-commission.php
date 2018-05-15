@@ -52,9 +52,9 @@ class WCV_Commission
 	public static function commission_status(){
 
 		return apply_filters( 'wcvendors_commission_status', array(
-				'due' 		=> __( 'Due', 'wcvendors' ),
-				'paid'		=> __( 'Paid', 'wcvendors' ),
-				'reversed'	=> __( 'Reversed', 'wcvendors' )
+				'due' 		=> __( 'Due', 'wc-vendors' ),
+				'paid'		=> __( 'Paid', 'wc-vendors' ),
+				'reversed'	=> __( 'Reversed', 'wc-vendors' )
 			)
 		);
 	}
@@ -146,7 +146,7 @@ class WCV_Commission
 			foreach ( $details as $key => $detail ) {
 
 				$product_id = $detail['product_id'];
-				$order_date = ( version_compare( WC_VERSION, '2.7', '<' ) ) ? $order->order_date : $order->get_date_created();
+				$order_date = $order->get_date_created();
 
 				$insert_due[ $product_id ] = array(
 					'order_id'       => $order_id,
@@ -300,7 +300,7 @@ class WCV_Commission
 
 		$product_commission = get_post_meta( $product_id, 'pv_commission_rate', true );
 		$vendor_commission  = WCV_Vendors::get_default_commission( $vendor_id );
-		$default_commission = WC_Vendors::$pv_options->get_option( 'default_commission' );
+		$default_commission = get_option( 'wcvendors_commission_percent' );
 
 		if ( $product_commission != '' && $product_commission !== false ) {
 			$commission = $product_commission;
@@ -544,5 +544,30 @@ class WCV_Commission
 		return $commission_due;
 
 	} // get_commission_due()
+
+
+	/**
+	 * Get the total due for all commissions
+	 *
+	 * @since 2.0.0
+	 * @access public
+	 */
+	public static function get_totals( $status = 'due' ){
+
+		$total_due = 0;
+
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . "pv_commission";
+		$query      = "SELECT sum(total_due + total_shipping + tax) as total
+					FROM `{$table_name}`
+					WHERE status = %s";
+		$results    = $wpdb->get_results( $wpdb->prepare( $query, $status ) );
+
+		$totals = array_shift( $results )->total;
+
+		return $totals;
+
+	}
 
 }
