@@ -1,0 +1,221 @@
+2018-05-15T03:46:33+00:00 CRITICAL Uncaught Error: Call to a member function get_option() on null in /var/www/html/wordpress/wp-content/themes/rehub/inc/wcvendor/wc-vendor-free-brand/class-shop-branding.php:41
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(286): RH_WCVendors_Free_Branding->enqueue_scripts('')
+#1 /var/www/html/wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /var/www/html/wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /var/www/html/wordpress/wp-includes/script-loader.php(1436): do_action('wp_enqueue_scri...')
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(286): wp_enqueue_scripts('')
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#7 /var/www/html/wordpress/wp-includes/general-template.php(2614): do_action('wp_head')
+#8 /var/www/html/wordpress/wp-content/themes/rehub/header.php(14): wp_head()
+#9 /var/www/html
+
+2018-05-15T06:29:37+00:00 CRITICAL Uncaught Error: Call to a member function get_option() on null in /var/www/html/wordpress/wp-content/themes/rehub/inc/wcvendor/wc-vendor-free-brand/class-shop-branding.php:41
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(286): RH_WCVendors_Free_Branding->enqueue_scripts('')
+#1 /var/www/html/wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /var/www/html/wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /var/www/html/wordpress/wp-includes/script-loader.php(1436): do_action('wp_enqueue_scri...')
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(286): wp_enqueue_scripts('')
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#7 /var/www/html/wordpress/wp-includes/general-template.php(2614): do_action('wp_head')
+#8 /var/www/html/wordpress/wp-content/themes/rehub/header.php(14): wp_head()
+#9 /var/www/html
+
+2018-05-15T07:57:52+00:00 CRITICAL Uncaught Error: Call to a member function get_option() on null in /var/www/html/wordpress/wp-content/themes/rehub/inc/wcvendor/wc-vendor-free-brand/class-shop-branding.php:41
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(286): RH_WCVendors_Free_Branding->enqueue_scripts('')
+#1 /var/www/html/wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /var/www/html/wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /var/www/html/wordpress/wp-includes/script-loader.php(1436): do_action('wp_enqueue_scri...')
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(286): wp_enqueue_scripts('')
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#7 /var/www/html/wordpress/wp-includes/general-template.php(2614): do_action('wp_head')
+#8 /var/www/html/wordpress/wp-content/themes/rehub/header.php(14): wp_head()
+#9 /var/www/html
+
+2018-05-15T08:32:41+00:00 CRITICAL Uncaught Error: Call to a member function get_option() on null in /var/www/html/wordpress/wp-content/themes/rehub/inc/wcvendor/wc-vendor-free-brand/class-shop-branding.php:41
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(286): RH_WCVendors_Free_Branding->enqueue_scripts('')
+#1 /var/www/html/wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /var/www/html/wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /var/www/html/wordpress/wp-includes/script-loader.php(1436): do_action('wp_enqueue_scri...')
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(286): wp_enqueue_scripts('')
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#7 /var/www/html/wordpress/wp-includes/general-template.php(2614): do_action('wp_head')
+#8 /var/www/html/wordpress/wp-content/themes/rehub/header.php(14): wp_head()
+#9 /var/www/html
+
+2018-05-15T11:01:19+00:00 CRITICAL Uncaught Error: Call to a member function get_option() on null in /var/www/html/wordpress/wp-content/themes/rehub/inc/wcvendor/wc-vendor-free-brand/class-shop-branding.php:41
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(286): RH_WCVendors_Free_Branding->enqueue_scripts('')
+#1 /var/www/html/wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /var/www/html/wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /var/www/html/wordpress/wp-includes/script-loader.php(1436): do_action('wp_enqueue_scri...')
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(286): wp_enqueue_scripts('')
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#7 /var/www/html/wordpress/wp-includes/general-template.php(2614): do_action('wp_head')
+#8 /var/www/html/wordpress/wp-content/themes/rehub/header.php(14): wp_head()
+#9 /var/www/html
+
+2018-05-15T13:52:52+00:00 CRITICAL Uncaught Error: Call to a member function get_option() on null in /var/www/html/wordpress/wp-content/themes/rehub/inc/wcvendor/wc-vendor-free-brand/class-shop-branding.php:41
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(286): RH_WCVendors_Free_Branding->enqueue_scripts('')
+#1 /var/www/html/wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /var/www/html/wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /var/www/html/wordpress/wp-includes/script-loader.php(1436): do_action('wp_enqueue_scri...')
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(286): wp_enqueue_scripts('')
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#7 /var/www/html/wordpress/wp-includes/general-template.php(2614): do_action('wp_head')
+#8 /var/www/html/wordpress/wp-content/themes/rehub/header.php(14): wp_head()
+#9 /var/www/html
+
+2018-05-15T18:22:04+00:00 CRITICAL Uncaught Error: Call to a member function get_option() on null in /var/www/html/wordpress/wp-content/themes/rehub/inc/wcvendor/wc-vendor-free-brand/class-shop-branding.php:41
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(286): RH_WCVendors_Free_Branding->enqueue_scripts('')
+#1 /var/www/html/wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /var/www/html/wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /var/www/html/wordpress/wp-includes/script-loader.php(1436): do_action('wp_enqueue_scri...')
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(286): wp_enqueue_scripts('')
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#7 /var/www/html/wordpress/wp-includes/general-template.php(2614): do_action('wp_head')
+#8 /var/www/html/wordpress/wp-content/themes/rehub/header.php(14): wp_head()
+#9 /var/www/html
+
+2018-05-15T21:35:32+00:00 CRITICAL Uncaught Error: Call to a member function get_option() on null in /var/www/html/wordpress/wp-content/themes/rehub/inc/wcvendor/wc-vendor-free-brand/class-shop-branding.php:41
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(286): RH_WCVendors_Free_Branding->enqueue_scripts('')
+#1 /var/www/html/wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /var/www/html/wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /var/www/html/wordpress/wp-includes/script-loader.php(1436): do_action('wp_enqueue_scri...')
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(286): wp_enqueue_scripts('')
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#7 /var/www/html/wordpress/wp-includes/general-template.php(2614): do_action('wp_head')
+#8 /var/www/html/wordpress/wp-content/themes/rehub/header.php(14): wp_head()
+#9 /var/www/html
+
+2018-05-15T22:43:29+00:00 CRITICAL Uncaught Error: Call to a member function get_option() on null in /var/www/html/wordpress/wp-content/themes/rehub/inc/wcvendor/wc-vendor-free-brand/class-shop-branding.php:41
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(286): RH_WCVendors_Free_Branding->enqueue_scripts('')
+#1 /var/www/html/wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /var/www/html/wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /var/www/html/wordpress/wp-includes/script-loader.php(1436): do_action('wp_enqueue_scri...')
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(286): wp_enqueue_scripts('')
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#7 /var/www/html/wordpress/wp-includes/general-template.php(2614): do_action('wp_head')
+#8 /var/www/html/wordpress/wp-content/themes/rehub/header.php(14): wp_head()
+#9 /var/www/html
+
+2018-05-15T22:58:37+00:00 CRITICAL Uncaught Error: Call to a member function get_option() on null in /var/www/html/wordpress/wp-content/themes/rehub/inc/wcvendor/wc-vendor-free-brand/class-shop-branding.php:41
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(286): RH_WCVendors_Free_Branding->enqueue_scripts('')
+#1 /var/www/html/wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /var/www/html/wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /var/www/html/wordpress/wp-includes/script-loader.php(1436): do_action('wp_enqueue_scri...')
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(286): wp_enqueue_scripts('')
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#7 /var/www/html/wordpress/wp-includes/general-template.php(2614): do_action('wp_head')
+#8 /var/www/html/wordpress/wp-content/themes/rehub/header.php(14): wp_head()
+#9 /var/www/html
+
+2018-05-15T22:58:52+00:00 CRITICAL Uncaught Error: Call to a member function get_option() on null in /var/www/html/wordpress/wp-content/themes/rehub/inc/wcvendor/wc-vendor-free-brand/class-shop-branding.php:41
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(286): RH_WCVendors_Free_Branding->enqueue_scripts('')
+#1 /var/www/html/wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /var/www/html/wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /var/www/html/wordpress/wp-includes/script-loader.php(1436): do_action('wp_enqueue_scri...')
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(286): wp_enqueue_scripts('')
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#7 /var/www/html/wordpress/wp-includes/general-template.php(2614): do_action('wp_head')
+#8 /var/www/html/wordpress/wp-content/themes/rehub/header.php(14): wp_head()
+#9 /var/www/html
+
+2018-05-16T02:58:46+00:00 CRITICAL Uncaught Error: Call to a member function get_option() on null in /var/www/html/wordpress/wp-content/themes/rehub/inc/wcvendor/wc-vendor-free-brand/class-shop-branding.php:41
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(286): RH_WCVendors_Free_Branding->enqueue_scripts('')
+#1 /var/www/html/wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /var/www/html/wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /var/www/html/wordpress/wp-includes/script-loader.php(1436): do_action('wp_enqueue_scri...')
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(286): wp_enqueue_scripts('')
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#7 /var/www/html/wordpress/wp-includes/general-template.php(2614): do_action('wp_head')
+#8 /var/www/html/wordpress/wp-content/themes/rehub/header.php(14): wp_head()
+#9 /var/www/html
+
+2018-05-16T03:35:43+00:00 CRITICAL Uncaught Error: Call to a member function get_option() on null in /var/www/html/wordpress/wp-content/themes/rehub/inc/wcvendor/wc-vendor-free-brand/class-shop-branding.php:41
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(286): RH_WCVendors_Free_Branding->enqueue_scripts('')
+#1 /var/www/html/wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /var/www/html/wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /var/www/html/wordpress/wp-includes/script-loader.php(1436): do_action('wp_enqueue_scri...')
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(286): wp_enqueue_scripts('')
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#7 /var/www/html/wordpress/wp-includes/general-template.php(2614): do_action('wp_head')
+#8 /var/www/html/wordpress/wp-content/themes/rehub/header.php(14): wp_head()
+#9 /var/www/html
+
+2018-05-16T03:36:14+00:00 CRITICAL Uncaught Error: Call to a member function get_option() on null in /var/www/html/wordpress/wp-content/themes/rehub/inc/wcvendor/wc-vendor-free-brand/class-shop-branding.php:41
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(286): RH_WCVendors_Free_Branding->enqueue_scripts('')
+#1 /var/www/html/wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /var/www/html/wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /var/www/html/wordpress/wp-includes/script-loader.php(1436): do_action('wp_enqueue_scri...')
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(286): wp_enqueue_scripts('')
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#7 /var/www/html/wordpress/wp-includes/general-template.php(2614): do_action('wp_head')
+#8 /var/www/html/wordpress/wp-content/themes/rehub/header.php(14): wp_head()
+#9 /var/www/html
+
+2018-05-16T03:36:16+00:00 CRITICAL Uncaught Error: Call to a member function get_option() on null in /var/www/html/wordpress/wp-content/themes/rehub/inc/wcvendor/wc-vendor-free-brand/class-shop-branding.php:41
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(286): RH_WCVendors_Free_Branding->enqueue_scripts('')
+#1 /var/www/html/wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /var/www/html/wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /var/www/html/wordpress/wp-includes/script-loader.php(1436): do_action('wp_enqueue_scri...')
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(286): wp_enqueue_scripts('')
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#7 /var/www/html/wordpress/wp-includes/general-template.php(2614): do_action('wp_head')
+#8 /var/www/html/wordpress/wp-content/themes/rehub/header.php(14): wp_head()
+#9 /var/www/html
+
+2018-05-16T03:36:50+00:00 CRITICAL Uncaught Error: Call to a member function get_option() on null in /var/www/html/wordpress/wp-content/themes/rehub/inc/wcvendor/wc-vendor-free-brand/class-shop-branding.php:41
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(286): RH_WCVendors_Free_Branding->enqueue_scripts('')
+#1 /var/www/html/wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /var/www/html/wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /var/www/html/wordpress/wp-includes/script-loader.php(1436): do_action('wp_enqueue_scri...')
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(286): wp_enqueue_scripts('')
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#7 /var/www/html/wordpress/wp-includes/general-template.php(2614): do_action('wp_head')
+#8 /var/www/html/wordpress/wp-content/themes/rehub/header.php(14): wp_head()
+#9 /var/www/html
+
+2018-05-16T04:04:45+00:00 CRITICAL Uncaught Error: Call to a member function get_option() on null in /var/www/html/wordpress/wp-content/themes/rehub/inc/wcvendor/wc-vendor-free-brand/class-shop-branding.php:41
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(286): RH_WCVendors_Free_Branding->enqueue_scripts('')
+#1 /var/www/html/wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /var/www/html/wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /var/www/html/wordpress/wp-includes/script-loader.php(1436): do_action('wp_enqueue_scri...')
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(286): wp_enqueue_scripts('')
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#7 /var/www/html/wordpress/wp-includes/general-template.php(2614): do_action('wp_head')
+#8 /var/www/html/wordpress/wp-content/themes/rehub/header.php(14): wp_head()
+#9 /var/www/html
+
