@@ -22,31 +22,28 @@ var GMW = {
         4 : 'An unknown error occurred'
     },
 
-    vars : {
+    // page locatore vars
+    auto_locator : {
+        status   : false,
+        type     : false,
+        callback : false       
+    },
 
-        // page locatore vars
-        auto_locator : {
-            status   : false,
-            type     : false,
-            callback : false       
-        },
+    // form locator button object
+    locator_button : {
+        status  : false,
+        element : false,
+        id      : false,
+        loader  : false,
+        submit  : false
+    },
 
-        // form locator button object
-        locator_button : {
-            status  : false,
-            element : false,
-            id      : false,
-            loader  : false,
-            submit  : false
-        },
-
-        // form submission vars
-        form_submission : {
-            status : false,
-            form   : false,
-            id     : false,
-            submit : false
-        },
+    // form submission vars
+    form_submission : {
+        status : false,
+        form   : false,
+        id     : false,
+        submit : false
     },
 
     /**
@@ -219,9 +216,7 @@ var GMW = {
             var hooks = GMW.hooks[hookType][action], hook;
            
             //sort by priority
-            hooks.sort( function( a, b ) { 
-                return a.priority - b.priority;
-            });
+            hooks.sort( function( a, b ) { return a["priority"]-b["priority"] } );
             
             for ( var i = 0; i < hooks.length; i++ ) {
                 
@@ -423,11 +418,11 @@ var GMW = {
             if ( typeof fieldData.autocomplete_countries !== 'undefined' ) {
                 options.componentRestrictions = { 
                     country : fieldData.autocomplete_countries.split( ',' )
-                };
+                }
             }
 
             if ( typeof fieldData.autocomplete_types !== 'undefined' ) {
-                options.types = [fieldData.autocomplete_types];
+                options.types = [fieldData.autocomplete_types] 
             }
 
             //The plugins uses basic options of Google places API. 
@@ -446,7 +441,22 @@ var GMW = {
                 
                 if ( place.geometry ) {
 
-                    var formElement = jQuery( input_field.closest( 'form' ) );
+                    var formElement = input_field.closest( 'form' );
+
+                     // if place exists and autocomplete is within a form, look for form ID and 
+                    // get the coords from the place details into the hidden coordinates fields of the form
+                    /*if ( formElement.attr( 'data-form_id' ) ) {
+                        
+                        var gmwFormID = formElement.data( 'form_id' );
+                    
+                    } else if ( formElement.find( '.gmw-form-id' ).length ) {
+
+                        var gmwFormID = formElement.find( '.gmw-form-id' ).val();
+
+                    } else {
+                        
+                        return
+                    }*/
 
                     // if only country entered set its value in hidden fields
                     if ( place.address_components.length == 1 && place.address_components[0].types[0] == 'country' ) {      
@@ -460,9 +470,8 @@ var GMW = {
                         formElement.find( '.gmw-country' ).val( place.address_components[1].short_name ).prop( 'disabled', false );
                     }
 
-                    // make sure coords fields exist.
                     formElement.find( '.gmw-lat' ).val( place.geometry.location.lat().toFixed(6) );
-                    formElement.find( '.gmw-lng' ).val( place.geometry.location.lng().toFixed(6) );             
+                    formElement.find( '.gmw-lng' ).val( place.geometry.location.lng().toFixed(6) );               
                 }   
             });
         }
@@ -521,7 +530,7 @@ var GMW = {
         GMW.do_action( 'gmw_save_location_fields', results );
                 
         //check for each of the address components and if exist save it in a cookie
-        for ( var x in address ) {
+        for ( x in address ) {
 
             // street number
             if ( address[x].types == 'street_number' && address[x].long_name != undefined ) {
@@ -639,10 +648,10 @@ var GMW = {
     auto_locator : function( type, success, failed ) {
 
         // set status to true
-        GMW.vars.auto_locator.status  = true;
-        GMW.vars.auto_locator.type    = type;
-        GMW.vars.auto_locator.success = success;
-        GMW.vars.auto_locator.failed  = failed;
+        GMW.auto_locator.status  = true;
+        GMW.auto_locator.type    = type;
+        GMW.auto_locator.success = success;
+        GMW.auto_locator.failed  = failed;
         
         // run navigator
         GMW.navigator( GMW.auto_locator_success, GMW.auto_locator_failed );
@@ -661,17 +670,17 @@ var GMW = {
         address_fields = GMW.save_location_fields( results );
 
         // run custom callback function if set 
-        if ( GMW.vars.auto_locator.success != false ) {
+        if ( GMW.auto_locator.success != false ) {
 
-            GMW.vars.auto_locator.success( address_fields, results );
+            GMW.auto_locator.success( address_fields, results );
 
         // otherwise, get done with the function.
         } else {
 
-            GMW.vars.auto_locator.status  = false;
-            GMW.vars.auto_locator.type    = false;
-            GMW.vars.auto_locator.success = false;
-            GMW.vars.auto_locator.failed  = false;
+            GMW.auto_locator.status  = false;
+            GMW.auto_locator.type    = false;
+            GMW.auto_locator.success = false;
+            GMW.auto_locator.failed  = false;
         }
     },
 
@@ -685,9 +694,9 @@ var GMW = {
     auto_locator_failed : function( status ) {
 
         // run custom failed callback function if set
-        if ( GMW.vars.auto_locator.failed != false ) {
+        if ( GMW.auto_locator.failed != false ) {
 
-            GMW.vars.auto_locator.failed( status );
+            GMW.auto_locator.failed( status );
         
         // otherwise, get done with the function.
         } else {
@@ -695,10 +704,10 @@ var GMW = {
             // alert error message
             alert( status );
 
-            GMW.vars.auto_locator.status  = false;
-            GMW.vars.auto_locator.type    = false;
-            GMW.vars.auto_locator.success = false;
-            GMW.vars.auto_locator.failed  = false;
+            GMW.auto_locator.status  = false;
+            GMW.auto_locator.type    = false;
+            GMW.auto_locator.success = false;
+            GMW.auto_locator.failed  = false;
         }
     },
 
@@ -710,9 +719,9 @@ var GMW = {
      */
     page_locator_success : function( address_fields, results ) {
 
-        GMW.vars.auto_locator.status   = false;
-        GMW.vars.auto_locator.callback = false;
-        GMW.vars.auto_locator.type     = false;
+        GMW.auto_locator.status   = false;
+        GMW.auto_locator.callback = false;
+        GMW.auto_locator.type     = false;
 
         // submit current location hidden form
         setTimeout(function() {
@@ -790,15 +799,15 @@ var GMW = {
     form_submission : function( form, event ) {
         
         // set form variables
-        GMW.vars.form_submission.status = true;
-        GMW.vars.form_submission.form   = form;
-        GMW.vars.form_submission.id     = GMW.vars.form_submission.form.find( '.gmw-form-id' ).val();
+        GMW.form_submission.status = true;
+        GMW.form_submission.form   = form;
+        GMW.form_submission.id     = GMW.form_submission.form.find( '.gmw-form-id' ).val();
 
-        if ( GMW.vars.form_submission.submit == true ) {
+        if ( GMW.form_submission.submit == true ) {
             return true;
         } 
 
-        //var form         = form;
+        var form         = form;
         var addressField = form.find( 'input.gmw-address' );
         var address      = '';
 
@@ -848,21 +857,21 @@ var GMW = {
             // otherwise submit the form
             } else {
                 
-                GMW.vars.form_submission.submit = true;
-                GMW.vars.form_submission.form.submit(); 
+                GMW.form_submission.submit = true;
+                GMW.form_submission.form.submit(); 
 
                 return false;
             }
         }
-
+       
         // When Client-side geocoder is enabled
-        if ( typeof clientSideGeocoder == 'undefined' || clientSideGeocoder == 1 ) {
-        	
+        if ( GMW.options.general_settings.js_geocode == 1 ) {
+
             // check if hidden coords exists. if so no need to geocode the address again and we can submit the form with the information we already have.
             if ( form.find( 'input.gmw-lat' ).val() != '' && form.find( 'input.gmw-lng' ).val() != '' ) {            
                
-                GMW.vars.form_submission.submit = true;
-                GMW.vars.form_submission.form.submit(); 
+                GMW.form_submission.submit = true;
+                GMW.form_submission.form.submit(); 
 
                 return false;
             }
@@ -873,8 +882,8 @@ var GMW = {
         // Otherwise, no geocoding needed. Submit the form!
         } else {    
 
-            GMW.vars.form_submission.submit = true;
-            GMW.vars.form_submission.form.submit(); 
+            GMW.form_submission.submit = true;
+            GMW.form_submission.form.submit(); 
 
             return false;    
         }
@@ -891,7 +900,7 @@ var GMW = {
      */
     form_geocoder_success : function( results ) {
 
-        var form = GMW.vars.form_submission.form;
+        var form = GMW.form_submission.form;
         var ac   = results[0].address_components;
 
         // if only country entered set its value in hidden fields
@@ -910,8 +919,8 @@ var GMW = {
 
         // submit the form
         setTimeout(function() {
-            GMW.vars.form_submission.submit = true;
-            GMW.vars.form_submission.form.submit();  
+            GMW.form_submission.submit = true;
+            GMW.form_submission.form.submit();  
         }, 300);
 
         return false; 
@@ -926,27 +935,25 @@ var GMW = {
      * 
      * @return {[type]}         [description]
      */
-    locator_button : function( locator, this_form ) {
-
-        var form;
+    locator_button : function( locator, form ) {
 
         // if form element is missing, try to find it.
-        if ( typeof this_form == 'undefined' ) {
-            form = locator.closest( 'form' );
+        if ( typeof form == 'undefined' ) {
+            var form = locator.closest( 'form' );
         } else {
-            form = this_form;
+             var form = form;
         }
        
         // disabled all text fields and submit buttons while working
         jQuery( 'form.gmw-form' ).find( 'input[type="text"], .gmw-submit' ).attr( 'disabled', 'disabled' );
         
         // set the locator vars.
-        GMW.vars.locator_button.status  = true;
-        GMW.vars.locator_button.form    = form;
-        GMW.vars.locator_button.element = locator;
-        GMW.vars.locator_button.form_id = locator.data( 'form_id' );
-        GMW.vars.locator_button.loader  = locator.next();
-        GMW.vars.locator_button.submit  = locator.attr( 'data-locator_submit' ) == 1 ? true : false;
+        GMW.locator_button.status  = true;
+        GMW.locator_button.form    = form;
+        GMW.locator_button.element = locator;
+        GMW.locator_button.form_id = locator.data( 'form_id' );
+        GMW.locator_button.loader  = locator.next();
+        GMW.locator_button.submit  = locator.attr( 'data-locator_submit' ) == 1 ? true : false;
 
         // clear hidden coordinates
         form.find( 'input.gmw-lat, input.gmw-lng' ).val( '' );
@@ -960,14 +967,14 @@ var GMW = {
         // otherwise, if this is a button
         } else if ( locator.hasClass( 'text' ) ) {
 
-             GMW.vars.locator_button.loader.fadeIn( 'fast' );
+             GMW.locator_button.loader.fadeIn( 'fast' );
 
         } else {
 
             // hide locator button
             locator.fadeOut( 'fast', function() {
                 // show spinning loader 
-                GMW.vars.locator_button.loader.fadeIn( 'fast' );
+                GMW.locator_button.loader.fadeIn( 'fast' )
             });
         }
 
@@ -988,7 +995,7 @@ var GMW = {
      */
     locator_button_success : function( address_fields, results ) {
 
-        var form         = GMW.vars.locator_button.form;
+        var form         = GMW.locator_button.form;
         var addressField = form.find( 'input.gmw-address' );
 
         // enable all forms.
@@ -1013,7 +1020,7 @@ var GMW = {
         }
        
         // if form locator set to auto submit form. 
-        if ( GMW.vars.locator_button.submit ) {
+        if ( GMW.locator_button.submit ) {
             
             setTimeout( function() {
                 
@@ -1048,7 +1055,7 @@ var GMW = {
      */
     locator_button_done : function() {
 
-        var locator = GMW.vars.locator_button.element;
+        var locator = GMW.locator_button.element;
 
         // enabled all text fields and submit buttons
         jQuery( 'form.gmw-form' ).find( 'input[type="text"], .gmw-submit' ).removeAttr( 'disabled' );
@@ -1059,7 +1066,7 @@ var GMW = {
 
         } else {
             // hide spinning loader
-            GMW.vars.locator_button.loader.fadeOut( 'fast',function() {
+            GMW.locator_button.loader.fadeOut( 'fast',function() {
                 // show locator button
                 locator.fadeIn( 'fast' );
             } );
@@ -1067,11 +1074,11 @@ var GMW = {
 
         setTimeout( function() {
             // change locator status
-            GMW.vars.locator_button.status  = false;
-            GMW.vars.locator_button.element = false;
-            GMW.vars.locator_button.form_id = false;
-            GMW.vars.locator_button.loader  = false;
-            GMW.vars.locator_button.submit  = false;
+            GMW.locator_button.status  = false;
+            GMW.locator_button.element = false;
+            GMW.locator_button.form_id = false;
+            GMW.locator_button.loader  = false;
+            GMW.locator_button.submit  = false;
         }, 500 );
     },
 
@@ -1225,7 +1232,7 @@ var GMW = {
             }
         });
     }
-};
+}
 
 jQuery( document ).ready( function( $ ) {
 

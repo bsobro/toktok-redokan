@@ -1,21 +1,21 @@
 <?php
-/**
- * Plugin Name: GEO my WP
- * Plugin URI: http://www.geomywp.com
- * Description: GEO my WP is an adavanced geolocation, mapping, and proximity search plugin. Geotag post types and BuddyPress members, and create advanced, proximity search forms to search and find locations based on address, radius, categories and more.
- * Version: 3.0.4
- * Author: Eyal Fitoussi
- * Author URI: http://www.geomywp.com
- * Requires at least: 4.5
- * Tested up to: 4.9.5
- * Buddypress: 2.8 or higher
- * Text Domain: geo-my-wp
- * Domain Path: /languages
- * License: GNU General Public License v3.0
- * License URI: http://www.gnu.org/licenses/gpl-3.0.html
- */
+/*
+Plugin Name: GEO my WP
+Plugin URI: http://www.geomywp.com
+Description: GEO my WP is an adavanced geolocation, mapping, and proximity search plugin. Geotag post types and BuddyPress members, and create advanced, proximity search forms to search and find locations based on address, radius, categories and more.
+Version: 3.0.1
+Author: Eyal Fitoussi
+Author URI: http://www.geomywp.com
+Requires at least: 4.5
+Tested up to: 4.9.5
+Buddypress: 2.8 or higher
+Text Domain: geo-my-wp
+Domain Path: /languages
+License: GNU General Public License v3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+*/
 
-// Exit if accessed directly.
+// Exit if accessed directly
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -23,173 +23,164 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * GEO my WP class.
  */
-class GEO_MY_WP {
+class GEO_my_WP {
 
 	/**
-	 * GEO my WP version.
-	 *
+	 * GEO my WP version
 	 * @var string
 	 */
-	public $version = '3.0.4';
+	public $version = '3.0.1';
 
 	/**
-	 * GEO my WP & Extensions options.
-	 *
+	 * GEO my WP & Extensions options
 	 * @var [type]
 	 */
 	public $options;
 
 	/**
-	 * GEO my WP URL parameteres prefix.
+	 * GEO my WP URL parameteres prefix
 	 *
 	 * This is the prefix used for the URL paramaters that GEO my WP
-	 * uses with submitted form. It can modified using the filter 'gmw_form_url_prefix', 'gmw_'.
+	 * uses with submitted form. It can modified using the filter
 	 *
+	 * apply_filters( 'gmw_form_url_prefix', 'gmw_' );
+	 * 
 	 * @var string
 	 */
 	public $url_prefix = '';
 
 	/**
 	 * Showing on mobile device?
-	 *
+	 * 
 	 * @var boolean
 	 */
 	public $is_mobile = false;
 
 	/**
-	 * Ajax URl.
-	 *
+	 * Ajax URl
 	 * @var boolean
 	 */
 	public $ajax_url = false;
 
 	/**
-	 * Enable disable internal caching system.
-	 *
+	 * Enable disable internal caching system
+	 * 
 	 * @var boolean
 	 */
 	public $internal_cache = true;
 
 	/**
-	 * Enable disable internal caching system.
-	 *
+	 * Enable disable internal caching system
+	 * 
 	 * @var boolean
 	 */
 	public $internal_cache_expiration = MONTH_IN_SECONDS;
 
 	/**
-	 * Minimum versions required for this version of GEO my WP.
-	 *
+	 * Minimum versions required for this version of GEO my WP
 	 * @var array
 	 */
 	public $required_versions = array(
-		'bp_groups_locator'                => '1.6',
-		'groups_locator'                   => '1.6', // old slug.
+		'bp_groups_locator'   			   => '1.6',
+		'groups_locator'				   => '1.6', // old slug
 		'bp_members_directory_geolocation' => '1.5',
-		'geo_members_directory'            => '1.5', // old slug.
-		'bp_xprofile_geolocation'          => '1.5',
-		'xprofile_fields'                  => '1.5', // old slug.
-		'exclude_locations'                => '1.3',
-		'exclude_members'                  => '1.3', // old slug.
-		'gmw_kleo_geolocation'             => '1.4',
-		'nearby_locations'                 => '1.3',
-		'nearby_posts'                     => '1.3', // old slug.
-		'premium_settings'                 => '2.0',
-		'global_maps'                      => '2.2',
-		'users_locator'                    => '1.3',
-		'wp_users_geo-location'            => '1.3', // old slug.
+		'geo_members_directory'			   => '1.5', // old slug
+		'bp_xprofile_geolocation' 		   => '1.5',
+		'xprofile_fields'				   => '1.5', // old slug
+		'exclude_locations'				   => '1.3',
+		'exclude_members'				   => '1.3', // old slug
+		'gmw_kleo_geolocation'  		   => '1.4',
+		'nearby_locations'				   => '1.3',
+		'nearby_posts'				   	   => '1.3', // old slug
+		'premium_settings' 	    		   => '2.0',
+		'global_maps' 	        		   => '2.2',
+		'users_locator'					   => '1.3',
+		'wp_users_geo-location' 		   => '1.3', // old slug
 	);
 
 	/**
-	 * Registered Objects.
-	 *
+	 * Registered Objects
+	 * 
 	 * @var array
 	 */
 	public $objects = array();
 
 	/**
-	 * Registered Objects Types.
-	 *
+	 * Registered Objects Types 
 	 * @var array
 	 */
 	public $object_types = array();
 
 	/**
-	 * Loaded addons.
-	 *
+	 * Loaded addons
 	 * @var array
 	 */
 	public $registered_addons = array();
 
 	/**
-	 * Addons Status.
-	 *
+	 * Addons Status
 	 * @var array
 	 */
 	public $addons_status = array();
 
 	/**
-	 * Collections of object types and blog ID.
-	 * This will be used on multisite installation.
-	 * and with objects that use different blog IDs. For example,
-	 * users will be saved in the main blog even on multisite since users
+	 * Collections of object types and blog ID. 
+	 * This will be used on multisite installation 
+	 * and with objects that use different blog IDs. For example, 
+	 * users will be saved in the main blog even on multisite since users 
 	 * share the same table across all blogs.
-	 *
+	 *  
 	 * @var array
 	 */
 	public $locations_blogs = array();
 
 	/**
-	 * Core addons.
-	 *
+	 * Core addons
 	 * @var array
 	 */
 	public $core_addons = array();
 
 	/**
-	 * Addons data.
-	 *
+	 * Addons data
 	 * @var array
 	 */
 	public $addons = array();
 
 	/**
-	 * Current Form being loaded.
-	 *
+	 * Current Form being loaded
 	 * @var array
 	 */
 	public $current_form = array();
 
 	/**
-	 * GEO my WP instance.
-	 *
-	 * @var GEO my WP.
-	 *
+	 * @var GEO my WP
+	 * 
 	 * @since 2.4
 	 */
 	private static $instance;
-
+	
 	/**
-	 *
-	 * GEO_my_WP Instance.
+	 * 
+	 * GEO_my_WP Instance
 	 *
 	 * Make sure that only one instance exists.
 	 *
 	 * @since 2.4
-	 *
+	 * 
 	 * @return GEO_my_WP
+	 * 
 	 */
 	public static function instance() {
 
-		if ( ! isset( self::$instance ) && ! ( self::$instance instanceof GEO_my_WP ) ) {
+		if ( !isset( self::$instance ) && ! ( self::$instance instanceof GEO_my_WP ) ) {
 
 			self::$instance = new GEO_my_WP;
 			self::$instance->constants();
 
-			// run plugin installer once GEO my WP activated.
+			// run plugin installer once GEO my WP activated
 			register_activation_hook( __FILE__, array( self::$instance, 'install' ) );
-
-			// setup some global variables.
+			
+			// setup some global variables
 			self::$instance->setup_globals();
 			self::$instance->includes();
 			self::$instance->actions();
@@ -209,7 +200,6 @@ class GEO_MY_WP {
 	 * Prevent cloning of GEO my WP.
 	 *
 	 * @since 3.0
-	 *
 	 * @return void
 	 */
 	public function __clone() {
@@ -220,7 +210,6 @@ class GEO_MY_WP {
 	 * Prevent GEO my WP from being unserialized.
 	 *
 	 * @since 3.0
-	 *
 	 * @return void
 	 */
 	public function __wakeup() {
@@ -228,19 +217,19 @@ class GEO_MY_WP {
 	}
 
 	/**
-	 * Setup plugin constants.
+	 * Setup plugin constants
 	 *
 	 * @access private
 	 * @since 2.4
 	 * @return void
 	 */
 	private function constants() {
-
-		// Define constants.
+	
+		// Define constants
 		if ( ! defined( 'GMW_REMOTE_SITE_URL' ) ) {
 			define( 'GMW_REMOTE_SITE_URL', 'https://geomywp.com' );
 		}
-
+		
 		if ( ! defined( 'IS_ADMIN' ) ) {
 			define( 'IS_ADMIN', is_admin() );
 		}
@@ -252,33 +241,33 @@ class GEO_MY_WP {
 		define( 'GMW_PLUGINS_URL', GMW_URL . '/plugins' );
 		define( 'GMW_IMAGES', GMW_URL . '/assets/images' );
 		define( 'GMW_FILE', __FILE__ );
-		define( 'GMW_BASENAME', plugin_basename( GMW_FILE ) );
-		//define( 'GMW_DOING_AJAX', defined( 'DOING_AJAX' ) );
+		define( 'GMW_BASENAME', plugin_basename( GMW_FILE ) );	
+		define( 'GMW_DOING_AJAX', wp_doing_ajax() );
 	}
-
+	
 	/**
-	 * Runs once GEO my WP Loaded.
+	 * Runs once GEO my WP Loaded
 	 *
 	 * @return void
 	 */
 	public static function loaded() {
 
-		// load textdomain.
+		// load textdomain
 		load_plugin_textdomain( 'geo-my-wp', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
 		// fires when GEO my WP has loaded.
 		do_action( 'gmw_loaded' );
 
-		// initializing add-ons that registered using GMW_Addon class.
+		// initializing add-ons that registered using GMW_Addon class
 		if ( class_exists( 'GMW_Addon' ) ) {
 			GMW_Addon::init_addons();
 		}
 	}
-
+	
 	/**
-	 * Plugin installer.
-	 *
-	 * Execute when plugin activated.
+	 * Plugin installer. Execute when plugin activated
+	 * 
+	 * @return [type] [description]
 	 */
 	public function install() {
 
@@ -290,46 +279,50 @@ class GEO_MY_WP {
 	}
 
 	/**
-	 * Plugin Updates.
+	 * Plugin Updates
+	 * 
+	 * @return [type] [description]
 	 */
 	public function update() {
 
-		// check if version changed.
-		if ( version_compare( GMW_VERSION, get_option( 'gmw_version' ), '>' ) ) {
+		// check if version changed
+		if ( version_compare( GMW_VERSION, get_option( 'gmw_version' ) , '>' ) ) {
 
 			include( 'includes/class-gmw-installer.php' );
 
 			GMW_Installer::init();
 
 			flush_rewrite_rules();
-		}
+		} 
 	}
 
 	/**
-	 * Setup global variables.
+	 * Setup global variables 
+	 * 
+	 * @return [type] [description]
 	 */
 	public function setup_globals() {
 
 		// for previous version, should be removed in the future.
 		global $gmw_options;
 
-		// get some addons data.
-		$gmw_options   = get_option( 'gmw_options' );
-		$this->options = $gmw_options;
+		// get some addons data
+		$gmw_options   = $this->options = get_option( 'gmw_options' );
 		$addons_status = get_option( 'gmw_addons_status' );
-
+		
 		if ( empty( $addons_status ) ) {
 			$addons_status = array();
 		}
 
 		/**
 		 * We get the addons data from database only in front-end.
-		 *
-		 * While in the back-end the addons data is being collected
-		 *
+		 * 
+		 * while in the back-end the addons data is being collected 
+		 * 
 		 * and saved in the options table to later be used in the front-end.
-		 *
+		 * 
 		 * We do this to prevent some addons data from generating on every page load.
+		 *
 		 */
 		if ( ! IS_ADMIN ) {
 
@@ -344,19 +337,28 @@ class GEO_MY_WP {
 
 		// addons statuses: active, inactive or disabled.
 		$this->addons_status = $addons_status;
-		$this->ajax_url      = admin_url( 'admin-ajax.php', is_ssl() ? 'admin' : 'http' );
-		$this->is_mobile     = ( function_exists( 'wp_is_mobile' ) && wp_is_mobile() ) ? true : false;
+		
+		$this->url_prefix     = esc_attr( apply_filters( 'gmw_form_url_prefix', $this->url_prefix ) );
+		$this->ajax_url       = admin_url( 'admin-ajax.php', is_ssl() ? 'admin' : 'http' );
+		$this->internal_cache = apply_filters( 'gmw_internal_cache_enabled', $this->internal_cache );
+		$this->internal_cache_expiration = apply_filters( 'gmw_internal_cache_expiration', $this->internal_cache_expiration );
+		$this->is_mobile 	  = ( function_exists( 'wp_is_mobile' ) && wp_is_mobile() ) ? true : false;
 	}
 
 	/**
-	 * Include files.
-	 *
+	 * Include files
+	 * 
 	 * @since 2.4
+	 * 
 	 */
 	public function includes() {
 
-		// include files.
-		include( 'includes/class-gmw-cache-helper.php' );
+		// enable GMW cache helper
+		if ( apply_filters( 'gmw_cache_helper_enabled', true ) ) {
+			include( 'includes/class-gmw-cache-helper.php' );
+		}
+
+		// include files
 		include( 'includes/class-gmw-helper.php' );
 		include( 'includes/class-gmw-forms-helper.php' );
 		include( 'includes/gmw-functions.php' );
@@ -378,20 +380,20 @@ class GEO_MY_WP {
 		include( 'includes/class-gmw-form.php' );
 		include( 'includes/gmw-shortcodes.php' );
 
-		// load core add-ons.
+		// load core add-ons
 		self::$instance->load_core_addons();
-
-		//include admin files.
+				
+		//include admin files
 		if ( IS_ADMIN ) {
-			include( GMW_PATH . '/includes/admin/class-gmw-admin.php' );
+			include( GMW_PATH . '/includes/admin/class-gmw-admin.php' ); 	
 		}
 	}
 
 	/**
-	 * Add actions.
+	 * add actions
 	 *
-	 * Run update on admin init.
-	 *
+	 * run update on admin init.
+	 * 
 	 * @since 2.4
 	 */
 	public function actions() {
@@ -399,9 +401,8 @@ class GEO_MY_WP {
 		add_action( 'plugins_loaded', array( $this, 'loaded' ) );
 		add_action( 'widgets_init', array( $this, 'widgets_init' ), 5 );
 		add_action( 'admin_init', array( $this, 'update' ) );
-		add_action( 'init', array( $this, 'wp_init' ) );
 	}
-
+	
 	/**
 	 * Loads widgets.
 	 */
@@ -412,18 +413,17 @@ class GEO_MY_WP {
 	}
 
 	/**
-	 * Verify if add-on is active ( deprecated ).
-	 *
-	 * @param  string $addon addon slug to check against.
-	 *
-	 * @return [boolean]
+	 * Verify if add-on is active ( deprecated )
+	 * 
+	 * @param  [array] $addon
+	 * @return [boolean]      
 	 */
 	public static function gmw_check_addon( $addon ) {
 		return gmw_is_addon_active( $addon );
 	}
 
 	/**
-	 * Include core add-ons.
+	 * Include core add-ons
 	 */
 	private function load_core_addons() {
 		include( GMW_PLUGINS_PATH . '/single-location/loader.php' );
@@ -432,29 +432,17 @@ class GEO_MY_WP {
 		include( GMW_PLUGINS_PATH . '/current-location/loader.php' );
 		include( GMW_PLUGINS_PATH . '/sweetdate-geolocation/loader.php' );
 	}
-
-	/**
-	 * When WordPress loaded.
-	 */
-	public function wp_init() {
-
-		// run some filters.
-		$this->url_prefix                = esc_attr( apply_filters( 'gmw_form_url_prefix', $this->url_prefix ) );
-		$this->internal_cache            = apply_filters( 'gmw_internal_cache_enabled', $this->internal_cache );
-		$this->internal_cache_expiration = apply_filters( 'gmw_internal_cache_expiration', $this->internal_cache_expiration );
-	}
 }
 
 /**
- * GMW Instance.
+ *  GMW Instance
  *
  * @since 1.1.1
- *
  * @return GEO my WP Instance
  */
 function GMW() {
-	return GEO_MY_WP::instance();
+	return GEO_my_WP::instance();
 }
 
-// Init GMW.
+// Init GMW
 $GLOBALS['geomywp'] = GMW();

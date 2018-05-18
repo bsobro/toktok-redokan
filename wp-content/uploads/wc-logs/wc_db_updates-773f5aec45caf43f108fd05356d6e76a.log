@@ -1,0 +1,44 @@
+2017-11-25T22:46:48+00:00 INFO Queuing 3.1.0 - wc_update_310_downloadable_products
+2017-11-25T22:46:48+00:00 INFO Queuing 3.1.0 - wc_update_310_old_comments
+2017-11-25T22:46:48+00:00 INFO Queuing 3.1.0 - wc_update_310_db_version
+2017-11-25T22:46:48+00:00 INFO Queuing 3.1.2 - wc_update_312_shop_manager_capabilities
+2017-11-25T22:46:48+00:00 INFO Queuing 3.1.2 - wc_update_312_db_version
+2017-11-25T22:46:48+00:00 INFO Queuing 3.2.0 - wc_update_320_mexican_states
+2017-11-25T22:46:48+00:00 INFO Queuing 3.2.0 - wc_update_320_db_version
+2017-11-25T22:46:48+00:00 INFO Running wc_update_310_downloadable_products callback
+2017-11-25T22:46:48+00:00 INFO Finished wc_update_310_downloadable_products callback
+2017-11-25T22:46:48+00:00 INFO Running wc_update_310_old_comments callback
+2017-11-25T22:46:48+00:00 INFO Finished wc_update_310_old_comments callback
+2017-11-25T22:46:48+00:00 INFO Running wc_update_310_db_version callback
+2017-11-25T22:46:48+00:00 INFO Finished wc_update_310_db_version callback
+2017-11-25T22:46:48+00:00 INFO Running wc_update_312_shop_manager_capabilities callback
+2017-11-25T22:46:48+00:00 INFO Finished wc_update_312_shop_manager_capabilities callback
+2017-11-25T22:46:48+00:00 INFO Running wc_update_312_db_version callback
+2017-11-25T22:46:48+00:00 INFO Finished wc_update_312_db_version callback
+2017-11-25T22:46:48+00:00 INFO Running wc_update_320_mexican_states callback
+2017-11-25T22:46:48+00:00 INFO Finished wc_update_320_mexican_states callback
+2017-11-25T22:46:48+00:00 INFO Running wc_update_320_db_version callback
+2017-11-25T22:46:48+00:00 INFO Finished wc_update_320_db_version callback
+2017-11-25T22:46:48+00:00 INFO Data update complete
+2018-04-18T10:47:18+00:00 INFO Queuing 3.3.0 - wc_update_330_image_options
+2018-04-18T10:47:18+00:00 INFO Queuing 3.3.0 - wc_update_330_webhooks
+2018-04-18T10:47:18+00:00 INFO Queuing 3.3.0 - wc_update_330_product_stock_status
+2018-04-18T10:47:18+00:00 INFO Queuing 3.3.0 - wc_update_330_set_default_product_cat
+2018-04-18T10:47:18+00:00 INFO Queuing 3.3.0 - wc_update_330_clear_transients
+2018-04-18T10:47:18+00:00 INFO Queuing 3.3.0 - wc_update_330_set_paypal_sandbox_credentials
+2018-04-18T10:47:18+00:00 INFO Queuing 3.3.0 - wc_update_330_db_version
+2018-04-18T10:47:19+00:00 INFO Running wc_update_330_image_options callback
+2018-04-18T10:47:19+00:00 INFO Finished wc_update_330_image_options callback
+2018-04-18T10:47:19+00:00 INFO Running wc_update_330_webhooks callback
+2018-04-18T10:47:19+00:00 INFO Finished wc_update_330_webhooks callback
+2018-04-18T10:47:19+00:00 INFO Running wc_update_330_product_stock_status callback
+2018-04-18T10:47:19+00:00 INFO Finished wc_update_330_product_stock_status callback
+2018-04-18T10:47:19+00:00 INFO Running wc_update_330_set_default_product_cat callback
+2018-04-18T10:47:19+00:00 INFO Finished wc_update_330_set_default_product_cat callback
+2018-04-18T10:47:19+00:00 INFO Running wc_update_330_clear_transients callback
+2018-04-18T10:47:19+00:00 INFO Finished wc_update_330_clear_transients callback
+2018-04-18T10:47:19+00:00 INFO Running wc_update_330_set_paypal_sandbox_credentials callback
+2018-04-18T10:47:19+00:00 INFO Finished wc_update_330_set_paypal_sandbox_credentials callback
+2018-04-18T10:47:19+00:00 INFO Running wc_update_330_db_version callback
+2018-04-18T10:47:19+00:00 INFO Finished wc_update_330_db_version callback
+2018-04-18T10:47:19+00:00 INFO Data update complete

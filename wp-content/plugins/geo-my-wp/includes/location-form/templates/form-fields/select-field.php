@@ -8,7 +8,7 @@
 
 	<?php } ?>
 
-	<select class="<?php echo esc_attr( $field['class'] ); ?>" id="<?php echo esc_attr( $field['id'] ); ?>" name="<?php echo esc_attr( $field_name ); ?>">
+	<select class="<?php echo esc_attr( $field['class'] ); ?>" id="<?php echo esc_attr( $field['id'] ); ?>" name="<?php echo esc_attr( $fieldName ); ?>">
 		
 		<?php foreach ( $field['options'] as $code => $name ) { ?>
 			

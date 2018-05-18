@@ -1,0 +1,45 @@
+/*
+  Theme Name: Rehub child theme - Revendor
+  Theme URI: http://revendor.wpsoul.net/
+  Description: A Hybrid magazine/shop/review/news Wordpress Theme
+  Author: Wpsoul
+  Author URI: https://wpsoul.com/
+  Version: 7.4
+  Template: rehub
+  Text Domain: rehubchild
+*/
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+
+.main-nav.dark_style{background: none #00c2b4;}
+.category .wpsm-title.middle-size-title h5, .tag .wpsm-title.middle-size-title h5{padding: 0}
+.sidebar .widget.widget-meta-data-filter h3, .sidebar .widget.widget-meta-data-filter h5, .sidebar .widget.widget-meta-data-filter h4 a, .sidebar .mdf_widget_found_count, .sidebar .widget.widget-meta-data-filter, .sidebar .widget.widget-meta-data-filter h4.data-filter-section-title{color: #111}
+.sidebar .widget.widget-meta-data-filter { background-color: #fff; padding: 20px; border: 1px solid #ccc;}
+.sidebar .widget.widget-meta-data-filter h4.data-filter-section-title{padding: 0; background-color: transparent;}
+.sidebar .widget.widget-meta-data-filter h4.data-filter-section-title { margin: 20px 0 10px !important; }
+.widget-meta-data-filter h3:after { height: 3px; width: 40px; height: 4px; background-color: #ddd; display: block; margin: 10px 0; content: ""; }
+.widget-meta-data-filter h3 { margin-bottom: 20px }
+.sidebar .widget.widget-meta-data-filter .mdf_textinput, .sidebar .widget.widget-meta-data-filter select { border: 1px solid #ddd }
+.widget.tabs > ul{border: none;}
+.sidebar .widget.tabs, .widget.outer_widget{border: none; padding: 0; background-color: transparent; box-shadow: none;}
+.postNavigation a{ background-color: #868686}
+.rate_bar_wrap{background-color: #fff;}
+.re-line-badge.re-line-table-badge{padding: 5px 8px 5px 20px;font: normal 13px/15px Arial;}
+.re-line-badge span:before, .re-line-badge span:after{display: none;}
+.sidebar .wpsm_recent_posts_list .item-small-news {border-bottom: 1px solid #E4E4E4;padding: 10px 0;background: radial-gradient(ellipse at top, rgba(255,255,255,0.75), rgba(255,255,255,0) 75%);}
+.vc_row .wpsm_recent_posts_list h3{font-size: 18px}
+.vc_row .wpsm_recent_posts_list .item-small-news{font-size: 14px; padding: 20px 0}
+.single_top_main .stars-rate{margin: 0 0 10px 0; display: inline-block;}
+.sidebar .list_excerpt{display: none;}
+.dealScore .thumbscount{background: #dff0ef;}
+.dealScore .label{background: #23b5ac;}
+.coupon_code_in_modal .coupon_modal_coupon{background-color: #f2f2f2}
+
+@media screen and (max-width: 1224px) {
+  
+}
+
+@media (max-width: 767px) {
+
+} 

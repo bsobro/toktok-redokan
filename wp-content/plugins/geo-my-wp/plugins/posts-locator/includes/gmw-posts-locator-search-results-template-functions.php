@@ -61,17 +61,13 @@ function gmw_search_results_post_excerpt( $post, $gmw = array() ) {
         return;
     }
 
-    // verify usage value
-    $usage = isset( $gmw['search_results']['excerpt']['usage'] ) ? $gmw['search_results']['excerpt']['usage'] : 'post_content';
-        
     $args = array(
         'id'                => $gmw['ID'], 
-        'content'           => $post->$usage,
+        'content'           => $post->post_content,
         'words_count'       => isset( $gmw['search_results']['excerpt']['count'] ) ? $gmw['search_results']['excerpt']['count'] : '',
         'link'              => get_the_permalink( $post->ID ),
         'link_text'         => isset( $gmw['search_results']['excerpt']['link'] ) ? $gmw['search_results']['excerpt']['link'] : '',
-        'enable_shortcodes'  => 1,
-        'the_content_filter' => 1
+        'enable_shortcodes' => 1
     );
 
     echo '<div class="excerpt">'.GMW_Template_Functions_Helper::get_excerpt( $args ).'</div>';

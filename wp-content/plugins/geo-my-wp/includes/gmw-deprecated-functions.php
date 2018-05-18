@@ -4,131 +4,74 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
+class GMW {
+
+	public function __construct() {
+
+		trigger_error( 'GMW class is deprecated since GEO my WP version 3.0. Use GMW_Form instead.', E_USER_NOTICE );
+	}
+}
+
+function gmw_get_draggable_handle( $gmw = array(), $info = array() , $draggable = '', $handle = true, $icon = 'gmw-icon-target', $containment = 'window' ) {
+					
+	$args = array( 
+		'icon'   	  => 'gmw-icon-menu',
+		'target' 	  => 'gmw-popup-info-window',
+		'containment' => 'window'
+	);
+
+	_deprecated_function( 'gmw_get_draggable_handle', '3.0', 'gmw_get_element_dragging_handle' );
+	return gmw_get_element_dragging_handle( $args );
+}
+
+function gmw_get_xprofile_fields( $gmw = array() ) {
+	_deprecated_function( 'gmw_get_xprofile_fields', '3.0', 'gmw_get_search_form_xprofile_fields' );
+	return gmw_get_search_form_xprofile_fields( $gmw );
+}
+
+function gmw_fl_xprofile_fields( $gmw = array() ) {
+	_deprecated_function( 'gmw_fl_xprofile_fields', '3.0', 'gmw_search_form_xprofile_fields' );
+	echo gmw_get_search_form_xprofile_fields( $gmw );
+}
+
 if ( ! IS_ADMIN ) {
-
-	class GMW {
-
-		public function __construct() {
-
-			trigger_error( 'GMW class is deprecated since GEO my WP version 3.0. Use GMW_Form instead.', E_USER_NOTICE );
-		}
-	}
-
-	function gmw_get_draggable_handle( $gmw = array(), $info = array() , $draggable = '', $handle = true, $icon = 'gmw-icon-target', $containment = 'window' ) {
-						
-		$args = array( 
-			'icon'   	  => 'gmw-icon-menu',
-			'target' 	  => 'gmw-popup-info-window',
-			'containment' => 'window'
-		);
-
-		_deprecated_function( 'gmw_get_draggable_handle', '3.0', 'gmw_get_element_dragging_handle' );
-		return gmw_get_element_dragging_handle( $args );
-	}
-
-	function gmw_get_xprofile_fields( $gmw = array() ) {
-		_deprecated_function( 'gmw_get_xprofile_fields', '3.0', 'gmw_get_search_form_xprofile_fields' );
-		return gmw_get_search_form_xprofile_fields( $gmw );
-	}
-
-	function gmw_fl_xprofile_fields( $gmw = array() ) {
-		_deprecated_function( 'gmw_fl_xprofile_fields', '3.0', 'gmw_search_form_xprofile_fields' );
-		echo gmw_get_search_form_xprofile_fields( $gmw );
-	}
 	
 	function gmw_get_keywords_field( $gmw = array() ) {
 		_deprecated_function( 'gmw_get_keywords_field', '3.0', 'gmw_get_search_form_keywords_field' );
 		return gmw_get_search_form_keywords_field( $gmw );
 	}
 
+
 	function gmw_keywords_field( $gmw = array() ) {
 		_deprecated_function( 'gmw_keywords_field', '3.0', 'gmw_search_form_keywords_field' );
 		echo gmw_get_search_form_keywords_field( $gmw );
 	}
-
-	function gmw_get_search_form_radius_values( $gmw = array() ) {
-		_deprecated_function( 'gmw_get_search_form_radius_values', '3.0', 'gmw_get_search_form_radius' );
-		return gmw_get_search_form_radius( $gmw );
-	}
-
-	function gmw_multiple_address_fields( $output, $gmw ) {
-		_deprecated_function( 'gmw_multiple_address_fields', '3.0', 'gmw_search_form_address_fields' );
-		return gmw_get_search_form_address_fields( $output, $gmw );
-	}
-
-	function gmw_search_form_radius_values( $gmw = array() ) {
-		_deprecated_function( 'gmw_search_form_radius_values', '3.0', 'gmw_search_form_radius' );
-		return gmw_search_form_radius( $gmw );
-	}
-
-	function gmw_search_form_locator_icon( $gmw=array(), $class=false ) {
-		_deprecated_function( 'gmw_search_form_locator_icon', '3.0', 'gmw_search_form_locator_button' );
-		return gmw_search_form_locator_button( $gmw, $class );
-	}
-
-	function gmw_form_set_labels( $form = array() ) {
-		_deprecated_function( 'gmw_form_set_labels', '3.0', 'There is no replacement for this function at this moment.' );
-		return;
-	}
-
-	function gmw_get_form_submit_fields( $gmw = array(), $label = 'submit' ) {
-		_deprecated_function( 'gmw_get_form_submit_fields', '3.0', 'gmw_get_search_form_submission_fields' );
-		gmw_get_search_form_submit_button( $gmw, $label );
-	}
-
-	function gmw_form_submit_fields( $gmw = array(), $label = 'submit' ) {
-		_deprecated_function( 'gmw_form_submit_fields', '3.0', 'gmw_search_form_submit_button' );
-		gmw_search_form_submit_button( $gmw, $label );
-	}
-
-	function gmw_fl_get_bp_groups( $gmw, $usage, $groups, $name ) {
-		_deprecated_function( 'gmw_fl_get_bp_groups', '3.0', 'gmw_get_search_form_bp_groups_filter' );
-
-		$args = array(
-			'id' 	=> $gmw['ID'],
-			'usage' => $usage
-		);
-		
-		return gmw_get_search_form_bp_groups_filter( $args, $groups );
-	}
-
-	function search_form_radius_field( $gmw ) {
-
-	    _deprecated_function( 'search_form_radius_field', '3.0', 'gmw_get_search_form_radius_slider' );
-		echo gmw_get_search_form_radius_slider( $gmw );
-	}
-		
-	function gmaps_search_form_taxonomies( $gmw = array(), $tag='div', $class='' ) {
-
-		_deprecated_function( 'gmaps_search_form_taxonomies', '2.2', 'gmw_search_form_taxonomies' );
-		return gmw_search_form_taxonomies( $gmw );
-	}
-
-	function gmw_pt_form_get_post_types_dropdown( $gmw, $title=false, $class=false, $label=false ) {
-		_deprecated_function( 'gmw_pt_form_get_post_types_dropdown', '3.0', 'gmw_get_search_form_post_types' );
-		return gmw_get_search_form_post_types( $gmw );
-	}
-
-	function gmw_pt_form_post_types_dropdown( $gmw, $title=false, $class=false, $label=false ) {
-		_deprecated_function( 'gmw_pt_form_post_types_dropdown', '3.0', 'gmw_search_form_post_types' );
-		gmw_search_form_post_types( $gmw );
-	}
-
-	function gmw_pt_get_form_taxonomies( $gmw, $tag = 'div', $class = false ) {
-		_deprecated_function( 'gmw_pt_get_form_taxonomies', '3.0', 'gmw_get_search_form_taxonomies' );
-		return gmw_get_search_form_taxonomies( $gmw, $tag = 'div' );
-	}
-
-	function gmw_pt_form_taxonomies( $gmw, $tag = 'div', $class = false ) {
-		_deprecated_function( 'gmw_pt_form_taxonomies', '3.0', 'gmw_search_form_taxonomies' );
-		gmw_search_form_taxonomies( $gmw, $tag = 'div' );
-	}
 }
 
-/*function GMW() {
-	_deprecated_function( 'GMW', '3.0.2', 'geo_my_wp' );
-	return geo_my_wp();
-}*/
+function gmw_get_search_form_radius_values( $gmw = array() ) {
+	_deprecated_function( 'gmw_get_search_form_radius_values', '3.0', 'gmw_get_search_form_radius' );
+	return gmw_get_search_form_radius( $gmw );
+}
+
+function gmw_multiple_address_fields( $output, $gmw ) {
+	_deprecated_function( 'gmw_multiple_address_fields', '3.0', 'gmw_search_form_address_fields' );
+	return gmw_get_search_form_address_fields( $output, $gmw );
+}
+
+function gmw_search_form_radius_values( $gmw = array() ) {
+	_deprecated_function( 'gmw_search_form_radius_values', '3.0', 'gmw_search_form_radius' );
+	return gmw_search_form_radius( $gmw );
+}
+
+function gmw_search_form_locator_icon( $gmw=array(), $class=false ) {
+	_deprecated_function( 'gmw_search_form_locator_icon', '3.0', 'gmw_search_form_locator_button' );
+	return gmw_search_form_locator_button( $gmw, $class );
+}
+
+function gmw_form_set_labels( $form = array() ) {
+	_deprecated_function( 'gmw_form_set_labels', '3.0', 'There is no replacement for this function at this moment.' );
+	return;
+}
 
 function gmw_get_additional_info( $info, $gmw = array(), $fields = array(), $labels = array(), $tag='div' ) {
 	_deprecated_function( 'gmw_get_additional_info', '3.0', 'gmw_get_location_meta_list' );
@@ -138,6 +81,16 @@ function gmw_get_additional_info( $info, $gmw = array(), $fields = array(), $lab
 function gmw_additional_info( $info, $gmw = array(), $fields = array(), $labels = array(), $tag='div' ) {
 	_deprecated_function( 'gmw_additional_info', '3.0', 'gmw_search_results_location_meta' );
 	gmw_search_results_location_meta( $info, $gmw );
+}
+
+function gmw_get_form_submit_fields( $gmw = array(), $label = 'submit' ) {
+	_deprecated_function( 'gmw_get_form_submit_fields', '3.0', 'gmw_get_search_form_submission_fields' );
+	gmw_get_search_form_submit_button( $gmw, $label );
+}
+
+function gmw_form_submit_fields( $gmw = array(), $label = 'submit' ) {
+	_deprecated_function( 'gmw_form_submit_fields', '3.0', 'gmw_search_form_submit_button' );
+	gmw_search_form_submit_button( $gmw, $label );
 }
 
 function gmw_iw_xprofile_fields( $gmw = array() ) {
@@ -249,7 +202,16 @@ function gmw_get_close_button( $icon = '', $gmw = array(), $r = false, $t = fals
 	return gmw_get_element_close_button( $icon );
 }
 
+function gmw_fl_get_bp_groups( $gmw, $usage, $groups, $name ) {
+	_deprecated_function( 'gmw_fl_get_bp_groups', '3.0', 'gmw_get_search_form_bp_groups_filter' );
 
+	$args = array(
+		'id' 	=> $gmw['ID'],
+		'usage' => $usage
+	);
+	
+	return gmw_get_search_form_bp_groups_filter( $args, $groups );
+}
 
 /**
  * GMW PT function - get post location from database or cache
@@ -280,6 +242,20 @@ function gmw_get_user_info_from_db( $user_id = 0 ) {
 	return gmw_get_user_location( $user_id );
 }
 
+if ( ! IS_ADMIN ) {
+	function search_form_radius_field( $gmw ) {
+
+	    _deprecated_function( 'search_form_radius_field', '3.0', 'gmw_get_search_form_radius_slider' );
+		echo gmw_get_search_form_radius_slider( $gmw );
+	}
+}
+
+function gmaps_search_form_taxonomies( $gmw = array(), $tag='div', $class='' ) {
+
+	_deprecated_function( 'gmaps_search_form_taxonomies', '2.2', 'gmw_search_form_taxonomies' );
+	return gmw_search_form_taxonomies( $gmw );
+}
+
 /**
  * GMW PT function - get post location from database or cache
  * @param $post_id
@@ -287,30 +263,26 @@ function gmw_get_user_info_from_db( $user_id = 0 ) {
 function gmw_get_post_info( $args = array(), $from_shortcode = false ) {
 	
 	if ( ! $from_shortcode ) {
-		trigger_error( 'gmw_get_post_info function is deprecated since GEO my WP version 3.0. Instead, use gmw_get_post_address to get the address fields, and gmw_get_post_location_meta to get location meta fields.', E_USER_NOTICE );
+		trigger_error( 'gmw_get_post_info function is deprecated since GEO my WP version 3.0. Please use gmw_get_post_address instead.', E_USER_NOTICE );
 	}
 
-	$output = '';
+	if ( function_exists( 'gmw_get_post_address' ) ) {
 
-	$post_id   = ! empty( $args['post_id'] ) ? $args['post_id'] : 0;
-   	$fields    = ! empty( $args['info'] )    ? $args['info']    : 'formatted_address';
-    $separator = ! empty( $args['divider'] ) ? $args['divider'] : ', ';
-  
-	// try to get address fields
-	$output = gmw_get_address_fields( 'post', $post_id, $fields, $separator );
+		$attr = array(
+			'post_id'   => ! empty( $args['post_id'] ) ? $args['post_id'] : 0,
+        	'fields'    => ! empty( $args['info'] )    ? $args['info']    : 'formatted_address',
+        	'separator' => ! empty( $args['divider'] ) ? $args['divider'] : ', '
+        );
 
-	// if no address fields found, maybe this is location meta
-	if ( empty( $output ) ) {
-
-		$output = gmw_get_location_meta_values( 'post', $post_id, $fields, $separator );
+		return gmw_get_post_address( $attr );
 	}
 
-	return $output;
+	return;
 }
 
 function gmw_get_post_info_shortcode( $args = array() ) {
 
-	trigger_error( '[gmw_post_info] shortcode is deprecated since GEO my WP version 3.0. Instead, use [gmw_post_address] to get the address fields, and [gmw_post_location_meta] to get location meta fields.', E_USER_NOTICE );
+	trigger_error( '[gmw_post_info] shortcode is deprecated since GEO my WP version 3.0. Please use [gmw_post_address] instead.', E_USER_NOTICE );
 
 	return gmw_get_post_info( $args, true );
 }
@@ -354,7 +326,7 @@ function gmw_get_member_info( $args = array(), $from_shortcode = false ) {
 function gmw_get_user_info( $args = array(), $from_shortcode = false ) {
 
 	if ( ! $from_shortcode ) {
-		trigger_error( 'gmw_get_user_info function is deprecated since WordPress Users Locator version 1.3. Use gmw_get_user_address instead.', E_USER_NOTICE );
+		trigger_error( 'gmw_get_user_info function is deprecated since Users Locator version 2.0. Please use gmw_get_user_address instead.', E_USER_NOTICE );
 	}
 
 	if ( function_exists( 'gmw_get_user_address' ) ) {
@@ -371,18 +343,9 @@ function gmw_get_user_info( $args = array(), $from_shortcode = false ) {
 	return;
 }
 
-function gmw_get_user_info_shortcode( $args = array() ) {
-
-	trigger_error( '[gmw_user_info] shortcode is deprecated since WordPress Users Locator version 1.3. Use [gmw_user_address] instead.', E_USER_NOTICE );
-
-	return function_exists( 'gmw_get_user_address' ) ? gmw_get_user_address( $args ) : '';
-}
-add_shortcode( 'gmw_user_info', 'gmw_get_user_info_shortcode' );
-
-
 function gmw_get_member_info_shortcode( $args = array() ) {
 
-	trigger_error( '[gmw_member_info] shortcode is deprecated since GEO my WP version 3.0. Use [gmw_user_address] instead.', E_USER_NOTICE );
+	trigger_error( '[gmw_member_info] shortcode is deprecated since GEO my WP version 3.0. Please use [gmw_user_address] instead.', E_USER_NOTICE );
 
 	return gmw_get_member_info( $args, true );
 }
@@ -431,7 +394,25 @@ function gmw_pt_thumbnail( $gmw, $post ) {
 	the_post_thumbnail( array( $gmw['search_results']['featured_image']['width'], $gmw['search_results']['featured_image']['height'] ) );
 }
 
+function gmw_pt_form_get_post_types_dropdown( $gmw, $title=false, $class=false, $label=false ) {
+	_deprecated_function( 'gmw_pt_form_get_post_types_dropdown', '3.0', 'gmw_get_search_form_post_types' );
+	return gmw_get_search_form_post_types( $gmw );
+}
 
+function gmw_pt_form_post_types_dropdown( $gmw, $title=false, $class=false, $label=false ) {
+	_deprecated_function( 'gmw_pt_form_post_types_dropdown', '3.0', 'gmw_search_form_post_types' );
+	gmw_search_form_post_types( $gmw );
+}
+
+function gmw_pt_get_form_taxonomies( $gmw, $tag = 'div', $class = false ) {
+	_deprecated_function( 'gmw_pt_get_form_taxonomies', '3.0', 'gmw_get_search_form_taxonomies' );
+	return gmw_get_search_form_taxonomies( $gmw, $tag = 'div' );
+}
+
+function gmw_pt_form_taxonomies( $gmw, $tag = 'div', $class = false ) {
+	_deprecated_function( 'gmw_pt_form_taxonomies', '3.0', 'gmw_search_form_taxonomies' );
+	gmw_search_form_taxonomies( $gmw, $tag = 'div' );
+}
 
 function gmw_pt_get_taxonomies( $gmw, $post ) {
 	_deprecated_function( 'gmw_pt_get_taxonomies', '3.0', 'gmw_search_results_taxonomies_terms_list' );
@@ -445,21 +426,14 @@ function gmw_pt_taxonomies( $gmw, $post ) {
 
 function gmw_pt_get_days_hours( $post, $gmw ) {
 	_deprecated_function( 'gmw_pt_get_days_hours', '3.0', 'gmw_get_hours_of_operation' );
-	
-	$post->object_type = 'post';
-	$post->object_id   = $post->ID;
-	
-	return gmw_get_hours_of_operation( $post );
+	return gmw_get_hours_of_operation( $post, $gmw );
 }
 
 function gmw_pt_days_hours( $post, $gmw ) {
 	_deprecated_function( 'gmw_pt_days_hours', '3.0', 'gmw_hours_of_operation' );
-	
-	$post->object_type = 'post';
-	$post->object_id   = $post->ID;
-	
-	return gmw_get_hours_of_operation( $post, $gmw );
+	gmw_hours_of_operation( $post, $gmw );
 }
+
 
 
 /**
@@ -692,6 +666,45 @@ function gmw_driving_distance( $info, $gmw, $title ) {
 	trigger_error( 'gmw_driving_distance function is deprecated since GEO my WP 3.0. It does not have a replacment at this time.' , E_USER_NOTICE );
 
 	return false;
+	/*
+	if ( empty( $gmw['lat'] ) || empty( $gmw['lng'] ) )
+		return;
+	
+	if ( !$info->lat || !$info->lng )
+		return;
+	
+	if ( $info->lat == 0.000000 || $info->lat == 0.000000 )
+		return;
+	
+	if ( empty( $title ) )
+		 $title = $gmw['labels']['search_results']['driving_distance'];
+	
+	$unitsSystem = strtoupper($gmw['units_array']['units']);
+	
+	echo '<div id="gmw-driving-distance-'.$info->ID.'" class="gmw-driving-distance gmw-'.$gmw['prefix'].'-driving-distance"><span class="label">'.$title.' </span><span class="distance"></span></div>';
+	
+    echo "<script>
+        var directionsDisplay;
+        var directionsService = new google.maps.DirectionsService();
+        var directionsDisplay = new google.maps.DirectionsRenderer();
+
+        var start = new google.maps.LatLng('{$gmw['lat']}', '{$gmw['lng']}');
+        var end = new google.maps.LatLng('{$info->lat}', '{$info->lng}');
+        var request = {
+            origin: start,
+            destination: end,
+            travelMode: google.maps.TravelMode.DRIVING,
+            unitSystem: google.maps.UnitSystem.{$unitsSystem}
+        };
+        
+        directionsService.route(request, function(result, status) {
+            if (status == google.maps.DirectionsStatus.OK) {
+                directionsDisplay.setDirections(result);              
+                jQuery('#gmw-driving-distance-{$info->ID} span.distance').text(result.routes[0].legs[0].distance.text);
+            }
+        });
+    </script>";
+    */
 }
 
 /**

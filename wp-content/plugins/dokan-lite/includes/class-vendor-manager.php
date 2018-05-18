@@ -7,34 +7,16 @@
  */
 class Dokan_Vendor_Manager {
 
-    /**
-     * Total vendors found
-     *
-     * @var integer
-     */
     private $total_users;
 
     /**
-     * Get all vendors
-     *
-     * @since 2.8.0
-     *
-     * @param  array  $args
-     *
-     * @return array
-     */
-    public function all( $args = array() ) {
-        return $this->get_vendors( $args );
-    }
-
-    /**
-     * Get vendors
+     * Get all vendor
      *
      * @param array $args
      *
      * @return array
      */
-    public function get_vendors( $args = array() ) {
+    public function all( $args = array() ) {
         $vendors = array();
 
         $defaults = array(
@@ -43,40 +25,16 @@ class Dokan_Vendor_Manager {
             'offset'     => 0,
             'orderby'    => 'registered',
             'order'      => 'ASC',
-            'status'     => 'approved',
-            'featured'   => '', // yes or no
-            'meta_query' => array(),
+            'meta_query' => array(
+                array(
+                    'key'     => 'dokan_enable_selling',
+                    'value'   => 'yes',
+                    'compare' => '='
+                )
+            )
         );
 
-        $args   = wp_parse_args( $args, $defaults );
-        $status = $args['status'];
-
-        // check if the user has permission to see pending vendors
-        if ( 'approved' != $args['status'] && current_user_can( 'manage_options' ) ) {
-            $status = $args['status'];
-        }
-
-        if ( in_array( $status, array( 'approved', 'pending' ) ) ) {
-            $operator = ( $status == 'approved' ) ? '=' : '!=';
-
-            $args['meta_query'][] = array(
-                'key'     => 'dokan_enable_selling',
-                'value'   => 'yes',
-                'compare' => $operator
-            );
-        }
-
-        // if featured
-        if ( 'yes' == $args['featured'] ) {
-            $args['meta_query'][] = array(
-                'key'     => 'dokan_feature_seller',
-                'value'   => 'yes',
-                'compare' => '='
-            );
-        }
-
-        unset( $args['status'] );
-        unset( $args['featured'] );
+        $args = wp_parse_args( $args, $defaults );
 
         $user_query = new WP_User_Query( $args );
         $results    = $user_query->get_results();
@@ -120,13 +78,25 @@ class Dokan_Vendor_Manager {
     public function get_featured( $args = array() ) {
 
         $defaults = array(
-            'number'   => 10,
-            'offset'   => 0,
-            'featured' => 'yes',
+            'number'     => 10,
+            'offset'     => 0,
+            'meta_query' => array(
+                array(
+                    'key'     => 'dokan_enable_selling',
+                    'value'   => 'yes',
+                    'compare' => '='
+                ),
+
+                array(
+                    'key'     => 'dokan_feature_seller',
+                    'value'   => 'yes',
+                    'compare' => '='
+                ),
+            )
         );
 
         $args = wp_parse_args( $args, $defaults );
 
-        return $this->get_vendors( $args );
+        return $this->all( $args );
     }
 }

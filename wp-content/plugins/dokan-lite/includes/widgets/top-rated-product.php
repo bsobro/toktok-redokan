@@ -92,3 +92,5 @@ class Dokan_Toprated_Widget extends WP_Widget {
     }
 
 } // class Dokan best selling product widget
+
+add_action( 'widgets_init', create_function( '', "register_widget( 'Dokan_Toprated_Widget' );" ) );
