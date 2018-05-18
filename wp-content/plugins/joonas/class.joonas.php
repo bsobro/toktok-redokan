@@ -42,12 +42,42 @@ class Joonas {
 		*/
 
         add_filter( 'comment_text', array( 'Joonas', 'filter_profanity' ) );
+
+
+        add_filter( 'dokan_query_var_filter', array( 'Joonas', 'dokan_load_document_menu' ) );
+
+        add_filter( 'dokan_get_dashboard_nav', array( 'Joonas', 'dokan_add_help_menu' ) );
+
+        add_action( 'dokan_load_custom_template', array( 'Joonas', 'dokan_load_template' ) );
     }
 
     public static function filter_profanity($content) {
         $profanities = array('badword','alsobad','...');
         $content=str_ireplace($profanities,'{censored}',$content);
         return $content;
+    }
+
+    public static function dokan_load_document_menu( $query_vars ) {
+        $query_vars['help'] = 'help';
+        return $query_vars;
+    }
+
+
+    public static function dokan_add_help_menu( $urls ) {
+        $urls['help'] = array(
+            'title' => __( 'Help', 'dokan'),
+            'icon'  => '<i class="fa fa-question"></i>',
+            'url'   => dokan_get_navigation_url( 'help' ),
+            'pos'   => 51
+        );
+        return $urls;
+    }
+
+    public static function dokan_load_template( $query_vars ) {
+        if ( isset( $query_vars['help'] ) ) {
+            require_once dirname( __FILE__ ). '/help.php';
+            exit();
+        }
     }
 
 	/**
