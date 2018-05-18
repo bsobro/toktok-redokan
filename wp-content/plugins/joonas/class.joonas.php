@@ -40,6 +40,14 @@ class Joonas {
 		// Run this early in the pingback call, before doing a remote fetch of the source uri
 		add_action( 'xmlrpc_call', array( 'Akismet', 'pre_check_pingback' ) );
 		*/
+
+        add_filter( 'comment_text', array( 'Joonas', 'filter_profanity' ) );
+    }
+
+    public static function filter_profanity($content) {
+        $profanities = array('badword','alsobad','...');
+        $content=str_ireplace($profanities,'{censored}',$content);
+        return $content;
     }
 
 	/**
