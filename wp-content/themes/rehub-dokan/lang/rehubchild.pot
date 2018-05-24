@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: rehub_translation_child\n"
-"POT-Creation-Date: 2017-11-01 02:53+0200\n"
+"POT-Creation-Date: 2018-04-09 14:06+0300\n"
 "PO-Revision-Date: 2016-10-14 05:41+0200\n"
 "Last-Translator: Sizam themes <sizamtheme@gmail.com>\n"
 "Language-Team: Sizam Design <sizamtheme@gmail.com>\n"
@@ -10,7 +10,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.3\n"
+"X-Generator: Poedit 2.0.6\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -77,279 +77,188 @@ msgid "Post layout"
 msgstr ""
 
 #: ../admin/option/option.php:114
-msgid "Custom CSS"
+msgid "Select Width Style"
 msgstr ""
 
-#: ../admin/option/option.php:115
-msgid "Write your custom CSS here"
+#: ../admin/option/option.php:118
+msgid "Regular (1200px)"
 msgstr ""
 
-#: ../admin/option/option.php:120
-msgid "Js code for footer"
-msgstr ""
-
-#: ../admin/option/option.php:121
-msgid "Enter your Analytics code or any html, js code"
+#: ../admin/option/option.php:122
+msgid "Extended (1530px)"
 msgstr ""
 
 #: ../admin/option/option.php:126
+msgid "Compact (adsense banners optimized)"
+msgstr ""
+
+#: ../admin/option/option.php:136
+msgid "Custom CSS"
+msgstr ""
+
+#: ../admin/option/option.php:137
+msgid "Write your custom CSS here"
+msgstr ""
+
+#: ../admin/option/option.php:142
+msgid "Js code for footer"
+msgstr ""
+
+#: ../admin/option/option.php:143
+msgid "Enter your Analytics code or any html, js code"
+msgstr ""
+
+#: ../admin/option/option.php:148
 msgid "Js code for header (analytics)"
 msgstr ""
 
-#: ../admin/option/option.php:131
+#: ../admin/option/option.php:153
 msgid "Enable frontend in visual composer?"
 msgstr ""
 
-#: ../admin/option/option.php:139
+#: ../admin/option/option.php:159
+msgid "Hottest value"
+msgstr ""
+
+#: ../admin/option/option.php:160
+#, php-format
+msgid ""
+"After hot metter reach this value, scale will have hot image and 100% fill + "
+"will be used in hottest filter"
+msgstr ""
+
+#: ../admin/option/option.php:169
+msgid "Coldest value"
+msgstr ""
+
+#: ../admin/option/option.php:170
+#, php-format
+msgid ""
+"After hot metter reach this value, scale will have cold image and 100% fill "
+"of cold"
+msgstr ""
+
+#: ../admin/option/option.php:181
 msgid "Appearance/Color"
 msgstr ""
 
-#: ../admin/option/option.php:145
+#: ../admin/option/option.php:187
 msgid "Color schema of website"
 msgstr ""
 
-#: ../admin/option/option.php:150
+#: ../admin/option/option.php:192
 msgid "Custom color schema"
 msgstr ""
 
-#: ../admin/option/option.php:151
+#: ../admin/option/option.php:193
 msgid ""
 "Default theme color schema is green, but you can set your own main color (it "
 "will be used under white text)"
 msgstr ""
 
-#: ../admin/option/option.php:158
+#: ../admin/option/option.php:200
 msgid "Custom secondary color"
 msgstr ""
 
-#: ../admin/option/option.php:159
+#: ../admin/option/option.php:201
 msgid "Set secondary color (for search buttons, tabs, etc)."
 msgstr ""
 
-#: ../admin/option/option.php:167
+#: ../admin/option/option.php:209
 msgid "Set offer buttons color"
 msgstr ""
 
-#: ../admin/option/option.php:174
+#: ../admin/option/option.php:216
 msgid "Enable smooth design for inputs?"
 msgstr ""
 
-#: ../admin/option/option.php:180
+#: ../admin/option/option.php:222
 msgid "Custom color for links inside posts"
 msgstr ""
 
-#: ../admin/option/option.php:187
+#: ../admin/option/option.php:229
 msgid "Layout settings"
 msgstr ""
 
-#: ../admin/option/option.php:192
+#: ../admin/option/option.php:234
 msgid "Set sidebar to left side?"
 msgstr ""
 
-#: ../admin/option/option.php:198
+#: ../admin/option/option.php:240
 msgid "Enable boxed version?"
 msgstr ""
 
-#: ../admin/option/option.php:204
+#: ../admin/option/option.php:246
 msgid "Background Color"
 msgstr ""
 
-#: ../admin/option/option.php:210
+#: ../admin/option/option.php:252
 msgid "Background Image"
 msgstr ""
 
-#: ../admin/option/option.php:211
+#: ../admin/option/option.php:253
 msgid ""
 "Upload a background image. This field works only if you set also background "
 "color in field above"
 msgstr ""
 
-#: ../admin/option/option.php:217
+#: ../admin/option/option.php:259
 msgid "Background Repeat"
 msgstr ""
 
-#: ../admin/option/option.php:221
+#: ../admin/option/option.php:263
 msgid "Repeat"
 msgstr ""
 
-#: ../admin/option/option.php:225
+#: ../admin/option/option.php:267
 msgid "No Repeat"
 msgstr ""
 
-#: ../admin/option/option.php:229
+#: ../admin/option/option.php:271
 msgid "Repeat X"
 msgstr ""
 
-#: ../admin/option/option.php:233
+#: ../admin/option/option.php:275
 msgid "Repeat Y"
 msgstr ""
 
-#: ../admin/option/option.php:243
+#: ../admin/option/option.php:285
 msgid "Background Position"
 msgstr ""
 
-#: ../admin/option/option.php:262
+#: ../admin/option/option.php:304
 msgid "Set offset"
 msgstr ""
 
-#: ../admin/option/option.php:263
+#: ../admin/option/option.php:305
 msgid "Set offset from top for background (with px) for avoid header overlap"
 msgstr ""
 
-#: ../admin/option/option.php:269
+#: ../admin/option/option.php:311
 msgid "Fixed Background Image?"
 msgstr ""
 
-#: ../admin/option/option.php:270
+#: ../admin/option/option.php:312
 msgid "The background is fixed with regard to the viewport."
 msgstr ""
 
-#: ../admin/option/option.php:275
+#: ../admin/option/option.php:317
 msgid "Fit size?"
 msgstr ""
 
-#: ../admin/option/option.php:276
+#: ../admin/option/option.php:318
 msgid "Set background image width and height to fit the size of window"
 msgstr ""
 
-#: ../admin/option/option.php:281
+#: ../admin/option/option.php:323
 msgid "Url for branded background"
 msgstr ""
 
-#: ../admin/option/option.php:282
+#: ../admin/option/option.php:324
 msgid "Insert url that will be display on background"
 msgstr ""
 
-#: ../geo-my-wp/customform/gmw-fl-location-tab.php:32
-msgid "Address Autocomplete"
-msgstr ""
-
-#: ../geo-my-wp/customform/gmw-fl-location-tab.php:39
-msgid "Type an address for autocomplete"
-msgstr ""
-
-#: ../geo-my-wp/customform/gmw-fl-location-tab.php:48
-msgid "Find your location on the map"
-msgstr ""
-
-#: ../geo-my-wp/customform/gmw-fl-location-tab.php:64
-msgid "Auto-Locator"
-msgstr ""
-
-#: ../geo-my-wp/customform/gmw-fl-location-tab.php:68
-msgid "Get Your Current Location"
-msgstr ""
-
-#: ../geo-my-wp/customform/gmw-fl-location-tab.php:81
-msgid "Address Fields"
-msgstr ""
-
-#: ../geo-my-wp/customform/gmw-fl-location-tab.php:89
-msgid "Street"
-msgstr ""
-
-#: ../geo-my-wp/customform/gmw-fl-location-tab.php:100
-msgid "Apt/Suit"
-msgstr ""
-
-#: ../geo-my-wp/customform/gmw-fl-location-tab.php:111
-msgid "City"
-msgstr ""
-
-#: ../geo-my-wp/customform/gmw-fl-location-tab.php:121
-msgid "State"
-msgstr ""
-
-#: ../geo-my-wp/customform/gmw-fl-location-tab.php:132
-msgid "State Long Name"
-msgstr ""
-
-#: ../geo-my-wp/customform/gmw-fl-location-tab.php:143
-msgid "Zipcode"
-msgstr ""
-
-#: ../geo-my-wp/customform/gmw-fl-location-tab.php:154
-msgid "Country"
-msgstr ""
-
-#: ../geo-my-wp/customform/gmw-fl-location-tab.php:165
-msgid "Country Long Name"
-msgstr ""
-
-#: ../geo-my-wp/customform/gmw-fl-location-tab.php:176
-msgid "address"
-msgstr ""
-
-#: ../geo-my-wp/customform/gmw-fl-location-tab.php:187
-msgid "Formatted Address"
-msgstr ""
-
-#: ../geo-my-wp/customform/gmw-fl-location-tab.php:198
-msgid "Street number"
-msgstr ""
-
-#: ../geo-my-wp/customform/gmw-fl-location-tab.php:209
-msgid "Street name"
-msgstr ""
-
-#: ../geo-my-wp/customform/gmw-fl-location-tab.php:217
-msgid "Latitude Longitude"
-msgstr ""
-
-#: ../geo-my-wp/customform/gmw-fl-location-tab.php:225
-msgid "Latitude"
-msgstr ""
-
-#: ../geo-my-wp/customform/gmw-fl-location-tab.php:236
-msgid "Longitude"
-msgstr ""
-
-#: ../geo-my-wp/customform/gmw-fl-location-tab.php:412
-msgid "Your Map Location"
-msgstr ""
-
-#: ../geo-my-wp/customform/gmw-fl-location-tab.php:413
-msgid "You haven't set a map location yet"
-msgstr ""
-
-#: ../geo-my-wp/customform/gmw-fl-location-tab.php:414
-msgid "Edit Location"
-msgstr ""
-
-#: ../geo-my-wp/customform/gmw-fl-location-tab.php:415
-msgid "Delete Location"
-msgstr ""
-
-#: ../geo-my-wp/customform/gmw-fl-location-tab.php:416
-msgid "Enter your map location manually"
-msgstr ""
-
-#: ../geo-my-wp/customform/gmw-fl-location-tab.php:417
-msgid "Address"
-msgstr ""
-
-#: ../geo-my-wp/customform/gmw-fl-location-tab.php:418
-msgid "Latitude / Longitude"
-msgstr ""
-
-#: ../geo-my-wp/customform/gmw-fl-location-tab.php:419
-msgid "Save Map Location"
-msgstr ""
-
-#: ../geo-my-wp/friends/search-results/sellers/results.php:104
-msgid "Shop"
-msgstr ""
-
-#: ../geo-my-wp/groups/search-results/grid/results.php:78
-#, php-format
-msgid "active %s"
-msgstr ""
-
-#: ../geo-my-wp/posts/search-results/custom-table/results.php:17
-msgid "Product"
-msgstr ""
-
-#: ../inc/parts/simplepostlist.php:12
+#: ../inc/parts/simplepostlist.php:15
 #, php-format
 msgid "%s ago"
 msgstr ""

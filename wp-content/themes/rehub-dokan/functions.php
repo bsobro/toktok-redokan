@@ -9,10 +9,10 @@ if ( defined( 'RH_GRANDCHILD_DIR' ) ) {
 	include( RH_GRANDCHILD_DIR . 'rh-grandchild-func.php' );
 }
 
-add_action( 'wp_enqueue_scripts', 'enqueue_parent_theme_style' );
+add_action( 'wp_enqueue_scripts', 'enqueue_parent_theme_style',11 );
 function enqueue_parent_theme_style() {
 	if ( !defined( 'RH_MAIN_THEME_VERSION' ) ) {
-		define('RH_MAIN_THEME_VERSION', '7.4');
+		define('RH_MAIN_THEME_VERSION', '7.5.3');
 	}
     wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css', array(), RH_MAIN_THEME_VERSION );
 	if (is_rtl()) {
