@@ -76,7 +76,6 @@ class Joonas {
     public static function dokan_load_template( $query_vars ) {
         if ( isset( $query_vars['help'] ) ) {
             require_once dirname( __FILE__ ). '/help.php';
-            exit();
         }
     }
 
