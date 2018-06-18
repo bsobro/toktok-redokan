@@ -52,7 +52,7 @@ class Joonas {
 
         add_action( 'dokan_help_content_inside_before', array( 'Joonas', 'dokan_help_content_inside_before' ) );
 
-        add_shortcode( 'my_short', array( 'Joonas', 'shortcode_function' ) );
+        add_shortcode( 'get_candy_list', array( 'Joonas', 'get_candy_list' ) );
     }
 
     public static function dokan_help_content_inside_before( $content ) {
@@ -84,12 +84,13 @@ class Joonas {
 
     public static function dokan_load_template( $query_vars ) {
         if ( isset( $query_vars['help'] ) ) {
-            require_once dirname( __FILE__ ). '/help.php';
+            require_once JOONAS__TEMPLATE_DIR . 'test.php';
         }
     }
 
-    public static function shortcode_function(){
-        return '<h1>shortcode</h1>';
+    public static function get_candy_list(){
+        include JOONAS__TEMPLATE_DIR . 'candy.list.php';
+        return '';
     }
 
 	/**
