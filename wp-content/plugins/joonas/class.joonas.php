@@ -49,6 +49,13 @@ class Joonas {
         add_filter( 'dokan_get_dashboard_nav', array( 'Joonas', 'dokan_add_help_menu' ) );
 
         add_action( 'dokan_load_custom_template', array( 'Joonas', 'dokan_load_template' ) );
+
+        add_action( 'dokan_help_content_inside_before', array( 'Joonas', 'dokan_help_content_inside_before' ) );
+    }
+
+    public static function dokan_help_content_inside_before( $content ) {
+        echo do_shortcode("[wpsm_highlight]Hello!!![/wpsm_highlight]");
+        return $content;
     }
 
     public static function filter_profanity($content) {
