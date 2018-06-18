@@ -6,9 +6,18 @@
 
     <button id="load-candies" class="button">Load Candies!</button>
 
-    <div id="candy-list">
-        <ul></ul>
-    </div>
+    <table id="candy-list" class="dokan-table dokan-table-striped product-listing-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Content</th>
+                <th>Status</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
 
     <hr/>
 
@@ -22,13 +31,24 @@
 <script type="text/javascript">
 $(document).ready(function(){
     function update_candy_list(){
-        var cont = $("#candy-list");
-        cont.html('');
+        var table = document.getElementById('candy-list').getElementsByTagName('tbody')[0];
+        table.innerHTML = '';
 
         $.get( "/wp-json/candyshop/v1/candy", function( data ) {
             var d = data || [];
             d.forEach(function(el, idx){
-                cont.append('<div style="border: 1px solid #ccc; padding: 1em 2em; height: 5em; overflow-y: scroll; margin: .5em auto;">' + JSON.stringify(el) + '</div>');
+                var row = table.insertRow(table.rows.length);
+                var c1 = row.insertCell(0);
+                var c2 = row.insertCell(1);
+                var c3 = row.insertCell(2);
+                var c4 = row.insertCell(3);
+                var c5 = row.insertCell(4);
+    
+                c1.innerHTML = el.ID;
+                c2.innerHTML = el.post_title;
+                c3.innerHTML = el.post_content;
+                c4.innerHTML = el.post_status;
+                c5.innerHTML = el.post_date;
             });
         });
     }
