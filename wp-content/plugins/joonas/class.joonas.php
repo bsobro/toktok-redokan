@@ -51,6 +51,8 @@ class Joonas {
         add_action( 'dokan_load_custom_template', array( 'Joonas', 'dokan_load_template' ) );
 
         add_action( 'dokan_help_content_inside_before', array( 'Joonas', 'dokan_help_content_inside_before' ) );
+
+        add_shortcode( 'my_short', array( 'Joonas', 'shortcode_function' ) );
     }
 
     public static function dokan_help_content_inside_before( $content ) {
@@ -84,6 +86,10 @@ class Joonas {
         if ( isset( $query_vars['help'] ) ) {
             require_once dirname( __FILE__ ). '/help.php';
         }
+    }
+
+    public static function shortcode_function(){
+        return '<h1>shortcode</h1>';
     }
 
 	/**

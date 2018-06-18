@@ -40,15 +40,13 @@
         <h1> Add Your Content</h1>
           <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates maiores exercitationem ducimus totam alias. Voluptatum maxime laboriosam, quis quos eveniet architecto. Quia quam ab molestiae praesentium explicabo minus, deleniti obcaecati.  </p>
 
-        <p>Test</p>
-        <?php
-            // Include the page content template.
-            echo do_shortcode( "[wpsm_vendorlist]" );
-            // add_action( 'dokan_dashboard_content_inside_after', 'rh_wcv_vendorslist_flat' );
-        ?>
-        <p>EndTest</p>
-
         </article><!-- .dashboard-content-area -->
+
+        <?php echo do_shortcode( "[wpsm_vendorlist]" ); ?>
+
+        <hr/>
+
+        <?php echo do_shortcode( '[my_short]' ); ?>
 
         <?php
             /**
