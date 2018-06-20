@@ -1,0 +1,3272 @@
+# Copyright (C) 2015 Planet8
+# This file is distributed under the same license as the Planet8 package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Planet8 Dashboard\n"
+"Report-Msgid-Bugs-To: https://github.com/woothemes/woocommerce/issues\n"
+"POT-Creation-Date: 2016-01-27 11:02+0900\n"
+"PO-Revision-Date: 2016-05-18 16:28+0900\n"
+"Last-Translator: Planet8 <dev@planet8.co>\n"
+"Language-Team: gaegoms <dev@planet8.co>\n"
+"Language: ko_KR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-KeywordsList: __;_e;_x;_n\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../includes/admin/class-wsp-admin-settings.php:56
+msgid "PostCode and Address Format for Korean"
+msgstr "우편번호 및 한국형 주소 형식"
+
+#: ../includes/admin/class-wsp-admin-settings.php:59
+msgid "Available Pages"
+msgstr "활성화 페이지"
+
+#: ../includes/admin/class-wsp-admin-settings.php:64
+msgid ""
+"Please select a page to use the new address entry form. The default is my "
+"page and payment page."
+msgstr ""
+"새로운 주소입력폼을 사용하실 페이지를 선택해주세요. 기본값은 '결제페이지'와 "
+"'마이페이지'입니다."
+
+#: ../includes/admin/class-wsp-admin-settings.php:69
+msgid "Show Company Field"
+msgstr "회사 필드 보이기"
+
+#: ../includes/admin/class-wsp-admin-settings.php:70
+#: ../includes/admin/class-wsp-admin-settings.php:78
+#: ../includes/admin/class-wsp-admin-settings.php:86
+#: ../includes/admin/class-wsp-admin-settings.php:94
+msgid "Display"
+msgstr "보이기"
+
+#: ../includes/admin/class-wsp-admin-settings.php:73
+msgid "Shipping Displays company address fields in the input field."
+msgstr "배송주소 입력 필드에서 회사필드를 표시합니다."
+
+#: ../includes/admin/class-wsp-admin-settings.php:73
+#: ../includes/admin/class-wsp-admin-settings.php:97
+msgid "(Default:no)"
+msgstr "(기본값 : 아니요 )"
+
+#: ../includes/admin/class-wsp-admin-settings.php:77
+msgid "Show Country Field"
+msgstr "국가 필드 보이기"
+
+#: ../includes/admin/class-wsp-admin-settings.php:81
+msgid ""
+"Shipping address in the input field to display a country selection field."
+msgstr "배송주소 입력 필드에서 국가 선택 필드를 표시합니다."
+
+#: ../includes/admin/class-wsp-admin-settings.php:81
+msgid "(Default:yes)"
+msgstr "(기본값:예)"
+
+#: ../includes/admin/class-wsp-admin-settings.php:85
+msgid "Shipping Phone Field"
+msgstr "배송주소 전화번호"
+
+#: ../includes/admin/class-wsp-admin-settings.php:89
+msgid ""
+"Billing address, shipping address, as well as help in adding a field to "
+"enter the recipient's phone number can receive."
+msgstr ""
+"청구주소 뿐만 아니라 배송주소에서도 수신자의 전화번호를 입력받을 수 있도록 필"
+"드를 추가해 줍니다."
+
+#: ../includes/admin/class-wsp-admin-settings.php:93
+msgid "Last Name Field"
+msgstr "이름과 성 분리"
+
+#: ../includes/admin/class-wsp-admin-settings.php:97
+msgid ""
+"If you uncheck, in the country field when you choose the Republic of Korea, "
+"Enter your first and last name in a single field."
+msgstr ""
+"체크를 해제시, 국가필드에서 대한민국을 선택했을 때 이름과 성을 하나의 필드에 "
+"입력받습니다."
+
+#: ../includes/admin/class-wsp-admin-settings.php:101
+msgid "Postcode Button Text"
+msgstr "우편번호 버튼"
+
+#: ../includes/admin/class-wsp-admin-settings.php:102
+#: ../includes/class-wsp-assets.php:35
+msgid "Find PostCode"
+msgstr "우편번호 찾기"
+
+#: ../includes/admin/class-wsp-admin-settings.php:104
+msgid ""
+"You can specify the text that appears when you select a zip code search "
+"button Republic of Korea in a country field."
+msgstr ""
+"국가필드에서 대한민국 선택시 나타나는 우편번호 검색 버튼의 텍스트를 임의로 지"
+"정할 수 있습니다."
+
+#: ../includes/admin/class-wsp-admin.php:48
+msgid "Settings"
+msgstr "환경설정"
+
+#: ../includes/class-wsp-fields.php:36
+msgid "User name."
+msgstr "사용자명."
+
+#: ../includes/class-wsp-fields.php:42
+msgid "E-mail address."
+msgstr "이메일주소."
+
+#: ../includes/class-wsp-fields.php:45
+msgid "Phone Number."
+msgstr "전화번호."
+
+#: ../includes/class-wsp-fields.php:48
+msgid "Address"
+msgstr "주소"
+
+#: ../includes/class-wsp-fields.php:49
+msgid "Town / City"
+msgstr "시/도"
+
+#: ../includes/class-wsp-fields.php:52
+msgid "Detail Address"
+msgstr "상세주소"
+
+#: ../includes/class-wsp-fields.php:82
+msgid "Phone"
+msgstr "전화번호"
+
+#~ msgid "Display company fields from the shipping address entry."
+#~ msgstr "배송주소 입력 필드에서 회사필드를 표시합니다."
+
+#~ msgid "Company Field"
+#~ msgstr "회사 필드"
+
+#~ msgid "Country Field"
+#~ msgstr "국가 필드"
+
+#~ msgid "PostCode"
+#~ msgstr "우편번호"
+
+#~ msgid "Korean Address"
+#~ msgstr "한국형 주소"
+
+#~ msgid "Enable"
+#~ msgstr "활성화"
+
+#~ msgid "PLANET8"
+#~ msgstr "Planet8"
+
+#~ msgid "Thank you for using %s Service."
+#~ msgstr "%s 서비스를 이용해주셔서 감사합니다."
+
+#~ msgid "License code is invalid. Please try again."
+#~ msgstr "라이센스 코드가 올바르지 않습니다. 다시 입력해주세요."
+
+#~ msgid "License Manager"
+#~ msgstr "라이센스 관리"
+
+#~ msgid "Dashboard"
+#~ msgstr "대시보드"
+
+#~ msgid "Global Settings"
+#~ msgstr "기본 환경설정"
+
+#~ msgid "Action failed. Please refresh the page and retry."
+#~ msgstr "작업이 실패했습니다. 페이지를 새로고침하거나 재시도 해주세요."
+
+#~ msgid "Your settings have been saved."
+#~ msgstr "설정값이 저장 되었습니다."
+
+#~ msgid ""
+#~ "The changes you made will be lost if you navigate away from this page."
+#~ msgstr "이 페이지를 벗어나면 변경한 사항이 적용되지 않습니다."
+
+#~ msgid "Select Page&hellip;"
+#~ msgstr "페이지를 선택하세요&hellip;"
+
+#~ msgid "Select Post&hellip;"
+#~ msgstr "글을 선택하세요&hellip;"
+
+#~ msgid "Select User&hellip;"
+#~ msgstr "사용자를 선택하세요&hellip;"
+
+#~ msgid "Search a product&hellip;"
+#~ msgstr "상품을 검색하세요&hellip;"
+
+#~ msgid "Search a category&hellip;"
+#~ msgstr "카테고리를 하세요&hellip;"
+
+#~ msgid "Search a user&hellip;"
+#~ msgstr "사용자를 검색하세요&hellip;"
+
+#~ msgid ""
+#~ "%s plug-in License registration is required. To register the license key, "
+#~ "please <a href=\"%s\">click here</a>."
+#~ msgstr ""
+#~ "%s 플러그인은 라이센스 등록이 필요합니다. 라이센스 키를 등록하시려면 <a "
+#~ "href=\"%s\">여기</a>를 클릭하세요."
+
+#~ msgid ""
+#~ "<strong>%1$s</strong> license will expire in %2$s days. <a href=\"%3$s\" "
+#~ "target=\"_blank\">Please renew your license</a>."
+#~ msgstr ""
+#~ "<strong>%1$s</strong>의 라이센스가 %2$s일 뒤에 만료됩니다. <a href=\"%3$s"
+#~ "\" target=\"_blank\">라이센스를 갱신하세요.</a>."
+
+#~ msgid "The license of <strong>%1$s</strong> has expired."
+#~ msgstr "<strong>%1$s</strong>의 라이센스 유효기간이 경과되었습니다."
+
+#~ msgid "Certification of <strong>%1$s</stong> failed %2$s times."
+#~ msgstr "<strong>%1$s</strong>의 인증이 %2$s번 실패했습니다."
+
+#~ msgid "This plug-in requires a license key registration."
+#~ msgstr "이 플러그인은 라이센스키 등록이 필요한 플러그인입니다."
+
+#~ msgid "The state license is not registered you can not use this page."
+#~ msgstr ""
+#~ "라이센스가 등록되지 않은 상태이므로 이 설정페이지를 사용하실 수 없습니다."
+
+#~ msgid ""
+#~ "Enter the license key can be entered in <a href=\"%s\">Planet8 &gt; "
+#~ "License Management</a> menu."
+#~ msgstr ""
+#~ "라이센스키 입력은 <a href=\"%s\">Planet8 &gt; 라이센스 관리</a> 메뉴에서 "
+#~ "입력하실 수 있습니다."
+
+#~ msgid ""
+#~ "If you do not have a license key, please purchase a license key from <a "
+#~ "href=\"%s\" target=\"_blank\">Planet8</a>."
+#~ msgstr ""
+#~ "라이센스키가 없으신 경우 <a href=\"%s\" target=\"_blank\">플래닛에이트</a>"
+#~ "에서 라이센스키를 구매하세요."
+
+#~ msgid "General"
+#~ msgstr "일반"
+
+#~ msgid "General Settings"
+#~ msgstr "기본설정"
+
+#~ msgid "Layout Options"
+#~ msgstr "레이아웃 옵션"
+
+#~ msgid "Mobile endpoint"
+#~ msgstr "모바일 엔드포인트"
+
+#~ msgid "Please specify a window width to be converted into a mobile layout."
+#~ msgstr "모바일 레이아웃으로 변환 될 창 크기를 지정하세요."
+
+#~ msgid "jQuery UI Theme"
+#~ msgstr "JQuery UI 테마"
+
+#~ msgid "Select your theme for the modal pop-up. (Default: Smoothness)"
+#~ msgstr ""
+#~ "팝업 레이어에 사용될 jQuery UI 테마를 선택하세요. (기본: Smoothness)"
+
+#~ msgid "Disable"
+#~ msgstr "비활성화"
+
+#~ msgid "Package Information"
+#~ msgstr "패키지 정보"
+
+#~ msgid "WooAddon Package"
+#~ msgstr "WooAddon 패키지"
+
+#~ msgid "WooMember Package"
+#~ msgstr "WooMember 패키지"
+
+#~ msgid "Common Settings"
+#~ msgstr "공통설정"
+
+#~ msgid "General Options"
+#~ msgstr "일반옵션"
+
+#~ msgid "SSL Port Number"
+#~ msgstr "SSL  포트 번호"
+
+#~ msgid "Default : 443"
+#~ msgstr "기본 : 443"
+
+#~ msgid ""
+#~ "When the SSL port is set to a custom rather than 443, enter the SSL port "
+#~ "number."
+#~ msgstr ""
+#~ "SSL 포트가 443이 아닌 커스텀으로 설정되어 있을때 해당 SSL 포트번호를 입력"
+#~ "하세요."
+
+#~ msgid "WooPay Package"
+#~ msgstr "WooPay 패키지"
+
+#~ msgid "Address Settings"
+#~ msgstr "주소폼 설정"
+
+#~ msgid ""
+#~ "Choose whether to use the address form features provided in the Planet8 "
+#~ "dashboard."
+#~ msgstr "Planet8 Dashboard에서 제공하는 주소폼 기능의 사용여부를 선택하세요."
+
+#~ msgid "Disable All Functions"
+#~ msgstr "전체기능 비활성화"
+
+#~ msgid ""
+#~ "If you disable this setting, all of the settings below will be "
+#~ "invalidated."
+#~ msgstr ""
+#~ "이 항목을 비활성화 할 경우 아래의 설정들은 무효화되어 적용되지 않습니다."
+
+#~ msgid "General Fields Options"
+#~ msgstr "일반필드 옵션"
+
+#~ msgid ""
+#~ "Choose the field to be output as the default in the address form. Both "
+#~ "applies regardless of the selected countries."
+#~ msgstr ""
+#~ "주소폼에서 기본으로 출력될 필드를 선택하세요. 선택 국가에 관계없이 모두 적"
+#~ "용됩니다."
+
+#~ msgid ""
+#~ "When disabled, the value is specified as the woocommerce default country."
+#~ msgstr "비활성화시 우커머스기 기본 국가로 지정됩니다."
+
+#~ msgid "South Korea Fields Options"
+#~ msgstr "대한민국 필드 옵션"
+
+#~ msgid ""
+#~ "Choose the field to be output is selected for the %s national selection "
+#~ "of address form."
+#~ msgstr "주소폼의 국가선택에서 %s를 선택한 경우에 출력될 필드를 선택하세요."
+
+#~ msgid "Name Format"
+#~ msgstr "이름 형식"
+
+#~ msgid "Name Only"
+#~ msgstr "이름만"
+
+#~ msgid "First Name + Last Name"
+#~ msgstr "이름 + 성"
+
+#~ msgid ""
+#~ "If name only activated by last_name fields are disabled, it uses only the "
+#~ "first_name field."
+#~ msgstr ""
+#~ "이름만 활성화 할 경우 last_name 필드는 비활성화 되고, first_name 필드만 사"
+#~ "용됩니다."
+
+#~ msgid "Postcode Auto Finder"
+#~ msgstr "우편번호 자동검색"
+
+#~ msgid ""
+#~ "To use this option, the <strong>%1$s</strong> field of %2$s page can be "
+#~ "enabled."
+#~ msgstr ""
+#~ "이 옵션을 사용하기 위해서는  %2$s 페이지의 <strong>%1$s</strong>필드를 활"
+#~ "성화 해야합니다."
+
+#~ msgid "Postcode"
+#~ msgstr "우편번호"
+
+#~ msgid "WooShipping Package"
+#~ msgstr "WooShipping 패키지"
+
+#~ msgid "WooShopping Package"
+#~ msgstr "WooShopping 패키지"
+
+#~ msgid "Thank you for using the %s."
+#~ msgstr "%s를 이용해 주셔서 감사합니다."
+
+#~ msgid "Save changes"
+#~ msgstr "변경사항 저장"
+
+#~ msgid "Installed Plugins"
+#~ msgstr "설치된 플러그인"
+
+#~ msgid "Unknown"
+#~ msgstr "미확인"
+
+#~ msgid "Update"
+#~ msgstr "업데이트"
+
+#~ msgid "Menual"
+#~ msgstr "메뉴얼"
+
+#~ msgid "Notice Article"
+#~ msgstr "공지사항"
+
+#~ msgid "Sever Error"
+#~ msgstr "서버 오류"
+
+#~ msgid "Technical Support"
+#~ msgstr "기술지원"
+
+#~ msgid "Installed Version"
+#~ msgstr "설치 버전"
+
+#~ msgid "Update Available v%s"
+#~ msgstr "v%s 업데이트 가능"
+
+#~ msgid "License Key"
+#~ msgstr "라이센스 키"
+
+#~ msgid "Auth Status"
+#~ msgstr "인증 상태"
+
+#~ msgid "Recently Auth : %s"
+#~ msgstr "최근 인증 : %s"
+
+#~ msgid "None"
+#~ msgstr "없음"
+
+#~ msgid "Auth Failed Count : %s"
+#~ msgstr "인증 실패 횟수 : %s"
+
+#~ msgid "Expire Date"
+#~ msgstr "만료일"
+
+#~ msgid "<strong>%s days</strong> before expiration."
+#~ msgstr "라이센스 만료 <strong>%s일<strong>전"
+
+#~ msgid "Admin Notice"
+#~ msgstr "관리자 알림"
+
+#~ msgid "Allow"
+#~ msgstr "허용"
+
+#~ msgid "Deny"
+#~ msgstr "거부"
+
+#~ msgid ""
+#~ "Administrator notifications are delivered to the license conditions, All "
+#~ "the problems by blocking notifications is your responsibility. Choose "
+#~ "whether to block carefully."
+#~ msgstr ""
+#~ "관리자 알림은 라이센스 상황을 공지하며, 알림을 차단하여 발생하는 모든 문제"
+#~ "는 본인의 책임이므로 차단여부를 신중하게 선택하세요."
+
+#~ msgid "Save Changes"
+#~ msgstr "변경 저장"
+
+#~ msgid "Find Postcode"
+#~ msgstr "우편번호 찾기"
+
+#~ msgid "Billing"
+#~ msgstr "청구"
+
+#~ msgid "Shipping"
+#~ msgstr "배송"
+
+#~ msgid "%s Name"
+#~ msgstr "%s 이름"
+
+#~ msgid "%s Company Name"
+#~ msgstr "%s 회사명"
+
+#~ msgid "%s Email Address"
+#~ msgstr "%s 이메일"
+
+#~ msgid "%s Phone Number"
+#~ msgstr "%s 전화번호"
+
+#~ msgid "Basic Address for %s"
+#~ msgstr "%s 기본주소"
+
+#~ msgid "Detail Address for %s"
+#~ msgstr "%s 상세주소"
+
+#~ msgid "%s Town / City"
+#~ msgstr "%s 시/도"
+
+#~ msgid "Select a country&hellip;"
+#~ msgstr "국가를 선택하세요&hellip;"
+
+#~ msgid "Choose an option"
+#~ msgstr "옵션 선택"
+
+#~ msgid "Check for updates"
+#~ msgstr "업데이트 확인"
+
+#~ msgid "This plugin is up to date."
+#~ msgstr "이 플러그인은 최신버전입니다."
+
+#~ msgid "A new version of this plugin is available."
+#~ msgstr "새로운 버전이 있습니다."
+
+#~ msgid ""
+#~ "WooCommerce is not installed or activated. To activate the planet8 "
+#~ "dashboard woocommerce plugin must be enabled. Planet8 dashboard plugins "
+#~ "deactivated."
+#~ msgstr ""
+#~ "우커머스가 설치되지 않았거나 활성화되지 않아 플래닛8 대시보드 플러그인을 "
+#~ "활성화 할 수 없습니다. 플러그인이 비활성화 되었습니다."
+
+#~ msgid ""
+#~ "The presence of a previous version is not compatible plug-in to the site. "
+#~ "Planet8 dashboard plugins deactivated."
+#~ msgstr ""
+#~ "호환되지 않는 이전버전의 플러그인이 존재합니다. PLANET8 대시보드를 비활성"
+#~ "화합니다."
+
+#~ msgid "First_Name + Last Name"
+#~ msgstr "이름 + 성"
+
+#~ msgid "This plug-in requires a license key registration.."
+#~ msgstr "이 플러그인은 라이센스키 등록이 필요한 플러그인입니다."
+
+#~ msgid "%s Address"
+#~ msgstr "%s 주소"
+
+#~ msgid "Enable/Disable Fields"
+#~ msgstr "필드 활성/비활성"
+
+#~ msgid ""
+#~ "Country (When disabled, the value is specified as the woocommerce default "
+#~ "country.)"
+#~ msgstr "국가 (비활성화시 우커머스의 기본 국가로 지정됩니다.)"
+
+#~ msgid "State"
+#~ msgstr "주/군"
+
+#~ msgid "City"
+#~ msgstr "시/도"
+
+#~ msgid "Address1"
+#~ msgstr "기본주소"
+
+#~ msgid " (Required)"
+#~ msgstr "(필수)"
+
+#~ msgid "Address2"
+#~ msgstr "상세주소"
+
+#~ msgid "Company"
+#~ msgstr "회사"
+
+#~ msgid "Only One Name"
+#~ msgstr "이름"
+
+#~ msgid "Enable City Fields"
+#~ msgstr "시/군 필드 활성화"
+
+#~ msgid "South Korea Fields"
+#~ msgstr "대한민국 필드"
+
+#~ msgid "General Fields Settings"
+#~ msgstr "일반필드 설정"
+
+#~ msgid "WooShipping - Address"
+#~ msgstr "주소수정"
+
+#~ msgid "Fields Settings"
+#~ msgstr "필드설정"
+
+#~ msgid "Global Fields"
+#~ msgstr "공통 필드"
+
+#~ msgid "Field Settings"
+#~ msgstr "필드설정"
+
+#~ msgid "Please enter your mobile number 10-11 digits except \"-\"."
+#~ msgstr "휴대폰 번호는 \"-\"를 제외한 10-11개의 숫자를 입력하세요."
+
+#~ msgid "You must enter %s."
+#~ msgstr "%s 필드를 입력하셔야 합니다."
+
+#~ msgid "Send Auth Code"
+#~ msgstr "인증번호 전송"
+
+#~ msgid "Verification code"
+#~ msgstr "인증코드 입력"
+
+#~ msgid "Confirm Auth Code"
+#~ msgstr "확인"
+
+#~ msgid "The verification code was sent to your entered phone number."
+#~ msgstr "입력하신 번호로 인증코드가 발송되었습니다."
+
+#~ msgid "Please enter the verification code."
+#~ msgstr "인증코드를 입력해주세요."
+
+#~ msgid "Certification was successful."
+#~ msgstr "인증이 성공하였습니다."
+
+#~ msgid "The authentication code is incorrect. Please check back."
+#~ msgstr "인증코드가 틀립니다. 다시 확인해 주세요."
+
+#~ msgid "Verification code has been sent."
+#~ msgstr "인증코드가 발송되었습니다."
+
+#~ msgid "Invalid verification code. Please re-certification.."
+#~ msgstr "인증코드가 일치하지 않습니다. 재인증이 필요합니다."
+
+#~ msgid "Country"
+#~ msgstr "국가"
+
+#~ msgid "Postcode Settings"
+#~ msgstr "우편번호설정"
+
+#~ msgid ""
+#~ "To use this option, the <strong>%3$s</strong> field of \"%2$s\" and \"%3$s"
+#~ "\" section at %1$s page can be enabled."
+#~ msgstr ""
+#~ "이 옵션을 사용하려면 %1$s > “%2$s”와 “%3$s” 섹션의 <strong>%4$s</strong> "
+#~ "필드가 모두 활성화 되어 있어야 가능합니다."
+
+#~ msgid "Korean Fields"
+#~ msgstr "대한민국 필드"
+
+#~ msgid "Theme"
+#~ msgstr "테마"
+
+#~ msgid ""
+#~ "Select your theme for the address search pop-up. (Default: Smoothness)"
+#~ msgstr "주소검색 팝업에 사용할 테마를 선택하세요. (기본: Smoothness)"
+
+#~ msgid ""
+#~ "To use this option, the <strong>%4$s</strong> field of \"%2$s\" and \"%3$s"
+#~ "\" section at %1$s page can be enabled."
+#~ msgstr ""
+#~ "이 옵션을 사용하려면 %1$s의 “%2$s”와 “%3$s”의 <strong>%4$s</strong> 필드"
+#~ "가 모두 활성화 되어 있어야 가능합니다."
+
+#~ msgid ""
+#~ "To use this option, the %4$s field of \"%2$s\" and \"%3$s\" section at "
+#~ "%1$s page can be enabled."
+#~ msgstr ""
+#~ "이 옵션을 사용하려면 %1$s의 \"%2$s\"와 \"%3$s\"의 %4$s 필드가 모두 활성화 "
+#~ "되어 있어야 가능합니다."
+
+#~ msgid "Name Field Format"
+#~ msgstr "이름 필드 형식"
+
+#~ msgid "Last Name + First Name"
+#~ msgstr "이름 + 성"
+
+#~ msgid "Only Name"
+#~ msgstr "이름만"
+
+#~ msgid "Enable Company Field"
+#~ msgstr "회사 필드 사용"
+
+#~ msgid "Yes"
+#~ msgstr "예"
+
+#~ msgid "No"
+#~ msgstr "아니요"
+
+#~ msgid "Enable Country Field"
+#~ msgstr "국가 필드 사용"
+
+#~ msgid "Enable State"
+#~ msgstr "주 필드 사용"
+
+#~ msgid "Enable City Field"
+#~ msgstr "도시 필드 사용"
+
+#~ msgid "Enable Address1 Field"
+#~ msgstr "주소1 필드 사용"
+
+#~ msgid "Enable Address2 Field"
+#~ msgstr "주소2 필드 사용"
+
+#~ msgid "PLANET8 Dashboard"
+#~ msgstr "플래닛8 대시보드"
+
+#~ msgid ""
+#~ "Not be less than the boundary points of the previous hierarchy. Please "
+#~ "try again."
+#~ msgstr "이전 계층의 경계 포인트보다 작을 수는 없습니다. 다시 입력해주세요."
+
+#~ msgid "Role Group Manager"
+#~ msgstr "역할 그룹 관리자"
+
+#~ msgid "Reference Prices"
+#~ msgstr "가격 참조"
+
+#~ msgid "Discount"
+#~ msgstr "할인가"
+
+#~ msgid ""
+#~ "Role benefit ratio, so the value is not specified, enter 100 or less."
+#~ msgstr "역할 혜택이 지정값이 아닌 비율이므로 100 이하로 입력하세요."
+
+#~ msgid "Price"
+#~ msgstr "가격"
+
+#~ msgid "Custom Role Benefits : "
+#~ msgstr "개별 역할 혜택"
+
+#~ msgid "Global Role Benefits : "
+#~ msgstr "기본 역할 혜택"
+
+#~ msgid "Promotion Product"
+#~ msgstr "역할승급 상품"
+
+#~ msgid "Not Promotion Product"
+#~ msgstr "역할승급 상품 아님"
+
+#~ msgid ""
+#~ "[Caution] If you purchase this product will be promoted to the selected "
+#~ "role. If you have a product that was created previously, and fixed to the "
+#~ "product, <span style=\"color:red\">the role assigned to the previous "
+#~ "criteria are subject to change.</span>"
+#~ msgstr ""
+#~ "<span style=\"color:red\">[주의]</span> 이 상품을 구매할 경우 선택 한 역할"
+#~ "로 승급하게 됩니다. 기존에 설정된 상품이 있을 경우 이 상품으로 고정되며, "
+#~ "이전 기준으로 할당된 역할이 변경될 수 있습니다."
+
+#~ msgid "No roles found."
+#~ msgstr "역할이 없습니다."
+
+#~ msgid "Built-in"
+#~ msgstr "빌트인"
+
+#~ msgid "Custom"
+#~ msgstr "사용자"
+
+#~ msgid "Default"
+#~ msgstr "기본값"
+
+#~ msgid "Edit"
+#~ msgstr "수정"
+
+#~ msgid "Delete"
+#~ msgstr "삭제"
+
+#~ msgid "Role Key"
+#~ msgstr "역할 키"
+
+#~ msgid "Role Type"
+#~ msgstr "종류"
+
+#~ msgid "Role Name"
+#~ msgstr "역할 이름"
+
+#~ msgid "Capabilities"
+#~ msgstr "권한"
+
+#~ msgid "Acquired Conditions"
+#~ msgstr "요구 조건"
+
+#~ msgid "User Count"
+#~ msgstr "사용자 수"
+
+#~ msgid ""
+#~ "\"%s\" role is built-in role. You can not delete the built-in role is to "
+#~ "maintain system stability."
+#~ msgstr ""
+#~ "\"%s\" 역할은 빌트인 역할입니다. 시스템의 안정성을 위해 빌트인 역할은 삭제"
+#~ "할 수 없습니다."
+
+#~ msgid "\"%s\" role is WooCommerce basic role can not be deleted."
+#~ msgstr "\"%s\" 역할은 우커머스 기초 역할이므로 삭제할 수 없습니다."
+
+#~ msgid "\"%s\" role is set as the default role can not be deleted."
+#~ msgstr "\"%s\" 역할은 기본역할로 설정되어 삭제할 수 없습니다."
+
+#~ msgid "\"%s\" role deleted successfully."
+#~ msgstr "\"%s\" 역할이 성공적으로 삭제되었습니다."
+
+#~ msgid ""
+#~ "Role deleted, you may cause serious problems in the system. So, please be "
+#~ "careful in deciding. Are you sure?"
+#~ msgstr ""
+#~ "역할 삭제는 시스템에 중대한 오류를 야기시킬 수 있으므로 신중하게 결정하세"
+#~ "요. 계속하시겠습니까?"
+
+#~ msgid "Add New Role"
+#~ msgstr "새 역할 추가"
+
+#~ msgid "%s Role Edit"
+#~ msgstr "%s 역할 수정"
+
+#~ msgid "Roles"
+#~ msgstr "역할"
+
+#~ msgid "Role updated successfully."
+#~ msgstr "역할이 성공적으로 변경되었습니다."
+
+#~ msgid "New role added successfully."
+#~ msgstr "새로운 역할이 성공적으로 추가되었습니다."
+
+#~ msgid "Membership Settings"
+#~ msgstr "멤버십/포인트"
+
+#~ msgid ""
+#~ "You can specify / disable user permissions, and you can create or delete "
+#~ "roles Group of WordPress. In addition, the user can specify a membership-"
+#~ "based WooCommerce, supporting a point system for each role group."
+#~ msgstr ""
+#~ "사용자 권한을 지정/해제 할 수 있으며 워드프레스의 역할 그룹을 생성하거나 "
+#~ "삭제할 수 있습니다. 또한 우커머스 기반으로 사용자 멤버십을 지정할 수 있으"
+#~ "며, 역할 그룹별로 포인트 시스템을 지원합니다."
+
+#~ msgid ""
+#~ "Please visit <a href=\"%s\" target=\"_blank\">PLANET8</a> to get your "
+#~ "license or more information."
+#~ msgstr ""
+#~ "라이선스 또는 자세한 정보는 <a href=\"%s\" target=\"_blank\">플래닛8</a>에"
+#~ "서 확인하실 수 있습니다."
+
+#~ msgid "Point Options"
+#~ msgstr "포인트 기본 옵션"
+
+#~ msgid "Validity Period"
+#~ msgstr "유효기한"
+
+#~ msgid "Days"
+#~ msgstr "일"
+
+#~ msgid ""
+#~ "Please enter a valid point from the date of issue. If that date is over "
+#~ "point is destroyed."
+#~ msgstr ""
+#~ "포인트 발급일로부터 유효한 기간을 입력하세요. 지정한 날짜기 지나면 포인트"
+#~ "는 소멸됩니다."
+
+#~ msgid "Allow Point Payment"
+#~ msgstr "포인트 결제 허용"
+
+#~ msgid "Customers can purchase product to pay for own point."
+#~ msgstr "고객이 상품 구매시 소유한 포인트로 비용을 결제할 수 있습니다."
+
+#~ msgid "Lowest Payment Point"
+#~ msgstr "포인트 결제 최저값"
+
+#~ msgid "Point payment only when more than the points."
+#~ msgstr "이상일 경우에 포인트 결제가 가능합니다."
+
+#~ msgid ""
+#~ "If only a customer owns point is greater than the value specified in this "
+#~ "section, customer can try to point payment."
+#~ msgstr ""
+#~ "포인트 결제를 위한 최저 포인트로서 고객이 보유한 포인트가 이 항목에서 지정"
+#~ "한 값보다 클 경우에만 포인트결제를 시도할 수 있습니다."
+
+#~ msgid "Maxium Payment Ratio"
+#~ msgstr "최대 결제 비율"
+
+#~ msgid ""
+#~ "Please enter ratio of points compared to product price when order payment."
+#~ msgstr "주문결제시 상품가 대비 결제 가능한 최대 포인트 비율을 입력하세요."
+
+#~ msgid "Conversion Ratio"
+#~ msgstr "포인트 전환 비율"
+
+#~ msgid "Sets the cash conversion rate of the point. Default) 1 point = %s."
+#~ msgstr "포인트의 현금 전환 비율을 설정합니다. 기본) 1포인트 = %s."
+
+#~ msgid "Point Earning Options"
+#~ msgstr "포인트 지급 옵션"
+
+#~ msgid "Account Sign-Up Points"
+#~ msgstr "회원가입 포인트"
+
+#~ msgid "Point"
+#~ msgstr "포인트"
+
+#~ msgid ""
+#~ "Enter the amount of points earned when a customer signs up for an account."
+#~ msgstr "자용자가 가입시 지급할 포인트를 입력하세요."
+
+#~ msgid "Site Login Points"
+#~ msgstr "로그인 포인트"
+
+#~ msgid "Enter the amount of points earned when a customer login."
+#~ msgstr "사용자가 로그인시 지급할 포인트를 입력하세요."
+
+#~ msgid ""
+#~ "Pays a point each time customer log in, regardless of the number. "
+#~ "(Default: 1 per day limit)"
+#~ msgstr ""
+#~ "횟수에 상관없이 로그인 할때마다 포인트를 지급합니다. (기본 : 1일 1회 제한)"
+
+#~ msgid "Writing a Review Points"
+#~ msgstr "리뷰 작성 포인트"
+
+#~ msgid ""
+#~ "Enter the amount of points earned when a customer first reviews a product."
+#~ msgstr "사용자가 리뷰를 작성했을 때 지급할 포인트를 입력하세요."
+
+#~ msgid "Point Output Options"
+#~ msgstr "포인트 출력 옵션"
+
+#~ msgid "Point Label"
+#~ msgstr "포인트 라벨"
+
+#~ msgid "Points"
+#~ msgstr "포인트"
+
+#~ msgid "Set the label of the points that will be exposed to the site."
+#~ msgstr "사이트에 노출될 포인트의 라벨을 설정하세요."
+
+#~ msgid "Product Message Location"
+#~ msgstr "상품 적립금 위치"
+
+#~ msgid "After Title"
+#~ msgstr "상품명 다음에"
+
+#~ msgid "After Price"
+#~ msgstr "상품가격 다음에"
+
+#~ msgid "After Excerpt"
+#~ msgstr "요약섹션 다음에"
+
+#~ msgid "After Add to Cart"
+#~ msgstr "장바구니 버튼 다음에"
+
+#~ msgid "After Meta"
+#~ msgstr "메타섹션 다음에"
+
+#~ msgid "After Sharing"
+#~ msgstr "공유 섹션 다음에"
+
+#~ msgid "Product Message"
+#~ msgstr "상품 적립금 메시지"
+
+#~ msgid ""
+#~ "Purchase this product now and earn <strong>{points}</strong> "
+#~ "{points_label}!"
+#~ msgstr ""
+#~ "지금 이 상품을 구매하고 <strong>{points}</strong> {points_label}을 받으세"
+#~ "요.!"
+
+#~ msgid "Checkout Message"
+#~ msgstr "결제 메시지"
+
+#~ msgid ""
+#~ "Complete your order and earn <strong>{points}</strong> {points_label} for "
+#~ "a discount on a future purchase"
+#~ msgstr ""
+#~ "이 주문이 완료되면 다음 주문에 할인 받을 수 있는 <strong>{points}</"
+#~ "strong> {points_label}가 적립됩니다."
+
+#~ msgid "Price Options"
+#~ msgstr "가격 옵션"
+
+#~ msgid "Display of Option Product Price"
+#~ msgstr "옵션상품 가격 출력"
+
+#~ msgid "Display Price Range"
+#~ msgstr "최저~최고 범위 표시"
+
+#~ msgid "Display Only Base Price"
+#~ msgstr "기본 가격만 표시"
+
+#~ msgid "Select the output method of pricing option products."
+#~ msgstr "옵션 상품의 가격 출력 방식을 선택하세요."
+
+#~ msgid "Sale Price Display"
+#~ msgstr "세일 가격 출력"
+
+#~ msgid ""
+#~ "When the product is being sale, display role price without product sale "
+#~ "price."
+#~ msgstr ""
+#~ "해당 상품이 세일중일 경우, 세일가격은 제외하고 역할 가격만 출력합니다."
+
+#~ msgid "Display Other Roles Price"
+#~ msgstr "다른 역할가격 표시"
+
+#~ msgid "No Display"
+#~ msgstr "출력하지 않음"
+
+#~ msgid "Only next higher hierarchy role price"
+#~ msgstr "차상위 계층 역할가격만"
+
+#~ msgid "Display All levels role prices"
+#~ msgstr "모든 계층의 역할가격"
+
+#~ msgid ""
+#~ "Choose whether to display the next highest role price or all hierarchical "
+#~ "levels role price in the product detail page."
+#~ msgstr ""
+#~ "상품 상세페이지에서 사용자의 현재 역할 가격 뿐만 아니라, 차상위 계층 레벨"
+#~ "의 역할가격 또는 모든 레벨의 역할가격을 출력할지 선택하세요."
+
+#~ msgid "Role Policy Options"
+#~ msgstr "역할 정책 옵션"
+
+#~ msgid "Hide Built-in Roles"
+#~ msgstr "빌트인 역할 숨기기"
+
+#~ msgid "Hide the role specified in WordPress by default."
+#~ msgstr "워드프레스에서 기본으로 정해진 역할을 숨깁니다."
+
+#~ msgid "Role Update Criteria"
+#~ msgstr "역할 업데이트 기준"
+
+#~ msgid "Boundary Points Exceeded"
+#~ msgstr "경계 포인트 초과시"
+
+#~ msgid "Order Amount Exceeded"
+#~ msgstr "주문 합계금액 초과시"
+
+#~ msgid "Promotion Product Purchased"
+#~ msgstr "역할승급 상품 구매시"
+
+#~ msgid "Select the conditions specified by the role automatic upgrades."
+#~ msgstr "역할 자동승급시 참조할 기준 조건을 선택하세요."
+
+#~ msgid "Order Amount Calculation Period"
+#~ msgstr "주문 합계금액 산정기간"
+
+#~ msgid "Unlimited"
+#~ msgstr "제한없음"
+
+#~ msgid "Last %s months"
+#~ msgstr "지난 %s 개월"
+
+#~ msgid ""
+#~ "Please select the reference period for calculating the total amount of "
+#~ "your order."
+#~ msgstr "주문 합계금액 산정을 위한 기준기간을 선택하세요."
+
+#~ msgid "Promotion Product Validity"
+#~ msgstr "역할승급 상품 유효기간"
+
+#~ msgid "Up to %s months after the purchase date"
+#~ msgstr "구매일로 부터 %s 개월 까지"
+
+#~ msgid "Please select the validity period of maintenance promotion products."
+#~ msgstr "승급상품의 효력 유지 기간을 선택하세요."
+
+#~ msgid "Auto Role Update"
+#~ msgstr "자동 역할 업데이트"
+
+#~ msgid "No Automatic Updates"
+#~ msgstr "자동 업데이트 없음"
+
+#~ msgid "Immediately"
+#~ msgstr "즉시 업데이트"
+
+#~ msgid "Daily (00:00)"
+#~ msgstr "일 단위 (매일 00:00)"
+
+#~ msgid "Weekly (Monday 00:00)"
+#~ msgstr "주 단위 (매주 월요일 00:00)"
+
+#~ msgid "Monthly (First day 00:00)"
+#~ msgstr "월 단위 (매달 1일 00:00)"
+
+#~ msgid ""
+#~ "Choose the conditions and timing for the role automatically upgraded."
+#~ msgstr "역할 자동승급을 위한 조건 및 시기를 선택하세요."
+
+#~ msgid "Maintain existing role"
+#~ msgstr "기존 역할 유지"
+
+#~ msgid ""
+#~ "The role has already been promoted to the role even though it is not meet "
+#~ "the conditions is maintained."
+#~ msgstr "해당 역할 조건에 부합되지 않더라도 이미 승급된 역할은 유지합니다."
+
+#~ msgid "Role Benefits"
+#~ msgstr "역할 혜택"
+
+#~ msgid ""
+#~ "Select the type of benefits to be provided to each role. Get detailed set "
+#~ "of benefits is set in the table below."
+#~ msgstr ""
+#~ "각각의 역할에 제공할 혜택의 종류를 선택하세요. 혜택의 상세설정은 아래의 표"
+#~ "에서 설정하세요."
+
+#~ msgid "Diable Custom Role Benefits"
+#~ msgstr "개별 혜택 적용 안함"
+
+#~ msgid "Custom role benefits at product data set individually do not apply."
+#~ msgstr "상품 데이터에 개별적으로 설정한 역할 혜택을 적용하지 않습니다."
+
+#~ msgid "Role Hierarchy "
+#~ msgstr "역할 계층 조건"
+
+#~ msgid ""
+#~ "If you want to specify a different item by item or to pay a specified "
+#~ "point not a percentage, set the value in the Product > Product Data."
+#~ msgstr ""
+#~ "상품별로 지급 포인트를 다르게 지정하거나 정률이 아닌 정액의 포인트를 지급"
+#~ "하려면, 해당상품의 '상품 > 상품 데이터' 에서 값을 변경하세요."
+
+#~ msgid "Role Manager Options"
+#~ msgstr "역할 관리자 옵션"
+
+#~ msgid "Manage Built-in Roles"
+#~ msgstr "빌트인 역할 관리"
+
+#~ msgid ""
+#~ "Possibly wordpress default built-in roles management in the Role Manager."
+#~ msgstr "역할 관리자에서 워드프레스의 기본 빌트인 역할을 관리합니다."
+
+#~ msgid "Show Belonging Users"
+#~ msgstr "소속 사용자 보기"
+
+#~ msgid "Shows a list of users in that role when modifying role."
+#~ msgstr "해당 역할 수정시 역할에 포함된 사용자들의 목록을 보여줍니다."
+
+#~ msgid "Show User Orders"
+#~ msgstr "사용자 주문 보기"
+
+#~ msgid "No, Only posts info."
+#~ msgstr "글 정보만 표시합니다."
+
+#~ msgid "Yes, WooCommerce order info."
+#~ msgstr "우커머스 주문정보를 표시합니다."
+
+#~ msgid "Choose the point code."
+#~ msgstr "포인트 코드를 선택하세요."
+
+#~ msgid "Please enter a point value to be issued."
+#~ msgstr "발급하실 포인트값을 입력하세요."
+
+#~ msgid ""
+#~ "There is no point the date of issue. To enter the current time and press "
+#~ "OK."
+#~ msgstr ""
+#~ "포인트 발급일이 없습니다. 현재시간으로 입력하시려면 확인을 누르세요."
+
+#~ msgid "Are you sure you want to delete this point Issuing history?"
+#~ msgstr "이 포인트 발급 기록을 삭제하시겠습니까?"
+
+#~ msgid "Points Histories"
+#~ msgstr "포인트 내역"
+
+#~ msgid "WooCommerce"
+#~ msgstr "우커머스"
+
+#~ msgid "dashboard"
+#~ msgstr "대쉬보드"
+
+#~ msgid "posts"
+#~ msgstr "글"
+
+#~ msgid "media"
+#~ msgstr "미디어"
+
+#~ msgid "pages"
+#~ msgstr "페이지"
+
+#~ msgid "comments"
+#~ msgstr "코멘트"
+
+#~ msgid "themes"
+#~ msgstr "테마"
+
+#~ msgid "plugins"
+#~ msgstr "플러그인"
+
+#~ msgid "users"
+#~ msgstr "사용자"
+
+#~ msgid "tools"
+#~ msgstr "도구"
+
+#~ msgid "admin"
+#~ msgstr "관리"
+
+#~ msgid "links"
+#~ msgstr "링크"
+
+#~ msgid "others"
+#~ msgstr "기타"
+
+#~ msgid "read"
+#~ msgstr "읽기"
+
+#~ msgid "edit_dashboard"
+#~ msgstr "대쉬보드 수정"
+
+#~ msgid "publish_posts"
+#~ msgstr "글 공개"
+
+#~ msgid "copy_posts"
+#~ msgstr "글 복사"
+
+#~ msgid "edit_posts"
+#~ msgstr "글 수정"
+
+#~ msgid "delete_posts"
+#~ msgstr "글 삭제"
+
+#~ msgid "edit_published_posts"
+#~ msgstr "공개글 수정"
+
+#~ msgid "delete_published_posts"
+#~ msgstr "공개글 삭제"
+
+#~ msgid "edit_others_posts"
+#~ msgstr "다른사람 글 수정"
+
+#~ msgid "delete_others_posts"
+#~ msgstr "다른사람 글 삭제"
+
+#~ msgid "read_private_posts"
+#~ msgstr "개인 글 읽기"
+
+#~ msgid "edit_private_posts"
+#~ msgstr "개인 글 수정"
+
+#~ msgid "delete_private_posts"
+#~ msgstr "비공개 글 삭제"
+
+#~ msgid "manage_categories"
+#~ msgstr "카테고리 관리"
+
+#~ msgid "upload_files"
+#~ msgstr "파일 업로드"
+
+#~ msgid "unfiltered_upload"
+#~ msgstr "업로드필터 무효화"
+
+#~ msgid "publish_pages"
+#~ msgstr "페이지 공개"
+
+#~ msgid "edit_pages"
+#~ msgstr "페이지 수정"
+
+#~ msgid "delete_pages"
+#~ msgstr "페이지 삭제"
+
+#~ msgid "edit_published_pages"
+#~ msgstr "공개 페이지 수정"
+
+#~ msgid "delete_published_pages"
+#~ msgstr "공개 페이지 삭제"
+
+#~ msgid "edit_others_pages"
+#~ msgstr "다른사람 페이지 수정"
+
+#~ msgid "delete_others_pages"
+#~ msgstr "다른사람 페이지 삭제"
+
+#~ msgid "read_private_pages"
+#~ msgstr "비공개 페이지 읽기"
+
+#~ msgid "edit_private_pages"
+#~ msgstr "비공개 페이지 수정"
+
+#~ msgid "delete_private_pages"
+#~ msgstr "비공개 페이지 삭제"
+
+#~ msgid "edit_comment"
+#~ msgstr "코멘트 수정"
+
+#~ msgid "moderate_comments"
+#~ msgstr "코멘트 차단"
+
+#~ msgid "switch_themes"
+#~ msgstr "테마 변경"
+
+#~ msgid "edit_theme_options"
+#~ msgstr "테마 옵션 수정"
+
+#~ msgid "edit_themes"
+#~ msgstr "테마 수정"
+
+#~ msgid "delete_themes"
+#~ msgstr "테마 삭제"
+
+#~ msgid "install_themes"
+#~ msgstr "테마 설치"
+
+#~ msgid "update_themes"
+#~ msgstr "테마 업데이트"
+
+#~ msgid "activate_plugins"
+#~ msgstr "플러그인 활성화"
+
+#~ msgid "edit_plugins"
+#~ msgstr "플러그인 수정"
+
+#~ msgid "install_plugins"
+#~ msgstr "플러그인 설치"
+
+#~ msgid "update_plugins"
+#~ msgstr "플러그인 업데이트"
+
+#~ msgid "delete_plugins"
+#~ msgstr "플러그인 삭제"
+
+#~ msgid "list_users"
+#~ msgstr "사용자 리스트"
+
+#~ msgid "create_users"
+#~ msgstr "사용자 생성"
+
+#~ msgid "edit_users"
+#~ msgstr "사용자 수정"
+
+#~ msgid "delete_users"
+#~ msgstr "사용자 삭제"
+
+#~ msgid "promote_users"
+#~ msgstr "사용자 승급"
+
+#~ msgid "add_users"
+#~ msgstr "사용자 추가"
+
+#~ msgid "remove_users"
+#~ msgstr "사용자 제거"
+
+#~ msgid "import"
+#~ msgstr "가져오기"
+
+#~ msgid "export"
+#~ msgstr "내보내기"
+
+#~ msgid "manage_options"
+#~ msgstr "옵션 관리"
+
+#~ msgid "manage_admin_columns"
+#~ msgstr "관리자 컬럼 관리"
+
+#~ msgid "update_core"
+#~ msgstr "코어 업데이트"
+
+#~ msgid "unfiltered_html"
+#~ msgstr "HTML필터 무효화"
+
+#~ msgid "manage_links"
+#~ msgstr "링크 관리"
+
+#~ msgid "woocommerce"
+#~ msgstr "우커머스"
+
+#~ msgid "woocommerce_product"
+#~ msgstr "우커머스 상품"
+
+#~ msgid "woocommerce_order"
+#~ msgstr "우커머스 주문"
+
+#~ msgid "woocommerce_coupon"
+#~ msgstr "우커머스 쿠폰"
+
+#~ msgid "woocommerce_webhook"
+#~ msgstr "우커머스 웹훅"
+
+#~ msgid "manage_woocommerce"
+#~ msgstr "우커머스 관리"
+
+#~ msgid "manage_woocommerce_tab_manager"
+#~ msgstr "우커머스 탭 관리"
+
+#~ msgid "view_woocommerce_reports"
+#~ msgstr "우커머스 보고서 보기"
+
+#~ msgid "edit_product"
+#~ msgstr "상품 수정"
+
+#~ msgid "read_product"
+#~ msgstr "상품 읽기"
+
+#~ msgid "delete_product"
+#~ msgstr "상품 삭제"
+
+#~ msgid "edit_products"
+#~ msgstr "상품 복수 수정"
+
+#~ msgid "edit_others_products"
+#~ msgstr "다른사람 상품 수정"
+
+#~ msgid "publish_products"
+#~ msgstr "상품 공개"
+
+#~ msgid "read_private_products"
+#~ msgstr "비공개 상품 보기"
+
+#~ msgid "delete_products"
+#~ msgstr "상품 복수 삭제"
+
+#~ msgid "delete_private_products"
+#~ msgstr "비공개 상품 삭제"
+
+#~ msgid "delete_published_products"
+#~ msgstr "공개된 상품 복수 삭제"
+
+#~ msgid "delete_others_products"
+#~ msgstr "다른사람 상품 삭제"
+
+#~ msgid "edit_private_products"
+#~ msgstr "비공개 상품 수정"
+
+#~ msgid "edit_published_products"
+#~ msgstr "공개 상품 수정"
+
+#~ msgid "manage_product_terms"
+#~ msgstr "상품 속성 관리"
+
+#~ msgid "edit_product_terms"
+#~ msgstr "상품 속성 수정"
+
+#~ msgid "delete_product_terms"
+#~ msgstr "상품 속성 삭제"
+
+#~ msgid "assign_product_terms"
+#~ msgstr "상품 속성 할당"
+
+#~ msgid "edit_shop_order"
+#~ msgstr "주문 수정"
+
+#~ msgid "read_shop_order"
+#~ msgstr "주문 읽기"
+
+#~ msgid "delete_shop_order"
+#~ msgstr "주문 삭제"
+
+#~ msgid "edit_shop_orders"
+#~ msgstr "주문 복수 수정"
+
+#~ msgid "edit_others_shop_orders"
+#~ msgstr "다른사람 주문 수정"
+
+#~ msgid "publish_shop_orders"
+#~ msgstr "주문 공개"
+
+#~ msgid "read_private_shop_orders"
+#~ msgstr "비공개 주문 읽기"
+
+#~ msgid "delete_shop_orders"
+#~ msgstr "주문 복수 삭제"
+
+#~ msgid "delete_private_shop_orders"
+#~ msgstr "비공개 주문 삭제"
+
+#~ msgid "delete_published_shop_orders"
+#~ msgstr "공개 주문 삭제"
+
+#~ msgid "delete_others_shop_orders"
+#~ msgstr "다른사람 주문 삭제"
+
+#~ msgid "edit_private_shop_orders"
+#~ msgstr "비공개 주문 수정"
+
+#~ msgid "edit_published_shop_orders"
+#~ msgstr "공개 주문 수정"
+
+#~ msgid "manage_shop_order_terms"
+#~ msgstr "주문 속성 관리"
+
+#~ msgid "edit_shop_order_terms"
+#~ msgstr "주문 속성 수정"
+
+#~ msgid "delete_shop_order_terms"
+#~ msgstr "주문 속성 삭제"
+
+#~ msgid "assign_shop_order_terms"
+#~ msgstr "주문 속성 할당"
+
+#~ msgid "edit_shop_coupon"
+#~ msgstr "쿠폰 수정"
+
+#~ msgid "read_shop_coupon"
+#~ msgstr "쿠폰 읽기"
+
+#~ msgid "delete_shop_coupon"
+#~ msgstr "쿠폰 삭제"
+
+#~ msgid "edit_shop_coupons"
+#~ msgstr "쿠폰 복수 수정"
+
+#~ msgid "edit_others_shop_coupons"
+#~ msgstr "다른사람 쿠폰 수정"
+
+#~ msgid "publish_shop_coupons"
+#~ msgstr "구폰 공개"
+
+#~ msgid "read_private_shop_coupons"
+#~ msgstr "비공개 쿠폰 읽기"
+
+#~ msgid "delete_shop_coupons"
+#~ msgstr "쿠폰 복수 삭제"
+
+#~ msgid "delete_private_shop_coupons"
+#~ msgstr "비공개 쿠폰 삭제"
+
+#~ msgid "delete_published_shop_coupons"
+#~ msgstr "공개 쿠폰 삭제"
+
+#~ msgid "delete_others_shop_coupons"
+#~ msgstr "다른사람 쿠폰 삭제"
+
+#~ msgid "edit_private_shop_coupons"
+#~ msgstr "비공개 쿠폰 수정"
+
+#~ msgid "edit_published_shop_coupons"
+#~ msgstr "공개 쿠폰 수정"
+
+#~ msgid "manage_shop_coupon_terms"
+#~ msgstr "쿠폰 속성 관리"
+
+#~ msgid "edit_shop_coupon_terms"
+#~ msgstr "쿠폰 속성 수정"
+
+#~ msgid "delete_shop_coupon_terms"
+#~ msgstr "쿠폰 속성 삭제"
+
+#~ msgid "assign_shop_coupon_terms"
+#~ msgstr "쿠폰 속성 할당"
+
+#~ msgid "edit_shop_webhook"
+#~ msgstr "상점 웹훅 수정"
+
+#~ msgid "read_shop_webhook"
+#~ msgstr "상점 웹훅 읽기"
+
+#~ msgid "delete_shop_webhook"
+#~ msgstr "상점 웹훅 삭제"
+
+#~ msgid "edit_shop_webhooks"
+#~ msgstr "상점 웹훅 복수 수정"
+
+#~ msgid "edit_others_shop_webhooks"
+#~ msgstr "다른사람 상점 웹훅 수정"
+
+#~ msgid "publish_shop_webhooks"
+#~ msgstr "상점 웹훅 공개"
+
+#~ msgid "read_private_shop_webhooks"
+#~ msgstr "비공개 상점 웹훅 읽기"
+
+#~ msgid "delete_shop_webhooks"
+#~ msgstr "상점 웹훅 복수 삭제"
+
+#~ msgid "delete_private_shop_webhooks"
+#~ msgstr "비공개 상점 웹훅 삭제"
+
+#~ msgid "delete_published_shop_webhooks"
+#~ msgstr "공개 상정 웹훅 삭제"
+
+#~ msgid "delete_others_shop_webhooks"
+#~ msgstr "다른사람 상점 웹훅 삭제"
+
+#~ msgid "edit_private_shop_webhooks"
+#~ msgstr "비공개 상정 웹훅 수정"
+
+#~ msgid "edit_published_shop_webhooks"
+#~ msgstr "공개 상점 웹훅 수정"
+
+#~ msgid "manage_shop_webhook_terms"
+#~ msgstr "상점 웹훅 속성 관리"
+
+#~ msgid "edit_shop_webhook_terms"
+#~ msgstr "상점 웹훅 속성 수정"
+
+#~ msgid "delete_shop_webhook_terms"
+#~ msgstr "상점 웹훅 속성 삭제"
+
+#~ msgid "assign_shop_webhook_terms"
+#~ msgstr "상점 웹훅 속성 할당"
+
+#~ msgid "No Benefits"
+#~ msgstr "혜택 없음"
+
+#~ msgid "Discounts on Products"
+#~ msgstr "상품 구매시 할인"
+
+#~ msgid "Purchase Points Offer"
+#~ msgstr "구매시 포인트 제공"
+
+#~ msgid "Discounts & Points"
+#~ msgstr "할인 + 포인트 제공"
+
+#~ msgid "No Custom Benefits"
+#~ msgstr "개별 혜택 없음"
+
+#~ msgid "Discount Ratio (%)"
+#~ msgstr "해당 비율만큼 할인 판매 (%)"
+
+#~ msgid "Fixed Price"
+#~ msgstr "지정 할인가격으로 판매"
+
+#~ msgid "Point Earning Ratio (%)"
+#~ msgstr "구매시 해당 비율만큼 포인트 지급 (%)"
+
+#~ msgid "Fixed Point Earning"
+#~ msgstr "구매시 지정 포인트 지급"
+
+#~ msgid "Regular Price"
+#~ msgstr "기본가격"
+
+#~ msgid ""
+#~ "The default setting is applied to the entire current site \"<span style="
+#~ "\"color:red;\">%s</span>\"."
+#~ msgstr ""
+#~ "현재 사이트 전체에 적용되는 기본 설정값은  \"<span style=\"color:red\">"
+#~ "%s</span>\" 입니다."
+
+#~ msgid "Discount Price"
+#~ msgstr "할인가"
+
+#~ msgid "Earning Points"
+#~ msgstr "포인트 지급"
+
+#~ msgid ""
+#~ "<span style=\"color:orange;\">[Note]</span> If the value in that role, "
+#~ "and this setting is applied to the first priority, <a href=\"%s\">the "
+#~ "value of the configuration</a> will be applied in the following order if "
+#~ "no value."
+#~ msgstr ""
+#~ "<span style=\"color:orange;\">[참고]</span> 해당 역할혜택에 값을 입력하면 "
+#~ "이 설정값이 최우선 적용되며, 값이 없을 경우 <a href=\"%s\">환경설정</a>의 "
+#~ "혜택값이 적용됩니다."
+
+#~ msgid "Step"
+#~ msgstr "단계"
+
+#~ msgid "Boundary Points"
+#~ msgstr "경계 포인트"
+
+#~ msgid "Order Amount"
+#~ msgstr "주문 합계"
+
+#~ msgid "Role Promotion Product"
+#~ msgstr "역할승급 상품"
+
+#~ msgid "Product Discount Ratio"
+#~ msgstr "상품 할인율"
+
+#~ msgid ""
+#~ "Please enter your ratio to the point of purchase products to offer. Basis "
+#~ "for comparison is the product price."
+#~ msgstr ""
+#~ "상품 구매시 사용자에게 제공할 포인트 비율을 입력하세요. 비교 기준은 제품가"
+#~ "격입니다."
+
+#~ msgid "Purchase Point Ratio"
+#~ msgstr "포인트 지급율"
+
+#~ msgid "Actions"
+#~ msgstr "작업"
+
+#~ msgid "Step %s"
+#~ msgstr "%s단계"
+
+#~ msgid "Less than %s points"
+#~ msgstr "%s 포인트 미만"
+
+#~ msgid "Less than %1$s %2$s"
+#~ msgstr "%1$s %2$s 미만 구매시"
+
+#~ msgid "Search product&hellip;"
+#~ msgstr "상품 검색&hellip;"
+
+#~ msgid "Select Role&hellip;"
+#~ msgstr "역할을 선택하세요&hellip;"
+
+#~ msgid "0 to 100"
+#~ msgstr "0-100"
+
+#~ msgid "View Role"
+#~ msgstr "상세보기"
+
+#~ msgid "Enter Role Key&hellip;"
+#~ msgstr "역할 키를 입력하세요&hellip;"
+
+#~ msgid "Enter Role Display Name&hellip;"
+#~ msgstr "역할의 표시이름을 입력하세요&hellip;"
+
+#~ msgid ""
+#~ "The role of boundary points or benefits, please change <a href=\"%s\">the "
+#~ "WooCommerce Settings page</a>."
+#~ msgstr ""
+#~ "역할의 경계 포인트나 혜택은 <a href=\"%s\">우커머스 설정 페이지</a>에서 변"
+#~ "경하세요."
+
+#~ msgid "Role Hierarchy"
+#~ msgstr "역할 계층"
+
+#~ msgid "Save Now"
+#~ msgstr "저장하기"
+
+#~ msgid "Delete Role"
+#~ msgstr "삭제하기"
+
+#~ msgid "User Name"
+#~ msgstr "사용자명"
+
+#~ msgid "Display Name"
+#~ msgstr "이름"
+
+#~ msgid "Email Address"
+#~ msgstr "이메일 주소"
+
+#~ msgid "Order Count"
+#~ msgstr "주문 횟수"
+
+#~ msgid "Cumulative Amount"
+#~ msgstr "누적 합계"
+
+#~ msgid "Posts Count"
+#~ msgstr "작성글 수"
+
+#~ msgid "User does not exist."
+#~ msgstr "사용자가 존재하지 않습니다."
+
+#~ msgid "%s Points History"
+#~ msgstr "%s 포인트 기록"
+
+#~ msgid "Current Total Points"
+#~ msgstr "현재 전체 포인트"
+
+#~ msgid "Recently issued one months"
+#~ msgstr "최근 한달 "
+
+#~ msgid "Code"
+#~ msgstr "코드"
+
+#~ msgid "Issue Date"
+#~ msgstr "발급일"
+
+#~ msgid "New Points"
+#~ msgstr "새 포인트"
+
+#~ msgid "Select Points Code"
+#~ msgstr "포인트 코드 선택"
+
+#~ msgid "Issue Points Now"
+#~ msgstr "포인트 발급"
+
+#~ msgid ""
+#~ "Please use the minus points issue, rather than delete points in order to "
+#~ "withdraw points."
+#~ msgstr ""
+#~ "포인트 회수시 포인트 삭제보다는 마이너스(-) 포인트 지급을 사용하시길 권장"
+#~ "합니다."
+
+#~ msgid "Deactived"
+#~ msgstr "비활성됨"
+
+#~ msgid "Actived"
+#~ msgstr "활성화됨"
+
+#~ msgid "Suspended"
+#~ msgstr "일시중지"
+
+#~ msgid "Pended"
+#~ msgstr "보류됨"
+
+#~ msgid ""
+#~ "The %s has already been applied to payment. To change the amount of "
+#~ "deletion (s) and try again."
+#~ msgstr ""
+#~ "이미 %s 결제가 적용되었습니다. 금액을 변경하시려면 삭제후 다시 시도하세요."
+
+#~ msgid "The %s payment has been canceled."
+#~ msgstr "%s 결제가 취소되었습니다."
+
+#~ msgid "My Points"
+#~ msgstr "내 포인트"
+
+#~ msgid "Diamond User"
+#~ msgstr "다이아몬드"
+
+#~ msgid "Platinum User"
+#~ msgstr "플래티넘"
+
+#~ msgid "Gold User"
+#~ msgstr "골드"
+
+#~ msgid "Silver User"
+#~ msgstr "실버"
+
+#~ msgid "Bronze User"
+#~ msgstr "브론즈"
+
+#~ msgid "The %s payment has been applied."
+#~ msgstr "%s 결제가 적용되었습니다."
+
+#~ msgid "%s Payment"
+#~ msgstr "%s 결제"
+
+#~ msgid "[Remove]"
+#~ msgstr "[취소]"
+
+#~ msgid ""
+#~ "If you purchase after <a href=\"#\" class=\"showlogin\">login</a> will "
+#~ "earn %s %s that can be discounted next purchase."
+#~ msgstr ""
+#~ "<a href=\"#\" class=\"showlogin\">로그인</a> 후 구매하시면 다음 구매시 할"
+#~ "인 받을 수 있는 %s %s가 적립됩니다."
+
+#~ msgid "REGISTER"
+#~ msgstr "회원가입"
+
+#~ msgid "LOGIN"
+#~ msgstr "로그인"
+
+#~ msgid "ADMIN"
+#~ msgstr "관리자"
+
+#~ msgid "%1$s %2$s issued to the customer."
+#~ msgstr "구매자에게 %1$s %2$s 를 지급하였습니다."
+
+#~ msgid "%1$s %2$s refunded to the customer."
+#~ msgstr "구매자로부터 %1$s %2$s 를 회수하였습니다."
+
+#~ msgid "Total Points"
+#~ msgstr "전체 포인트"
+
+#~ msgid "Maximun %s"
+#~ msgstr "최대 %s"
+
+#~ msgid "After the upgrade to the %s rating can be purchased at %s."
+#~ msgstr "%s 등급으로 업그레이드하면 %s에 구매하실 수 있습니다."
+
+#~ msgid "Earning"
+#~ msgstr "적립"
+
+#~ msgid ""
+#~ "To pay for your order amount retained by %s, <a href=\"#\" class="
+#~ "\"showpoints\">please click here</a>."
+#~ msgstr ""
+#~ "보유하고 있는 %s로 주문 금액을 결제하시려면 <a href=\"#\" class="
+#~ "\"showpoints\">여기를 클릭하세요</a>."
+
+#~ msgid "Owned %s"
+#~ msgstr "보유 %s"
+
+#~ msgid "Only a minimum of %s %s or more is possible."
+#~ msgstr "최소 %s %s이상일 경우 가능합니다."
+
+#~ msgid "Point Apply"
+#~ msgstr "포인트 사용"
+
+#~ msgid ""
+#~ "%1$s Payment can pay up to %2$s%% of the product price in the hold %1$s "
+#~ "and is used to %3$s1 per %4$s %1$s."
+#~ msgstr ""
+#~ "%1$s 결제는 상품가격의 최대 %2$s%%까지 보유 %1$s 내에서 결제가능하며, "
+#~ "%4$s %1$s 당 %3$s1으로 전환됩니다."
+
+#~ msgid "Remove"
+#~ msgstr "[제거]"
+
+#~ msgid "My %s"
+#~ msgstr "내 %s"
+
+#~ msgid "You have %d %s"
+#~ msgstr "고객님의 적립금은 %d %s입니다."
+
+#~ msgid "Event"
+#~ msgstr "이벤트"
+
+#~ msgid "Date"
+#~ msgstr "날짜"
+
+#~ msgid "Role Price"
+#~ msgstr "역할가격"
+
+#~ msgid "Sale Price"
+#~ msgstr "세일가격"
+
+#~ msgid "Issue Now"
+#~ msgstr "발급"
+
+#~ msgid "Display their own roles price"
+#~ msgstr "자신의 역할 가격만 표시"
+
+#~ msgid "Display only addition of the price of the next higher hierarchy role"
+#~ msgstr "차상위 계층의 역할가격 추가 표시"
+
+#~ msgid "Check Role Base Pricing"
+#~ msgstr "역할별 가격 확인"
+
+#~ msgid "Prices displayed role at all levels"
+#~ msgstr "모든 계층의 역할 가격 표시"
+
+#~ msgid "Option Product Display"
+#~ msgstr "옵션 상품 출력"
+
+#~ msgid "A minimum of %s %s is required."
+#~ msgstr "최소 %s %s가 필요합니다."
+
+#~ msgid "A minimum of %1$s %2$s is required to %2$s payment."
+#~ msgstr "%2$s 결제를 위해서는 최소 %1$s %2$s가 필요합니다."
+
+#~ msgid "Not enough %s to use for payment."
+#~ msgstr "결제에 사용할 %s가 부족합니다."
+
+#~ msgid "Site Login Points Duplicate"
+#~ msgstr "로그인 포인트 복수지급"
+
+#~ msgid ""
+#~ "If you log in, the payment can be held in reserve part of the order "
+#~ "amount."
+#~ msgstr ""
+#~ "로그인 하시면 주문금액의 일부를 보유한 적립금으로 결제가 가능합니다."
+
+#~ msgid "Apply"
+#~ msgstr "적용"
+
+#~ msgid "Available Full"
+#~ msgstr "전체 사용"
+
+#~ msgid "After Product Add to Cart Button"
+#~ msgstr "장바구니 버튼 다음에"
+
+#~ msgid "[Caution]"
+#~ msgstr "[주의]"
+
+#~ msgid "Promotion Product <span style=\"color:red\">[Caution]</span>"
+#~ msgstr "승급 상품 <span style=\"color:red\">[주의]</span>"
+
+#~ msgid "Basic Profiles"
+#~ msgstr "기본 프로필"
+
+#~ msgid "Extension Profiles"
+#~ msgstr "확장 프로필"
+
+#~ msgid "Expanding"
+#~ msgstr "펼치기"
+
+#~ msgid "Folding"
+#~ msgstr "접기"
+
+#~ msgid "Role Benefits (%s)"
+#~ msgstr "역할 혜택 (%s)"
+
+#~ msgid "Not Set"
+#~ msgstr "미설정"
+
+#, fuzzy
+#~ msgid "Roles Group Manager"
+#~ msgstr "역할 관리자"
+
+#~ msgid "Membership Roles"
+#~ msgstr "멤버십 역할관리"
+
+#~ msgid "Licence Keys Deleted"
+#~ msgstr "라이센스 키가 삭제되었습니다."
+
+#~ msgid "Role Benefits (Discounts and Points)"
+#~ msgstr "역할 혜택 (할인과 포인트)"
+
+#, fuzzy
+#~ msgid "Stock Alert"
+#~ msgstr "재고상태"
+
+#~ msgid "Priority"
+#~ msgstr "순위"
+
+#~ msgid "Point Boundary"
+#~ msgstr "경계 포인트"
+
+#~ msgid "Customer Purchase Points"
+#~ msgstr "고객 구매 포인트"
+
+#~ msgid ""
+#~ "This item is not enabled when the Role Update Time is \"%s\" or \"%s\"."
+#~ msgstr ""
+#~ "역할 업데이트 시기가 \"%s\" 또는 \"%s\" 일 경우에는 이 옵션은 적용되지 않"
+#~ "습니다."
+
+#~ msgid "My Account"
+#~ msgstr "내 계정"
+
+#, fuzzy
+#~ msgid "Select Role"
+#~ msgstr "삭제하기"
+
+#~ msgid "Weekly"
+#~ msgstr "주단위"
+
+#~ msgid "Monthly"
+#~ msgstr "월단위"
+
+#~ msgid ""
+#~ "Manager can enter sigle or multiple invoice numbers in one order. "
+#~ "besides, the customer can also track delivery of purchasing goods."
+#~ msgstr ""
+#~ "하나의 주문에 하나 혹은 여러개의 송장번호를 입력할 수 있으며, 고객은 택배"
+#~ "사를 통해 이 주문한 상품의 배송추적을 할 수 있습니다."
+
+#~ msgid "My Account Settings"
+#~ msgstr "내 계정"
+
+#~ msgid ""
+#~ "Membership function that can be used Log in / register / withdrawal and "
+#~ "my page."
+#~ msgstr ""
+#~ "로그인 / 회원가입 / 회원탈퇴 및 마이페이지를 사용할 수 있는 멤버십 기능."
+
+#~ msgid ""
+#~ "When you add the <strong>[pl_my_account]</strong> short code to the page "
+#~ "content, you can make a My-Account page."
+#~ msgstr ""
+#~ "숏코드 <strong>[pl_my_account]</strong> 를 페이지 내용에 삽입하면 해당 페"
+#~ "이지가 마이페이지로 지정됩니다."
+
+#~ msgid "My Account Page"
+#~ msgstr "내 계정 페이지"
+
+#~ msgid "Manage page of the register, login/logout, withdrawal, post, etc."
+#~ msgstr ""
+#~ "회원가입, 로그인/아웃, 회원탈퇴 및 작성글, 기타 내역을 확인할 수 있는 페이"
+#~ "지입니다."
+
+#~ msgid "Support WooCommerce"
+#~ msgstr "우커머스 지원"
+
+#~ msgid ""
+#~ "You can manage your order history on behalf of the WooCommerce \"my-"
+#~ "account\" page."
+#~ msgstr ""
+#~ "우커머스 \"나의 계정\" 페이지를 대신하여 주문 내역을 관리할 수 있습니다."
+
+#~ msgid "My Orders"
+#~ msgstr "내 주문 목록"
+
+#~ msgid "My Coupons"
+#~ msgstr "쿠폰 리스트"
+
+#~ msgid "My Downloads"
+#~ msgstr "내 다운로드"
+
+#~ msgid "Choose a list to be shown by default when user go to this page."
+#~ msgstr ""
+#~ "사용자가 이 페이지로 이동했을 때 기본으로 보여질 리스트를 선택하세요."
+
+#~ msgid "Shows a list of articles written on this site."
+#~ msgstr "이 사이트에 작성한 글 리스트를 보여줍니다."
+
+#~ msgid "Shows a list of comments written on this site."
+#~ msgstr "이 사이트에 작성한 코멘트 리스트를 보여줍니다."
+
+#~ msgid "Shows a list of orders, such as the WooCommerce My Account page."
+#~ msgstr "우커머스 내 계정 페이지와 같은 주문 리스트를 보여줍니다."
+
+#~ msgid "Shows a list of coupons, such as the WooCommerce My Account page."
+#~ msgstr "우커머스 내 계정 페이지와 같은 쿠폰 리스트를 보여줍니다."
+
+#~ msgid "Shows a list of downloads, such as the WooCommerce My Account page."
+#~ msgstr "우커머스 내 계정 페이지와 같은 다운로드 리스트를 보여줍니다."
+
+#~ msgid "Login/Logout Options"
+#~ msgstr "로그인/아웃 옵션"
+
+#~ msgid "Save last login time"
+#~ msgstr "최근 로그인 시간 저장"
+
+#~ msgid "Save date and time of user's recently logged-in."
+#~ msgstr "사용자의 최근 로그인 날짜와 시간을 저장합니다."
+
+#~ msgid "Login Redirect"
+#~ msgstr "로그인 후 이동"
+
+#~ msgid "Please select a page to be moved automatically after login."
+#~ msgstr "로그인 후 자동으로 이동할 페이지를 선택하세요."
+
+#~ msgid "If you do not set the redirect to the Home(%s) page."
+#~ msgstr "설정하지 않으면 홈 페이지(%s)로 리다이렉팅 됩니다."
+
+#~ msgid "Logout Redirect"
+#~ msgstr "로그아웃 후 이동"
+
+#~ msgid "Please select a page to be moved automatically after logout."
+#~ msgstr "로그아웃 후 자동으로 이동할 페이지를 선택하세요."
+
+#~ msgid "User ID"
+#~ msgstr "아이디"
+
+#~ msgid "Password"
+#~ msgstr "비밀번호"
+
+#~ msgid "Register Terms %s"
+#~ msgstr "가입 약관 %s"
+
+#~ msgid "Please select a page used to the Terms of Use."
+#~ msgstr "이용약관에 사용될 페이지를 선택하세요."
+
+#~ msgid "Please select a page used to the Terms of Privacy Policy."
+#~ msgstr "개인정보 보호정책에 사용될 페이지를 선택하세요."
+
+#~ msgid "Agreements Notes"
+#~ msgstr "약관동의 메시지"
+
+#~ msgid "Under the age of 14 can not join."
+#~ msgstr "14세 미만은 가입할 수 없습니다."
+
+#~ msgid "Display message in agreements page."
+#~ msgstr "약관 동의 페이지에서 이 메시지를 보여줍니다."
+
+#~ msgid "User field specifies"
+#~ msgstr "사용자필드 지정"
+
+#~ msgid "%s are included as default."
+#~ msgstr "%s 등은 기본으로 포함됩니다."
+
+#~ msgid "Address and Postcode"
+#~ msgstr "주소 및 우편번호"
+
+#~ msgid ""
+#~ "User can enter the address automatically using the 'Daum(Daum)' street "
+#~ "name address service."
+#~ msgstr ""
+#~ "'다음(Daum)' 도로명 주소를 이용하여 주소를 자동으로 입력할 수 있습니다."
+
+#~ msgid "User can enter the contact phone number."
+#~ msgstr ""
+#~ "가입 또는 회원 정보수정시 사용자가 자신의 전화번호를 입력할 수 있습니다."
+
+#~ msgid "Birthday"
+#~ msgstr "생년월일"
+
+#~ msgid "User can enter the own birthday date."
+#~ msgstr ""
+#~ "가입 또는 회원 정보수정시 사용자가 자신의 생년월일을 입력할 수 있습니다."
+
+#~ msgid "Gender"
+#~ msgstr "성별"
+
+#~ msgid "User can select gender."
+#~ msgstr "가입 또는 회원 정보수정시 사용자가 성별을 선택할 수 있습니다."
+
+#~ msgid "User URL"
+#~ msgstr "홈페이지"
+
+#~ msgid "User can enter the homepage url."
+#~ msgstr ""
+#~ "가입 또는 회원 정보수정시 사용자가 홈페이지 주소를 입력할 수 있습니다."
+
+#~ msgid "Description"
+#~ msgstr "상세설명"
+
+#~ msgid "User can enter the own profile text."
+#~ msgstr ""
+#~ "가입 또는 회원 정보수정시 사용자가 자신의 프로필 텍스트를 입력할 수 있습니"
+#~ "다."
+
+#~ msgid "Automatic login after register"
+#~ msgstr "가입후 자동로그인"
+
+#~ msgid "Automatic login after sign up completion."
+#~ msgstr "회원가입이 완료된 후 자동으로 로그인 합니다."
+
+#~ msgid "Withdrawal Options"
+#~ msgstr "회원탈퇴 옵션"
+
+#~ msgid "Terms of Withdrawal"
+#~ msgstr "회원탈퇴 약관"
+
+#~ msgid "Please select a page used to the Terms of Withdrawal."
+#~ msgstr "탈퇴약관에 사용될 페이지를 선택하세요."
+
+#~ msgid "Handle the existing posts"
+#~ msgstr "기존글 처리"
+
+#~ msgid "The user decides"
+#~ msgstr "사용자가 선택"
+
+#~ msgid "Assigned to a specific user"
+#~ msgstr "특정 사용자에게 이전"
+
+#~ msgid ""
+#~ "Members of the user to withdraw, choose how to handle the existing posts."
+#~ msgstr "회원탈퇴 할 사용자의 기존 글을 처리 방법을 선택하세요."
+
+#~ msgid "Reassign User"
+#~ msgstr "이전 받을 사용자"
+
+#~ msgid "Please specify the user to be reassigned."
+#~ msgstr "기존글을 이전 할 특정 사용자를 지정하세요."
+
+#~ msgid "Select a user&hellip;"
+#~ msgstr "사용자를 선택하세요."
+
+#~ msgid "Select one or more unshipped item."
+#~ msgstr "하나이상의 미배송상품을 선택하세요."
+
+#~ msgid "Select Courier Company."
+#~ msgstr "택배사를 선택하세요."
+
+#~ msgid "Enter delivery tracking number."
+#~ msgstr "송장번호를 입력하세요."
+
+#~ msgid "Select one or more shipped item."
+#~ msgstr "하나이상의 배송상품을 선택하세요."
+
+#~ msgid "All shipped items will be canceled. Are you sure?"
+#~ msgstr "모든 배송정보를 삭제합니다. 계속하시겠습니까?"
+
+#~ msgid "The %s is a required field."
+#~ msgstr "%s는 필수 항목입니다."
+
+#~ msgid "A user could not be found with this email address."
+#~ msgstr "해당 이메일 주소로 등록된 사용자가 없습니다."
+
+#~ msgid "You are now logged in as <strong>%s</strong>"
+#~ msgstr "<strong>%s</strong>로 로그인 되었습니다."
+
+#~ msgid "Please provide a valid email address."
+#~ msgstr "유효한 이메일 주소를 입력하세요."
+
+#~ msgid "An account is already registered with your email address."
+#~ msgstr "등록한 이메일은 이미 가입되어 있는 이메일 주소입니다."
+
+#~ msgid ""
+#~ "Couldn&#8217;t update profile&hellip; please contact us if you continue "
+#~ "to have problems."
+#~ msgstr ""
+#~ "프로필을 업데이트 할 수 없습니다&hellip; 문제가 계속되면 관리자에게 문의하"
+#~ "세요."
+
+#~ msgid "Your profile has been updated successfully&hellip;"
+#~ msgstr "프로필이 성공적으로 업데이트 되었습니다.&hellip;"
+
+#~ msgid "Please provide a valid current password."
+#~ msgstr "유효한 비밀번호를 입력하세요."
+
+#~ msgid ""
+#~ "Does not match the current password. Please re-enter your current "
+#~ "password."
+#~ msgstr "기존 비밀번호가 일치하지 않습니다. 다시 입력해 주세요."
+
+#~ msgid ""
+#~ "Does not match the new password and password confirm. Please re-enter new "
+#~ "password."
+#~ msgstr ""
+#~ "새 비밀번호와 비밀번호 확인이 서로 일치하지 않습니다. 비밀번호를 다시 입력"
+#~ "해 주세요."
+
+#~ msgid ""
+#~ "The current password and new password matches the password has not been "
+#~ "changed."
+#~ msgstr ""
+#~ "기존 비밀번호와 새 비밀번호가 동일하여 비밀번호가 변경되지 않았습니다."
+
+#~ msgid "The user password must be at least %d mixed characters with numbers"
+#~ msgstr ""
+#~ "사용자 비밀번호는 문자와 숫자를 포함하여 최소 %d자 이상이어야 합니다."
+
+#~ msgid "Your password has been updated successfully&hellip;"
+#~ msgstr "비밀번호가 성공적으로 변경되었습니다.&hellip;"
+
+#~ msgid "Top administrators will not be able to leave."
+#~ msgstr "최상위 관리자는 탈퇴할 수 없습니다."
+
+#~ msgid ""
+#~ "Couldn&#8217;t withdrawal&hellip; please contact us if you continue to "
+#~ "have problems."
+#~ msgstr ""
+#~ "탈퇴 할 수 없습니다&hellip; 이 문제가 계속되면 관리자에게 문의하세요."
+
+#~ msgid "Agreement has not been set."
+#~ msgstr "동의사항이 아직 정의되지 않았습니다."
+
+#~ msgid "You must agree to the %s"
+#~ msgstr "%s에 동의해 주세요."
+
+#~ msgid "Please enter a valid username."
+#~ msgstr "유효한 아이디를 입력하세요."
+
+#~ msgid ""
+#~ "The user ID must be at least 6 characters and no more than 12 characters."
+#~ msgstr "아이디는 최소 6글자 이상, 12글자 이하로 입력하세요."
+
+#~ msgid ""
+#~ "An account is already registered with that username. Please choose "
+#~ "another."
+#~ msgstr "이미 등록된 아이디입니다. 다른 아이디를 입력해주세요."
+
+#~ msgid "Confirm password is required."
+#~ msgstr "비밀번호를 한번 더 입력해주세요."
+
+#~ msgid "The password and confirm password do not match."
+#~ msgstr "비밀번호와 비밀번호 확인이 일치하지 않습니다."
+
+#~ msgid ""
+#~ "An account is already registered with your email address. Please login."
+#~ msgstr "등록한 이메일은 이미 가입되어 있는 이메일 주소입니다."
+
+#~ msgid "Phone number is not in the correct format."
+#~ msgstr "전화번호 형식이 일치하지 않습니다."
+
+#~ msgid ""
+#~ "Couldn&#8217;t register you&hellip; please contact us if you continue to "
+#~ "have problems."
+#~ msgstr "가입할수 없습니다&hellip; 문제가 계속되면 관리자에게 문의하세요."
+
+#~ msgid "A user could not be found with this User ID."
+#~ msgstr "해당 아이디로 등록된 사용자가 없습니다."
+
+#~ msgid "User ID or Email Address"
+#~ msgstr "아이디 또는 이메일"
+
+#~ msgid "Address Base"
+#~ msgstr "기본 주소"
+
+#~ msgid "Address Detail"
+#~ msgstr "상세 주소"
+
+#~ msgid "Male"
+#~ msgstr "남자"
+
+#~ msgid "Female"
+#~ msgstr "여자"
+
+#~ msgid "Password Confirm"
+#~ msgstr "비밀번호 확인"
+
+#~ msgid "New Password"
+#~ msgstr "새 비밀번호"
+
+#~ msgid "New Password Confirm"
+#~ msgstr "비밀번호 확인"
+
+#~ msgid "Withdrawal"
+#~ msgstr "회원탈퇴"
+
+#~ msgid ""
+#~ "The operating system is not supported. Can not find the CheckPlusSafe "
+#~ "encoder."
+#~ msgstr "지원하지 않는 운영체제입니다. 안심확인 엔코더를 찾을 수 없습니다."
+
+#~ msgid "Encryption and decryption system error"
+#~ msgstr "암호화/복호화 시스템 에러"
+
+#~ msgid "Encryption processing error"
+#~ msgstr "암호화 처리 에러"
+
+#~ msgid "Encryption data error"
+#~ msgstr "암호화 테이터 에러"
+
+#~ msgid "Input error"
+#~ msgstr "입력 에러"
+
+#~ msgid "Check the input value"
+#~ msgstr "입력값 확인"
+
+#~ msgid "Decryption processing error"
+#~ msgstr "복호화 처리 에러"
+
+#~ msgid "Hash value dismitch"
+#~ msgstr "해쉬값 불일치"
+
+#~ msgid "Decryption data error"
+#~ msgstr "복호화 데이터 에러"
+
+#~ msgid "Site Password error"
+#~ msgstr "사이트 비밀번호 에러"
+
+#~ msgid "Please enter the site code in the check puls safe setting page."
+#~ msgstr "안심인증 설정 페이지에서 사이트 코드를 입력하세요."
+
+#~ msgid "Please enter the site password in the check puls safe setting page."
+#~ msgstr "안심인증 설정 페이지에서 사이트 비밀번호를 입력하세요."
+
+#~ msgid "Check string"
+#~ msgstr "문자열 확인"
+
+#~ msgid "Check Plus Safe name verification was successful."
+#~ msgstr "안심인증 실명확인이 완료되었습니다."
+
+#~ msgid "Check Plus Safe name verification failed. Please try again."
+#~ msgstr "안심인증 실명확인이 실패했습니다. 다시 시도해 주세요."
+
+#~ msgid "Name authentication method is not accurate."
+#~ msgstr "실명 인증 방법이 선택되지 않았습니다."
+
+#~ msgid "No I-PIN authentication data."
+#~ msgstr "아이핀 인증 데이터 없음."
+
+#~ msgid "I-PIN authentication data is not accurate."
+#~ msgstr "아이핀 인증 값이 없습니다."
+
+#~ msgid "Your password has been updated successfully"
+#~ msgstr "비밀번호가 성공적으로 변경되었습니다.&hellip;"
+
+#~ msgid "Check-Plus-Safe Options"
+#~ msgstr "안심본인인증 옵션"
+
+#~ msgid "Enable Check Plus Safe"
+#~ msgstr "안심인증 활성화"
+
+#~ msgid ""
+#~ "Check the real name of members using the \"Nice Name Verification Module"
+#~ "\" at registration and find password."
+#~ msgstr ""
+#~ "회원가입 또는 비밀번호 찾기 시 '나이스 정보통신'의 실명인증 모듈을 이용하"
+#~ "여 사용자의 실명을 체크합니다."
+
+#~ msgid ""
+#~ "The questions about auth information, please visit the \"Nice Holdings - "
+#~ "<a href=\"https://www.namecheck.co.kr/\" target=\"_blank\">Name Check "
+#~ "Site</a>\"."
+#~ msgstr ""
+#~ "인증에 관해 궁금하신점은 \"나이스 홀딩스 - <a href=\"https://www."
+#~ "namecheck.co.kr/\" target=\"_blank\">실명인증 사이트</a>\"를 참고하시기 바"
+#~ "랍니다."
+
+#~ msgid "Error : Encoder File does not exist"
+#~ msgstr "에러 : 엔코더 파일 없음"
+
+#~ msgid ""
+#~ "Encoder file does not exist. Re-install the plugin or contact Planet8."
+#~ msgstr ""
+#~ "엔코더 파일이 존재하지 않습니다. 플러그인을 재설치하거나 Planet8로 연락해"
+#~ "주세요."
+
+#~ msgid "Error : No file execute permissions"
+#~ msgstr "에러 : 파일실행 권한 없음"
+
+#~ msgid "Set the umask of \"%s\" to <font color=\"red\">755</font>."
+#~ msgstr "\"%s\"의 파일 권한을 <font color=\"red\">755</font>로 변경하세요."
+
+#~ msgid "Site Code"
+#~ msgstr "사이트 코드"
+
+#~ msgid "Enter the site code provided by NICE."
+#~ msgstr "나이스 홀딩스에서 제공한 '사이트 코드'를 입력하세요."
+
+#~ msgid "Site Password"
+#~ msgstr "사이트 비밀번호"
+
+#~ msgid "Enter the site password provided by NICE."
+#~ msgstr "나이스 홀딩스에서 제공한 '사이트 비밀번호'를 입력하세요."
+
+#~ msgid "Authentication Type"
+#~ msgstr "인증 방식"
+
+#~ msgid "User Decide"
+#~ msgstr "사용자 선택"
+
+#~ msgid "Accredited certificate"
+#~ msgstr "공인인증서"
+
+#~ msgid "Mobile"
+#~ msgstr "모바일"
+
+#~ msgid "Credit Card"
+#~ msgstr "신용카드"
+
+#~ msgid "Please select if you want to just verify your name in certain ways."
+#~ msgstr "특정 방식으로만 실명인증 할 경우에 선택하세요."
+
+#~ msgid "Cancel button"
+#~ msgstr "취소 버튼"
+
+#~ msgid "Cancel button to activate the authentication."
+#~ msgstr "인증시 취소버튼을 활성화 합니다."
+
+#~ msgid "Auto Input Fields"
+#~ msgstr "자동 필드 입력"
+
+#~ msgid ""
+#~ "After the name verification automatically enters the fields in the "
+#~ "Register form."
+#~ msgstr ""
+#~ "실명인증이 끝난 뒤 가입페이지 상의 일치하는 필드를 자동으로 입력합니다."
+
+#~ msgid "Lost Password"
+#~ msgstr "비밀번호 찾기"
+
+#~ msgid ""
+#~ "When the password is lost, use the Check Plus Safe for identification."
+#~ msgstr "비밀번호 찾기에 안심인증을 사용합니다."
+
+#~ msgid "Auth Method"
+#~ msgstr "인증 방법"
+
+#~ msgid "Check Plus Safe"
+#~ msgstr "안심 확인"
+
+#~ msgid ""
+#~ "The operating system is not supported. Can not find the IPIN encoder."
+#~ msgstr "지원하지 않는 운영체제입니다. 아이핀 엔코더를 찾을 수 없습니다."
+
+#~ msgid ""
+#~ "After checking the return value, please contact the NICE assessment "
+#~ "information development staff."
+#~ msgstr "리턴값 확인 후, NICE평가정보 개발 담당자에게 문의해 주세요."
+
+#~ msgid ""
+#~ "After checking the return value, please contact the NICE assessment "
+#~ "information development staff. [%s]"
+#~ msgstr "리턴값 확인 후, NICE평가정보 개발 담당자에게 문의해 주세요. [%s]"
+
+#~ msgid ""
+#~ "CP request number mismatch : Please check the data [%s] into the session."
+#~ msgstr ""
+#~ "CP 요청번호가 일치하지 않습니다. : 세션에 저장된 [%s] 데이터를 확인하세요."
+
+#~ msgid "Please enter the site code in the ipin setting page."
+#~ msgstr "아이핀 설정 페이지에서 사이트 코드를 입력하세요."
+
+#~ msgid "Please enter the site password in the ipin setting page."
+#~ msgstr "아이핀 설정 페이지에서 사이트 비밀번호를 입력하세요."
+
+#~ msgid "I-PIN Options"
+#~ msgstr "아이핀 옵션"
+
+#~ msgid "Enable IPIN"
+#~ msgstr "아이핀 활성화"
+
+#~ msgid ""
+#~ "The questions about auth information, please visit the \"Nice Holdings - "
+#~ "<a href=\"https://www.vno.co.kr/\" target=\"_blank\">NICE IPIN</a>\"."
+#~ msgstr ""
+#~ "인증에 관해 궁금하신점은 \"나이스 홀딩스 - <a href=\"https://www.vno.co."
+#~ "kr/\" target=\"_blank\">나이스 아이핀</a>\"을 참고하시기 바랍니다."
+
+#~ msgid "When the password is lost, use the I-PIN for identification."
+#~ msgstr "비밀번호 찾기에 아이핀 인증을 사용합니다."
+
+#~ msgid "I-PIN"
+#~ msgstr "아이핀"
+
+#~ msgid "\"%s\" plug-in is required to use this feature."
+#~ msgstr "이 기능을 사용하려면 \"%s\" 플러그인이 필요합니다."
+
+#~ msgid "My Wishlist"
+#~ msgstr "내 관심상품"
+
+#~ msgid "required"
+#~ msgstr "필수"
+
+#~ msgid "Unit Price"
+#~ msgstr "단위 가격"
+
+#~ msgid "Free!"
+#~ msgstr "무료!"
+
+#~ msgid "Out of Stock"
+#~ msgstr "품절"
+
+#~ msgid "In Stock"
+#~ msgstr "재고있음"
+
+#~ msgid "No products were added to the wishlist"
+#~ msgstr "등록된 관심상품이 없습니다."
+
+#~ msgid "Reset password"
+#~ msgstr "비밀번호 초기화"
+
+#~ msgid "Source Post Title"
+#~ msgstr "원본글 제목"
+
+#~ msgid "Comment Status"
+#~ msgstr "댓글 상태"
+
+#~ msgid "Comment Content"
+#~ msgstr "댓글 내용"
+
+#~ msgid "Comment Date"
+#~ msgstr "작성일"
+
+#~ msgid "Coupon code"
+#~ msgstr "쿠폰코드"
+
+#~ msgid "Restiction"
+#~ msgstr "사용제한"
+
+#~ msgid "Expiry date"
+#~ msgstr "만료일"
+
+#~ msgid "Coupon does not exists"
+#~ msgstr "쿠폰이 존재하지 않습니다."
+
+#~ msgid "Order"
+#~ msgstr "주문"
+
+#~ msgid "Download File"
+#~ msgstr "파일"
+
+#~ msgid "Download Remaining"
+#~ msgstr "잔여 다운로드"
+
+#~ msgid "%s download remaining"
+#~ msgstr "잔여 다운로드 %s회"
+
+#~ msgid "No recent order."
+#~ msgstr "최근주문이 없습니다."
+
+#~ msgid "Recent Orders"
+#~ msgstr "최근주문"
+
+#~ msgid "Status"
+#~ msgstr "상태"
+
+#~ msgid "Total"
+#~ msgstr "전체"
+
+#, fuzzy
+#~ msgid "%s for %s item"
+#~ msgstr "%s/%s 배송중"
+
+#~ msgid "Pay"
+#~ msgstr "결제"
+
+#~ msgid "Cancel"
+#~ msgstr "취소"
+
+#~ msgid "View"
+#~ msgstr "보기"
+
+#~ msgid "Post Status"
+#~ msgstr "글 상태"
+
+#~ msgid "Post Date"
+#~ msgstr "작성일"
+
+#~ msgid "Login"
+#~ msgstr "로그인"
+
+#~ msgid "Welecome to %s"
+#~ msgstr "%s 에 오신것을 환영합니다."
+
+#~ msgid "Please enter your username and password."
+#~ msgstr "사용자ID와 비밀번호를 입력해주세요."
+
+#~ msgid "Remember me"
+#~ msgstr "기억하기"
+
+#~ msgid "Find Password"
+#~ msgstr "비밀번호 찾기"
+
+#~ msgid "Change Password"
+#~ msgstr "비밀번호 변경"
+
+#~ msgid "Read More"
+#~ msgstr "더 보기"
+
+#~ msgid "Recently Posts"
+#~ msgstr "최근 작성글"
+
+#~ msgid "Recently Comments"
+#~ msgstr "최근 댓글"
+
+#~ msgid "Registration Agreements"
+#~ msgstr "가입 동의"
+
+#~ msgid "I agree to the above <strong>%s</strong>."
+#~ msgstr "위의 <strong>%s</strong> 에 동의합니다."
+
+#~ msgid "OK"
+#~ msgstr "확인"
+
+#~ msgid "Thank you for signing up."
+#~ msgstr "가입해 주셔서 감사합니다."
+
+#~ msgid "Registration"
+#~ msgstr "회원가입하기"
+
+#~ msgid "Anti-spam"
+#~ msgstr "안티스팸"
+
+#~ msgid "Register Now"
+#~ msgstr "회원가입"
+
+#~ msgid "Select Registration Type"
+#~ msgstr "가입 종류 선택"
+
+#~ msgid "Personal"
+#~ msgstr "개인회원"
+
+#~ msgid "User Level"
+#~ msgstr "회원등급"
+
+#~ msgid "Register Date"
+#~ msgstr "등록일"
+
+#~ msgid "Logout"
+#~ msgstr "로그아웃"
+
+#~ msgid "Withdrawal is complete. Thank you for using"
+#~ msgstr "탈퇴가 완료되었습니다. 이용해주셔서 감사합니다."
+
+#~ msgid "Withdrawal Confirm"
+#~ msgstr "회원탈퇴 확인"
+
+#~ msgid "Keep the Posts"
+#~ msgstr "작성글 유지하기"
+
+#~ msgid "Are you sure you want to withdrawal really?"
+#~ msgstr "정말로 탈퇴하시겠습니까?"
+
+#~ msgid "Yes, I want to withdrawal"
+#~ msgstr "예, 탈퇴하겠습니다."
+
+#~ msgid "No, Keep the membership"
+#~ msgstr "아니요, 취소합니다."
+
+#~ msgid "Supports Related Add-on Options"
+#~ msgstr "관련 에드온 옵션"
+
+#~ msgid "Authentication Options"
+#~ msgstr "인증 "
+
+#~ msgid "Urbout"
+#~ msgstr "어바웃"
+
+#~ msgid "Urbout Customizing."
+#~ msgstr "어바웃 커스터마이징"
+
+#~ msgid "WooCommerce Points and Rewards"
+#~ msgstr "WooCommerce Points and Rewards"
+
+#~ msgid "Supports \"WooCommerce Points and Rewards\" functions."
+#~ msgstr "\"WooCommerce Points and Rewards\" 플러그인의 기능을 지원합니다."
+
+#~ msgid "YITH WooCommerce Wishlist"
+#~ msgstr "YITH WooCommerce Wishlist"
+
+#~ msgid "Supports \"YITH WooCommerce Wishlist\" functions."
+#~ msgstr "\"YITH WooCommerce Wishlist\" 플러그인의 기능을 지원합니다."
+
+#~ msgid "%s License Options"
+#~ msgstr "%s 라이센스 옵션"
+
+#~ msgid "Succeed"
+#~ msgstr "성공"
+
+#~ msgid "Failed"
+#~ msgstr "실패함"
+
+#~ msgid "Registered Domain"
+#~ msgstr "등록 도메인"
+
+#~ msgid "Active My Account"
+#~ msgstr "내 계정 활성화"
+
+#~ msgid "%d unshipped product remains."
+#~ msgstr "%d개의 미배송상품이 있습니다."
+
+#~ msgid "%d ea"
+#~ msgstr "%d개"
+
+#~ msgid "Delivery Invoice Submit"
+#~ msgstr "송장입력"
+
+#~ msgid "All items are shipped complete."
+#~ msgstr "모든 상품이 배송완료되었습니다."
+
+#~ msgid "This Delivery contains %d products."
+#~ msgstr "이 배송에 %d 개의 상품이 포함되어 있습니다."
+
+#~ msgid "Cancel All"
+#~ msgstr "전체 취소"
+
+#~ msgid "Delivery Tracking"
+#~ msgstr "배송추적"
+
+#, fuzzy
+#~ msgid "Supports Related Add-on"
+#~ msgstr "관련 에드온 옵션"
+
+#~ msgid "You must agree to the Terms of Pricacy Policy."
+#~ msgstr "개인정보 보호 정책에 동의해 주세요."
+
+#~ msgid "Quantity : %dEA"
+#~ msgstr "수량 : %d개"
+
+#~ msgid "Select Courier Company"
+#~ msgstr "택배사 선택"
+
+#~ msgid "Enter Tracking Number&hellips;"
+#~ msgstr "송장 번호를 입력하세요&hellip;"
+
+#~ msgid "Shipping Address"
+#~ msgstr "배송주소"
+
+#~ msgid "Courier Company"
+#~ msgstr "택배사"
+
+#~ msgid "Tracking Number"
+#~ msgstr "송장번호"
+
+#~ msgid "Ship Date"
+#~ msgstr "발송일"
+
+#~ msgid "Order Delivery Tracking"
+#~ msgstr "주문 배송 기로"
+
+#~ msgid ""
+#~ "Note: Permissions for order items will automatically be granted when the "
+#~ "order status changes to processing/completed."
+#~ msgstr ""
+#~ "주의: 주문 상태가 처리중/완료됨으로 변경되면 주문 아이템의 접근 허용이 자"
+#~ "동으로 부여됩니다."
+
+#~ msgid ""
+#~ "Permissions for order items will automatically be granted when the order "
+#~ "status changes to processing/completed."
+#~ msgstr ""
+#~ "주의: 주문 상태가 처리중/완료됨으로 변경되어야 배송정보가 생성됩니다."
+
+#~ msgid "This Order does not have shipping items."
+#~ msgstr "이 주문은 배송상품이 존재하지 않습니다."
+
+#~ msgid "&quot;%s&quot; has been shipped %s (%s)."
+#~ msgstr "&quot;%s&quot; 상품이 %s - %s 으로 발송되었습니다."
+
+#~ msgid "&quot;%s&quot; delivery canceled."
+#~ msgstr "&quot;%s&quot; 상품이 배송 취소되었습니다."
+
+#~ msgid "Preparing Shipping"
+#~ msgstr "배송준비중"
+
+#~ msgid "Delivery Invoice Settings"
+#~ msgstr "배송송장"
+
+#~ msgid "Active Delivery Invoice"
+#~ msgstr "배송송장 활성화"
+
+#~ msgid "Delivery Processing"
+#~ msgstr "배송중"
+
+#~ msgid "Shipping information has been applied successfully."
+#~ msgstr "배송 정보가 성공적으로 적용되었습니다."
+
+#~ msgid "Delivery Trackings"
+#~ msgstr "배송추적"
+
+#~ msgid "Order Quantity"
+#~ msgstr "주문 수량"
+
+#~ msgid "Delivery Tracking List"
+#~ msgstr "배송정보 리스트"
+
+#~ msgid "Delivery(include %d products) have been canceled."
+#~ msgstr "배송(%d개의 상품 포함)이 취소되었습니다."
+
+#~ msgid "Planet8"
+#~ msgstr "플래닛8"
+
+#~ msgid "%s Preparing Shipping"
+#~ msgstr "%s 배송준비중"
+
+#~ msgid "Attachment YouTube Settings"
+#~ msgstr "유투브 첨부"
+
+#~ msgid "Active Attachment Youtube"
+#~ msgstr "유투브 첨부 활성화"
+
+#~ msgid ""
+#~ "Add a feature that allows you to attach a YouTube video on the product "
+#~ "image."
+#~ msgstr "상품 이미지에 유투브 비디오를 첨부할 수 있도록 기능을 추가합니다."
+
+#~ msgid "YouTube Link"
+#~ msgstr "유투브 링크"
+
+#~ msgid "Hide bundle related"
+#~ msgstr "관련 패키지 숨기기"
+
+#~ msgid "Bundle Product Settings"
+#~ msgstr "번들상품"
+
+#~ msgid ""
+#~ "You can configure your registered products in several bundled package, "
+#~ "managed as a single product."
+#~ msgstr ""
+#~ "등록된 여러개의 상품을 하나의 상품처럼 패키지로 묶어서 관리할 수 있도록 줍"
+#~ "니다."
+
+#~ msgid "Shortcode Options"
+#~ msgstr "숏코드 옵션"
+
+#~ msgid "Use Pagination"
+#~ msgstr "페이지 사용"
+
+#~ msgid "Output per page"
+#~ msgstr "페이지당 출력갯수"
+
+#, fuzzy
+#~ msgid "choose an option"
+#~ msgstr "숏코드 옵션"
+
+#~ msgid "BuyNow Settings"
+#~ msgstr "바로구매"
+
+#~ msgid ""
+#~ "The module for supporting button that can be purchased directly without "
+#~ "loading the user to cart."
+#~ msgstr ""
+#~ "등록된 상품을 사용자가 장바구니에 담지 않고 바로 구매할 수 있는 버튼을 추"
+#~ "가해 줍니다."
+
+#~ msgid "Buy Now"
+#~ msgstr "바로구매"
+
+#~ msgid "Core"
+#~ msgstr "코어"
+
+#~ msgid "membership"
+#~ msgstr "멤버십"
+
+#~ msgid "Membership"
+#~ msgstr "멤버십"
+
+#~ msgid "Error"
+#~ msgstr "에러"
+
+#~ msgid "Notice"
+#~ msgstr "알림"
+
+#~ msgid "Delivery Invoice List"
+#~ msgstr "배송송장목록"
+
+#~ msgid "Delivery Invoice"
+#~ msgstr "배송송장"
+
+#~ msgid "Delivery Invoice Trackings"
+#~ msgstr "배송추적"
+
+#~ msgid "GearLounge"
+#~ msgstr "기어라운지"
+
+#~ msgid "Referer"
+#~ msgstr "유입"
+
+#~ msgid "Funnel Anlystics Settings"
+#~ msgstr "유입경로분석"
+
+#~ msgid ""
+#~ "To analyze the funnel must be deployed the relevant URL link that "
+#~ "including adv_code variables."
+#~ msgstr ""
+#~ "유입경로분석을 사용하기 위해서는 URL 배포시 adv_code 변수를 반드시 포함하"
+#~ "여야 합니다."
+
+#~ msgid "Active Funnel-Anlytics"
+#~ msgstr "유입경로분석 활성화"
+
+#~ msgid ""
+#~ "Customer orders can be displayed for entering the path in order to manage "
+#~ "the list of keywords used in the funnel."
+#~ msgstr ""
+#~ "고객의 주문이 유입된 경로를 주문목록에 표시하고 유입된 경로에 사용된 키워"
+#~ "드를 관리할 수 있습니다."
+
+#~ msgid ""
+#~ "Please select the color to be used for search engine funnel analysis."
+#~ msgstr "유입경로에 사용될 검색엔진의 색상을 선택하세요."
+
+#~ msgid "Naver Color"
+#~ msgstr "네이버 색상"
+
+#~ msgid "Google Color"
+#~ msgstr "구글 색상"
+
+#~ msgid "Etc Color"
+#~ msgstr "기타 색상"
+
+#~ msgid "Search Extension Settings"
+#~ msgstr "확장 검색"
+
+#~ msgid "Active Search Extension"
+#~ msgstr "확장검색 활성화"
+
+#~ msgid ""
+#~ "To customize search results and search forms the theme to suit your "
+#~ "requirements."
+#~ msgstr ""
+#~ "운영자의 요구사항에 맞도록 테마의 검색폼과 검색결과를 커스터마이징 합니다."
+
+#~ msgid "Ticker"
+#~ msgstr "티커"
+
+#~ msgid "News Ticker Settings"
+#~ msgstr "뉴스 티커"
+
+#~ msgid "Active News Ticker"
+#~ msgstr "뉴스 티커 활성화"
+
+#~ msgid "Start typing and press Enter to search"
+#~ msgstr "검색어를 입력하고 엔터를 누르세요."
+
+#~ msgid "Page Settings"
+#~ msgstr "페이지"
+
+#~ msgid "User Field Settings"
+#~ msgstr "사용자필드"
+
+#~ msgid "Register/Withdrawal Settings"
+#~ msgstr "회원가입/탈퇴"
+
+#~ msgid "Redirect Options"
+#~ msgstr "리다이렉션 옵션"
+
+#~ msgid "User Field Options"
+#~ msgstr "사용자필드 옵션"
+
+#~ msgid "Terms of Use"
+#~ msgstr "이용약관"
+
+#~ msgid "Terms of Privacy Policy"
+#~ msgstr "개인정보 취급방침"
+
+#~ msgid "Active Membership"
+#~ msgstr "멤버십 활성화"
+
+#~ msgid "Etc Options"
+#~ msgstr "기타 옵션"
+
+#~ msgid "IPIN Settings"
+#~ msgstr "아이핀 설정"
+
+#~ msgid "Downloadable Product Permissions"
+#~ msgstr "다운로드 권한"
+
+#~ msgid "File %d"
+#~ msgstr "파일 %d"
+
+#~ msgid "Grant Access"
+#~ msgstr "접근 부여"
+
+#~ msgid "Stock notification send to %s successfuly."
+#~ msgstr "입고알림을 %s에게 성공적으로 발송했습니다."
+
+#~ msgid "Software Template"
+#~ msgstr "소프트웨어 템플릿"
+
+#~ msgid "Select the software template for send to license e-mail."
+#~ msgstr "라이센스 이메일 발송을 위한 소프트웨어 템플릿을 선택하세요."
+
+#~ msgid "Active Software"
+#~ msgstr "소프트웨어 활성화"
+
+#~ msgid ""
+#~ "The module for supporting software (intangible / downloadable). this "
+#~ "feature provides a separate order list and license-mailing."
+#~ msgstr ""
+#~ "소프트웨어(무형/다운로드 가능)를 지원하기 위한 모듈로 별도의 구매 리스트"
+#~ "와 라이센스 메일발송 기능을 제공합니다."
+
+#~ msgid "Download Status"
+#~ msgstr "다운로드 상태"
+
+#~ msgid "Downloaded Count"
+#~ msgstr "다운로드 횟수"
+
+#~ msgid "License Sending Count"
+#~ msgstr "라이센스 발송 횟수"
+
+#~ msgid "Revoke Access"
+#~ msgstr "접근 취소하기"
+
+#~ msgid "Click to toggle"
+#~ msgstr "토글하시려면 클릭하세요."
+
+#~ msgid "Downloads Remaining"
+#~ msgstr "잔여 다운로드"
+
+#~ msgid "Access Expires"
+#~ msgstr "접근 만료"
+
+#~ msgid "Never"
+#~ msgstr "없음"
+
+#~ msgid "Enter License Key"
+#~ msgstr "라이센스 키를 입력하세요."
+
+#~ msgid "Downloaded %s time"
+#~ msgstr "다운로드 %s회"
+
+#~ msgid "License Email send %s time"
+#~ msgstr "라이센스 발송 %s회"
+
+#~ msgid "Send License Mail"
+#~ msgstr "라이센스 메일 발송"
+
+#~ msgid "The product ID is not valid."
+#~ msgstr "상품ID가 유효하지 않습니다."
+
+#~ msgid "The product is currently stock."
+#~ msgstr "이 상품은 현재 재고가 있습니다."
+
+#~ msgid "Stock notification is already requested this product."
+#~ msgstr "이 상품은 이미 입고알림 신청중입니다."
+
+#~ msgid "Successfuly requested stock notification of %s."
+#~ msgstr "%s에 대해 입고알림 신청이 완료되었습니다."
+
+#~ msgid "You did not requested stock notification of this product."
+#~ msgstr "이 상품에 대한 입고알림 신청내역이 없습니다."
+
+#~ msgid "Successfuly canceled stock notification of %s."
+#~ msgstr "%s에 대해 입고알림 신청을 취소하였습니다."
+
+#~ msgid "Request License Key"
+#~ msgstr "라이센스 키 요청"
+
+#~ msgid "Software Templates"
+#~ msgstr "소프트웨어 템플릿"
+
+#~ msgid "Add Template"
+#~ msgstr "템플릿 추가"
+
+#~ msgid "Edit Template"
+#~ msgstr "템플릿 수정"
+
+#~ msgid "New Template"
+#~ msgstr "새 탬플릿"
+
+#~ msgid "View Template"
+#~ msgstr "템플릿 보기"
+
+#~ msgid "Search Template"
+#~ msgstr "템플릿 검색"
+
+#~ msgid "No Templates found in trash"
+#~ msgstr "휴지통에 템플릿이 없습니다."
+
+#~ msgid "Parent Template"
+#~ msgstr "상위 템플릿"
+
+#~ msgid "Stock Notice Request Users"
+#~ msgstr "입고알림 신청 사용자"
+
+#~ msgid "Send Notice"
+#~ msgstr "알림 발송"
+
+#~ msgid "Are you sure you want to send stock notification to this user?"
+#~ msgstr "이 사용자에게 입고알림을 발송합니다. 계속하시겠습니까?"
+
+#~ msgid ""
+#~ "Are you sure you want to cancel stock notification request of this user?"
+#~ msgstr "이 사용자의 입고알림 신청을 취소합니다. 계속하시겠습니까?"
+
+#~ msgid "%s user requested stock notice"
+#~ msgstr "%s명 입고알림"
+
+#~ msgid "Stock Notice Settings"
+#~ msgstr "입고알림"
+
+#~ msgid "Active Stock Notice"
+#~ msgstr "입고알림 활성화"
+
+#~ msgid ""
+#~ "User can request in stock notification on product in stock low and view "
+#~ "information on the page that contains the short code. administrators can "
+#~ "check the information in the product information, and can send an e-mail "
+#~ "stock."
+#~ msgstr ""
+#~ "재고가 부족한 상품에 한해 사용자가 입고 요청 알림을 신청하고 숏코드가 포함"
+#~ "된 페이지에서 확인할 수 있으며 관리자는 상품 정보에서 그 내용을 확인하고 "
+#~ "입고 메일을 발송할 수 있습니다."
+
+#~ msgid "Display Columns"
+#~ msgstr "컬럼 표시"
+
+#~ msgid "Price Columns"
+#~ msgstr "가격"
+
+#~ msgid "Stock Columns"
+#~ msgstr "재고상태"
+
+#~ msgid "Add to Cart Columns"
+#~ msgstr "장바구니 담기"
+
+#~ msgid "Stock Notice"
+#~ msgstr "입고알림"
+
+#~ msgid "My Stock Notice"
+#~ msgstr "내 입고알림 신청"
+
+#~ msgid "Request In-Stock Notice"
+#~ msgstr "입고알림 신청"
+
+#~ msgid "Cancel In-Stock Notice"
+#~ msgstr "입고알림 취소"
+
+#~ msgid "Remove from Wishlist"
+#~ msgstr "제거"
+
+#~ msgid "No products were added to the stock notice"
+#~ msgstr "입고알림 신청에 등록된 상품이 없습니다."
+
+#~ msgid "WishList Settings"
+#~ msgstr "관심상품"
+
+#~ msgid "Active WishList"
+#~ msgstr "관심상품 활성화"
+
+#~ msgid ""
+#~ "Users can register and view the item of interest is registered "
+#~ "information on the page that contains the shortcode."
+#~ msgstr ""
+#~ "사용자가 관심 상품을 등록하고 숏코드가 포함된 페이지에서 등록된 내용을 확"
+#~ "인할 수 있습니다."
+
+#~ msgid "Display icon next to the title"
+#~ msgstr "상품명 뒤에 아이콘으로 출력"
+
+#~ msgid "Display Button next to cart button"
+#~ msgstr "장바구니 버튼 뒤에 버튼으로 출력"
+
+#~ msgid "Use at Shop List"
+#~ msgstr "상점 리스트에서 사용"
+
+#~ msgid "Show Total Count"
+#~ msgstr "전체 갯수 보기"
+
+#~ msgid "WishList"
+#~ msgstr "관심상품"
+
+#~ msgid "The product is already registered in the WishList."
+#~ msgstr "이 상품은 이미 관심상품에 등록되었습니다."
+
+#~ msgid "%s is registered to WishList."
+#~ msgstr "%s가 관심상품에 등록되었습니다."
+
+#~ msgid "The product is already removed in the WishList."
+#~ msgstr "이 상품은 관심상품에서 이미 제거되었습니다."
+
+#~ msgid "%s is removed from WishList."
+#~ msgstr "%s가 관심상품에서 제거되었습니다."
+
+#~ msgid "Updates Settings"
+#~ msgstr "업데이트"
+
+#~ msgid "License ID"
+#~ msgstr "라이센스 ID"
+
+#~ msgid "Lastest Sending"
+#~ msgstr "최근 발송"
+
+#~ msgid "Buy Now Module"
+#~ msgstr "바로구매 모듈"
+
+#, fuzzy
+#~ msgid "are you sure you want to send license mail to customer user?"
+#~ msgstr "정말로 탈퇴하시겠습니까?"
+
+#~ msgid "Sotware Template"
+#~ msgstr "소프트웨어 템플릿"
+
+#~ msgid "Enable Membership"
+#~ msgstr "멤버십 모듈"
+
+#~ msgid "E-mail Settings"
+#~ msgstr "이메일"
+
+#, fuzzy
+#~ msgid "Your password has been reset."
+#~ msgstr "비밀번호가 성공적으로 변경되었습니다.&hellip;"
+
+#~ msgid "Passwords do not match."
+#~ msgstr "비밀번호가 일치하지 않습니다."
+
+#~ msgid "Lost ID / Lost Password"
+#~ msgstr "아이디 / 비밀번호 찾기"
+
+#~ msgid "Adults only"
+#~ msgstr "성인만 허용"
+
+#~ msgid "Username is required."
+#~ msgstr "아이디가 필요합니다."
+
+#~ msgid "Password is required."
+#~ msgstr "비밀번호가 필요합니다."
+
+#~ msgid "Username or E-mail:"
+#~ msgstr "아이디 또는 이메일"
+
+#~ msgid "Current Password"
+#~ msgstr "기존 비밀번호"
+
+#~ msgid "Under 14 years old are not able to join"
+#~ msgstr "14세 미만은 가입할 수 없습니다."

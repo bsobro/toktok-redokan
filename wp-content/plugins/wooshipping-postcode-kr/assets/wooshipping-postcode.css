@@ -1,0 +1,7 @@
+/* js dynamic css */
+.wooshipping-fixed-body { width: 100%; position: fixed; top: 0; }
+
+/* fixed css */
+.wooshipping_postcode_field .popup-trigger { width: 100%; }
+.ui-dialog { 	height: 100% ! important; }
+.ui-dialog #wooshipping-postcode-popup { padding: 0; }
